@@ -1,14 +1,28 @@
+:root{
+    --blur-var:0;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
 body {
     background-color: #d8d8d8;
     font-family: 'Product Sans';
     color: black;
+    height: 500vh;
 }
-.header-container {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    z-index: 1;
+#header-container {
+    width: 100vw;
+    height: 30vh;
+    z-index: 2 !important;
 }
 .logo {
+    z-index: 2;
     position: fixed;
     top: 10px;
     max-width: 80px;
@@ -17,13 +31,15 @@ body {
     left: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.header-container h1 {
+#header-container h1 {
+    z-index: 2;
     position: fixed;
     top: -5px;
     left: 130px;
     font-size: 36px;
 }
-.header-container h2 {
+#header-container h2 {
+    z-index: 2;
     position: fixed;
     top: 45px;
     left: 130px;
@@ -31,6 +47,7 @@ body {
 }
 .icon-container {
     position: fixed;
+    z-index: 2;
     top: 25px;
     right: 35px;
     background-color: #f8f8f87a;
@@ -66,8 +83,7 @@ body {
     left: 0;
     right: 0;
     margin: auto;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    filter: blur(calc(var(--blur-var, 0) * 1px));
     box-sizing: border-box;
 }
 .sezione {
@@ -269,6 +285,7 @@ hr {
     margin-top: 20px;
     margin-left: 50px;
     font-weight: weight;
+    padding: 3vw;
 }
 
 .menu-nav a {

@@ -15,4 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
         fullscreenMenu.classList.remove('show'); // Remove 'show' class
         fullscreenMenu.classList.add('hide'); // Add 'hide' class
     });
+
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        const valore = scrollY / 10;
+
+        document.documentElement.style.setProperty('--blur-var', valore);
+    });
 });
