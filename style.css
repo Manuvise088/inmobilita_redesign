@@ -9,12 +9,19 @@
 .show {
     display: block;
 }
-
+h1, h2, h3, h4, h5, h6, p {
+    color: white;
+}
 body {
     background-color: #d8d8d8;
-    font-family: 'Product Sans';
-    color: black;
+    font-family: 'National Park';
+    color: white;
+    background-color: #16305d;
     height: 500vh;
+    overflow-x: hidden;
+}
+body button {
+    font-family: 'National Park';
 }
 #header-container {
     width: 100vw;
@@ -50,13 +57,14 @@ body {
     z-index: 2;
     top: 25px;
     right: 35px;
-    background-color: #f8f8f87a;
+    background-color: #ffffff;
     padding-top: 10px;
     padding-bottom: 8px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 100px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: black;
 }
 .icon-container span {
     font-size: 28px;
@@ -64,10 +72,17 @@ body {
     transition-duration: 0.3s;
 }
 .icon-container span:hover {
-    background-color: #FFFFFF29;
+    background-color: #2f2f2f29;
     transition-duration: 0.3s;
     border-radius: 100px;
     padding: 3px;
+}
+.bandiera {
+    width: 30px;
+    margin-top: 2px;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-left: 5px;
 }
 .sezioni-container {
     position: absolute;
@@ -124,15 +139,14 @@ body {
     left: 0;
     right: 0;
     width: 100%;
-    background-color: rgb(179, 179, 179);
-    border-top: solid 2px rgb(0, 0, 0);
+    background-color: #204586;
+    border-top: solid 2px #ffffff;
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    color: black;
 }
 
 .navsez {
@@ -143,7 +157,7 @@ body {
 
 .navsez a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: #ffffff;
     font-size: 16px;
     display: flex;
     flex-direction: column;
