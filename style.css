@@ -380,21 +380,36 @@ p {
     width: 17vw;
 }
 
-@media screen and (max-width: 640px){
+@media screen and (orientation: portrait){
     #what{
-        width: 90vw;
+        top: 10vh;
+        width: 95vw;
+        border-radius: 5vh;
     }
     #introduction{
-        max-width: 67vw;
+        margin-left: 6.5vw;
+        max-width: 80vw;
+        border-radius: 5vh;
     }
     #intro-text{
+        font-size: 1.3vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-top: 6vh;
         margin-left: 5vw;
         width: 45vw;
+        padding-top: 4vh;
+        padding-bottom: 5vh;
+        border-radius: 5vh;
     }
     #intro-img{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-top: 4vh;
         left:58vw;
         width: 20vh;
         height: 20vh;
-        top:19vh;
     }
 }
