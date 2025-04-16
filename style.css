@@ -17,7 +17,6 @@ body {
     font-family: 'National Park';
     color: white;
     background-color: #16305d;
-    height: 500vh;
     overflow-x: hidden;
 }
 body button {
@@ -62,7 +61,6 @@ body button {
     padding-bottom: 8px;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 100px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: black;
 }
@@ -331,4 +329,53 @@ p {
     padding-left: 5px;
     padding-right: 5px;
     cursor: pointer;
+}
+
+#what{
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    margin-left: 3vw;
+    background-color: #f8f8f87a;
+    width: 40vw;
+    height: 50vh;
+    border-radius: 4vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#introduction{
+    position: relative;
+    text-align: center;
+    align-items: center;
+    color: black;
+    max-width: 20vw;
+    margin-left: 9.5vw;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    background-color: white;
+    border-radius: 4vw;
+    border: solid 0.5vh #3888aa;
+}
+
+#intro-text{
+    position: relative;
+    color: black;
+    background-color: white;
+    border-radius: 4vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-left: 1vw;
+    margin-right: 20vw;
+    padding-top: 3.5vh;
+    padding-bottom: 5vh;
+    border: solid 0.5vh #3888aa;
+}
+
+#intro-img{
+    position: absolute;
+    z-index: 2;
+    left: 22vw;
+    top: 12vh;
+    height: 17vw;
+    width: 17vw;
 }
