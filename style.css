@@ -379,3 +379,22 @@ p {
     height: 17vw;
     width: 17vw;
 }
+
+@media screen and (max-width: 640px){
+    #what{
+        width: 90vw;
+    }
+    #introduction{
+        max-width: 67vw;
+    }
+    #intro-text{
+        margin-left: 5vw;
+        width: 45vw;
+    }
+    #intro-img{
+        left:58vw;
+        width: 20vh;
+        height: 20vh;
+        top:19vh;
+    }
+}
