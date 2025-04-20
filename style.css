@@ -15,6 +15,7 @@ h1, h2, h3, h4, h5, h6, p {
 body {
     background-color: #d8d8d8;
     font-family: 'National Park';
+    font-size: 1.75vh;
     color: white;
     background-color: #16305d;
     overflow-x: hidden;
@@ -337,7 +338,7 @@ p {
     text-align: center;
     margin-left: 3vw;
     background-color: #f8f8f87a;
-    width: 40vw;
+    width: 94vw;
     height: 50vh;
     border-radius: 4vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -348,8 +349,8 @@ p {
     text-align: center;
     align-items: center;
     color: black;
-    max-width: 20vw;
-    margin-left: 9.5vw;
+    max-width: 47vw;
+    margin-left: 20vw;
     padding-top: 1.5vh;
     padding-bottom: 1.5vh;
     background-color: white;
@@ -364,8 +365,9 @@ p {
     border-radius: 4vw;
     padding-left: 1vw;
     padding-right: 1vw;
-    margin-left: 1vw;
-    margin-right: 20vw;
+    margin-top: 5vh;
+    margin-left: 6vw;
+    margin-right: 52vw;
     padding-top: 3.5vh;
     padding-bottom: 5vh;
     border: solid 0.5vh #3888aa;
@@ -374,10 +376,37 @@ p {
 #intro-img{
     position: absolute;
     z-index: 2;
-    left: 22vw;
+    left: 55vw;
     top: 12vh;
     height: 17vw;
     width: 17vw;
+}
+
+.goals{
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    margin-left: 3vw;
+    margin-top: 70vh;
+    background-color: #f8f8f87a;
+    width: 94vw;
+    height: 100vh;
+    border-radius: 4vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#goals_title{
+    position: relative;
+    text-align: center;
+    align-items: center;
+    color: black;
+    max-width: 47vw;
+    margin-left: 20vw;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    background-color: white;
+    border-radius: 4vw;
+    border: solid 0.5vh #3888aa;
 }
 
 @media screen and (orientation: portrait){
