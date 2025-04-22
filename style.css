@@ -35,11 +35,10 @@ h1, h2, h3, h4, h5, h6, p {
     color: white;
 }
 body {
-    background-color: #d8d8d8;
+    background-color: #4DCC8E;
     font-family: 'National Park';
     font-size: 1.75vh;
     color: white;
-    background-color: #16305d;
     overflow-x: hidden;
 }
 
@@ -80,18 +79,21 @@ body button {
     z-index: 2;
     top: 25px;
     right: 35px;
-    background-color: #ffffff;
     padding-top: 10px;
     padding-bottom: 8px;
     padding-left: 10px;
     padding-right: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: black;
+    border-radius: 100px;
+    background-color: #FF3EB7
 }
 .icon-container span {
     font-size: 28px;
     margin-left: 5px;
     transition-duration: 0.3s;
+    text-decoration: none;
+    color: black;
 }
 .icon-container span:hover {
     background-color: #2f2f2f29;
@@ -127,8 +129,8 @@ body button {
 .sezione {
     margin: 5px;
     padding: 10px;
-    flex: 1 1 calc(100% / 6 - 10px);
-    max-width: calc(100% / 6 - 10px); 
+    flex: 1 1 calc(100% / 5 - 10px);
+    max-width: calc(100% / 5 - 10px); 
     box-sizing: border-box;
     border: solid 0.5vh #3888aa;
     border-radius: 100px;
@@ -331,10 +333,12 @@ hr {
     font-size: 1.5em;
     margin: 10px 0;
     font-weight: weight;
+    transition-duration: 0.3s;
 }
 
 .menu-nav a:hover {
-    text-decoration: underline;
+    background-color: black;
+    transition-duration: 0.3s;
 }
 
 p {
@@ -407,7 +411,7 @@ p {
     width: 17vw;
 }
 
-#goals{
+.goals{
     position: absolute;
     align-items: center;
     text-align: center;
@@ -415,7 +419,7 @@ p {
     margin-top: 70vh;
     background-color: #f8f8f87a;
     width: 94vw;
-    height: 90vh;
+    height: 100vh;
     border-radius: 4vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: fadeinup 0.3s ease-in-out 0s 1 normal;
@@ -433,68 +437,6 @@ p {
     background-color: white;
     border-radius: 4vw;
     border: solid 0.5vh #3888aa;
-}
-
-.goal{
-    width: 25vw;
-    height: 60vh;
-    background: white;
-    border-radius: 2.5vw;
-    margin-top: 5vh;
-    margin-left: 5vw;
-    border: solid 0.5vh #3888aa;
-}
-
-.goal p{
-    color: black;
-}
-
-.goal h3 {
-    margin-top: 5vh !important;
-    color: black;
-}
-
-
-#goal1 img{
-    position: absolute;
-    display: flex;
-    text-align: center;
-    align-content: center;
-    width: 15vw;
-    height: 15vw;
-    margin-left: 5vw;
-}
-
-#goal2 img{
-    position: absolute;
-    display: flex;
-    text-align: center;
-    align-content: center;
-    width: 15vw;
-    height: 15vw;
-    margin-left: 5vw;
-}
-
-#goal3 img{
-    position: absolute;
-    display: flex;
-    text-align: center;
-    align-content: center;
-    width: 15vw;
-    height: 15vw;
-    margin-left: 5vw;
-}
-
-#goal2{
-    position: absolute;
-    top: 10vh;
-    margin-left: 35vw;
-}
-
-#goal3{
-    position: absolute;
-    top: 10vh;
-    margin-left: 65vw;
 }
 
 @media screen and (orientation: portrait){
