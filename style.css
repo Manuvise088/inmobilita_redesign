@@ -382,7 +382,7 @@ p {
     width: 17vw;
 }
 
-.goals{
+#goals{
     position: absolute;
     align-items: center;
     text-align: center;
@@ -390,7 +390,7 @@ p {
     margin-top: 70vh;
     background-color: #f8f8f87a;
     width: 94vw;
-    height: 100vh;
+    height: 90vh;
     border-radius: 4vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -407,6 +407,68 @@ p {
     background-color: white;
     border-radius: 4vw;
     border: solid 0.5vh #3888aa;
+}
+
+.goal{
+    width: 25vw;
+    height: 60vh;
+    background: white;
+    border-radius: 2.5vw;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    border: solid 0.5vh #3888aa;
+}
+
+.goal p{
+    color: black;
+}
+
+.goal h3 {
+    margin-top: 5vh !important;
+    color: black;
+}
+
+
+#goal1 img{
+    position: absolute;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    width: 15vw;
+    height: 15vw;
+    margin-left: 5vw;
+}
+
+#goal2 img{
+    position: absolute;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    width: 15vw;
+    height: 15vw;
+    margin-left: 5vw;
+}
+
+#goal3 img{
+    position: absolute;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    width: 15vw;
+    height: 15vw;
+    margin-left: 5vw;
+}
+
+#goal2{
+    position: absolute;
+    top: 10vh;
+    margin-left: 35vw;
+}
+
+#goal3{
+    position: absolute;
+    top: 10vh;
+    margin-left: 65vw;
 }
 
 @media screen and (orientation: portrait){
