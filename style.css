@@ -1,3 +1,25 @@
+@keyframes fadeinup{
+    0%{
+        opacity: 0.7;
+        transform: translateY(3vh);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeinright{
+    0%{
+        opacity: 0.7;
+        transform: translateX(-3vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 :root{
     --blur-var:0;
 }
@@ -20,6 +42,7 @@ body {
     background-color: #16305d;
     overflow-x: hidden;
 }
+
 body button {
     font-family: 'National Park';
 }
@@ -99,6 +122,7 @@ body button {
     margin: auto;
     filter: blur(calc(var(--blur-var, 0) * 1px));
     box-sizing: border-box;
+    animation: fadeinright 0.5s linear 0s 1 normal;
 }
 .sezione {
     margin: 5px;
@@ -215,7 +239,7 @@ footer p {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     z-index: 9999;
-    color: white;
+    color: white; 
 }
 
 .fullscreen-menu.show {
@@ -342,6 +366,7 @@ p {
     height: 50vh;
     border-radius: 4vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeinup 0.3s linear 0s 1 normal;
 }
 
 #introduction{
@@ -393,6 +418,7 @@ p {
     height: 90vh;
     border-radius: 4vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeinup 0.3s ease-in-out 0s 1 normal;
 }
 
 #goals_title{
