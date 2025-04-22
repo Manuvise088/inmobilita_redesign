@@ -20,6 +20,13 @@
     }
 }
 
+@keyframes slideout{
+    100%{
+        opacity:0.3;
+        transform: translateX(-100vw);
+    }
+}
+
 :root{
     --blur-var:0;
 }
@@ -495,6 +502,10 @@ p {
     position: absolute;
     top: 10vh;
     margin-left: 65vw;
+}
+
+.slideout{
+    animation: slideout 1s linear 0s 1 normal;
 }
 
 @media screen and (orientation: portrait){
