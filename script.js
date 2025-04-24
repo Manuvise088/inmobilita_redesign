@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const footerMenuIcon = document.getElementById('footer-menu-icon');
     const fullscreenMenu = document.getElementById('fullscreen-menu');
     const closeMenuButton = document.getElementById('close-menu');
-    const ProjectButton = document.getElementById('project');
+    const ActivityButton = document.getElementById('activity');
 
     // Open menu
     footerMenuIcon.addEventListener('click', (e) => {
@@ -24,8 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.style.setProperty('--blur-var', valore);
     });
 
-    ProjectButton.addEventListener('click'), () => {
-        document.getElementById('what').className = 'slideout';
-        document.getElementById('goals').className = 'slideout';
-    }
+    ActivityButton.addEventListener('click', () => {
+        document.getElementById('what').style.animation = 'slideout 1s forwards 0s 1 normal';
+        document.getElementById('goals').style.animation = 'slideout 1s forwards 0s 1 normal';
+        document.getElementById('activity_div').style.animation = 'slidein 1s forwards 0s 1 normal';
+        document.getElementById('activity_div').style.visibility = 'visible';
+        document.getElementById('activity').style.opacity = '0.5';
+        document.getElementById('home').style.opacity = '1';
+    });    
 });
