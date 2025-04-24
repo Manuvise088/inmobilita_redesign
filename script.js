@@ -31,5 +31,5 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('activity_div').style.visibility = 'visible';
         document.getElementById('activity').style.opacity = '0.5';
         document.getElementById('home').style.opacity = '1';
-    });    
+    });
 });

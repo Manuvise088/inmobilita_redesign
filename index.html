@@ -14,9 +14,9 @@
     </head>
     <header>
         <div id="header-container">
-            <a href="index.html"><img class="logo" alt="logo" src="logo.png"></a>
-            <h1>INMOBILITÀ</h1>
-            <h2>🌎 Progetto di sostenibilità</h2>
+            <a href="index.html"><img class="logo" alt="logo" src="logo.png" id = 'inmob_logo'></a>
+            <h1 id = 'inmobilita'>INMOBILITÀ</h1>
+            <h2 id = 'inmob_parag'>🌎 Progetto di sostenibilità</h2>
             <div class="icon-container">
                 <span class="material-icons-outlined">info</span>
                 <span class="material-icons-outlined">call</span>
@@ -24,16 +24,16 @@
                 <a href="index_en.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAFVBMVEX///8AkkbOKzcAjz9otofeeoDNIS7QkpT1AAAAPklEQVRoge3MCREAIAADoPn2j2yDBfAgABnN2qnOnU3kcrlcLpfL5XK5XC6Xy+VyuVwul8vlcrlcLpfL/8ofekklvck8DdwAAAAASUVORK5CYII=" class="bandiera"></a>
             </div>
         </div>
-        <div class="sezioni-container">
-            <a class="sezione" href = 'index.html' id = 'home'><span class="material-icons-outlined">home</span>Home</a>
-            <a class="sezione" id = 'project'><span class="material-icons-outlined">info</span>Progetto</a>
-            <a class="sezione" id = 'activity'><span class="material-icons-outlined">campaign</span>Attività</a>
-            <a class="sezione" href="sezione.html"><span class="material-icons-outlined">handshake</span>Partner</a>
-            <a class="sezione" href="sezione.html"><span class="material-icons-outlined">people</span>Crediti</a>
-            <a class="sezione" href="sezione.html"><span class="material-icons-outlined">call</span>Contatti</a>
-        </div>
     </header>
     <body>
+        <div class="sezioni-container">
+          <a class="sezione" href = 'index.html' id = 'home'><span class="material-icons-outlined">home</span>Home</a>
+          <a class="sezione" id = 'project'><span class="material-icons-outlined">info</span>Progetto</a>
+          <a class="sezione" id = 'activity'><span class="material-icons-outlined">campaign</span>Attività</a>
+          <a class="sezione" href="sezione.html"><span class="material-icons-outlined">handshake</span>Partner</a>
+          <a class="sezione" href="sezione.html"><span class="material-icons-outlined">people</span>Crediti</a>
+          <a class="sezione" href="sezione.html"><span class="material-icons-outlined">call</span>Contatti</a>
+        </div>
         <div id="fullscreen-menu" class="fullscreen-menu">
             <div class="menu-header">
                 <div class="logo-container">
@@ -44,15 +44,7 @@
                     <span class="material-icons-outlined">close</span>
                 </button>
             </div>
-            <hr>
-            <nav class="menu-nav">
-                <a href = 'index.html' id = 'home'><span class="material-icons-outlined">home</span>Home</a>
-                <a id = 'project'><span class="material-icons-outlined">info</span>Progetto</a>
-                <a id = 'activity'><span class="material-icons-outlined">campaign</span>Attività</a>
-                <a href="partner.html"><span class="material-icons-outlined">handshake</span>Partner</a>
-                <a href="crediti.html"><span class="material-icons-outlined">people</span>Crediti</a>
-                <a href="contatti.html"><span class="material-icons-outlined">call</span>Contatti</a>
-            </nav>
+
             <p style="position: absolute; bottom: 10px; width: 100%; text-align: center; color: white;">Copyright 2025 Inmobilità - Piano Infinito</p>
         </div> 
 
@@ -84,6 +76,8 @@
 
         <div id = 'activity_div'>
             <h2 id = 'activity_title'>Attività</h2>
+            <h3 id = "first_year_title">Primo Anno</h3>
+            <h3 id = 'second_year_title'>Secondo Anno</h3>
             <div id="first_year" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -96,15 +90,17 @@
                     <img src="..." class="d-block w-100" alt="...">
                   </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#first_year" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#first_year" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
             </div>
+            
+            <div id = 'sep_line'></div>
 
             <div id="second_year" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -118,11 +114,11 @@
                     <img src="..." class="d-block w-100" alt="...">
                   </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#second_year" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#second_year" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
@@ -131,7 +127,6 @@
                  
     </body>
     <footer>
-        <p style="color: white">Copyright 2025 Inmobilità - Piano Infinito</p>
         <div class="navmenu_mobile">
             <nav class="navsez">
                 <a href="index.html"><span class="material-icons-outlined">home</span>Home</a>
