@@ -27,7 +27,7 @@
     </header>
     <body>
         <div class="sezioni-container">
-          <a class="sezione" href = 'index.html' id = 'home'><span class="material-icons-outlined">home</span>Home</a>
+          <a class="sezione" id = 'home' ><span class="material-icons-outlined">home</span>Home</a>
           <a class="sezione" id = 'project'><span class="material-icons-outlined">info</span>Progetto</a>
           <a class="sezione" id = 'activity'><span class="material-icons-outlined">campaign</span>Attività</a>
           <a class="sezione" href="sezione.html"><span class="material-icons-outlined">handshake</span>Partner</a>
@@ -44,18 +44,20 @@
                     <span class="material-icons-outlined">close</span>
                 </button>
             </div>
-
-            <p style="position: absolute; bottom: 10px; width: 100%; text-align: center; color: white;">Copyright 2025 Inmobilità - Piano Infinito</p>
         </div> 
 
-        <div id = "what">
-            <h2 id = "introduction">Introduzione</h2>
-            <p id = "intro-text">Il progetto IN-MOBILITÀ nasce con l’obiettivo di trasformare spazi urbani sottoutilizzati in luoghi vitali e funzionali, promuovendo la mobilità sostenibile. Il cuore del progetto si trova nell’unione tra la comunità scolastica — composta da studenti e insegnanti — e la rigenerazione degli spazi urbani. Il nostro approccio è semplice ma ambizioso: muovere luoghi immobili verso un futuro più sostenibile e accessibile per tutti. IN-MOBILITÀ è un progetto che vuole fare la differenza, coinvolgendo direttamente la scuola e la comunità locale in un processo di trasformazione che guarda al futuro, alla sostenibilità e al benessere collettivo. Un piccolo passo per una grande mobilità.
-            </p>
-            <img src="logo.png" id = "intro-img">
-        </div>
-
-        <div id = "goals">
+        <div id="what">
+          <div id="intro_content">
+              <h2 id="introduction">Introduzione</h2>
+              <div id="intro-layout">
+                  <p id="intro-text">Il progetto IN-MOBILITÀ nasce con l’obiettivo di trasformare spazi urbani sottoutilizzati in luoghi vitali e funzionali, promuovendo la mobilità sostenibile. Il cuore del progetto si trova nell’unione tra la comunità scolastica — composta da studenti e insegnanti — e la rigenerazione degli spazi urbani. Il nostro approccio è semplice ma ambizioso: muovere luoghi immobili verso un futuro più sostenibile e accessibile per tutti. IN-MOBILITÀ è un progetto che vuole fare la differenza, coinvolgendo direttamente la scuola e la comunità locale in un processo di trasformazione che guarda al futuro, alla sostenibilità e al benessere collettivo. Un piccolo passo per una grande mobilità.</p>
+                  <img id="img_body" src="body_img.jpg" alt="Progetto IN-MOBILITÀ">
+                  <img id="logo_body" src="logo.png" alt="Progetto IN-MOBILITÀ">
+              </div>
+          </div>
+          <hr class="separatore_1"> <!-- Placed directly under the "what" section -->
+      </div>
+      <div id = "goals">
             <h2 id = "goals_title">Obiettivi del progetto</h2>
             <div class="goal" id = "goal1">
                 <h3>Rigenerazione degli spazi per la mobilità sostenibile</h3>
@@ -73,7 +75,6 @@
                 <img src = "logo.png">
             </div>
         </div>
-
         <div id = 'activity_div'>
             <h2 id = 'activity_title'>Attività</h2>
             <h3 id = "first_year_title">Primo Anno</h3>
@@ -127,6 +128,7 @@
                  
     </body>
     <footer>
+      <span id="scrollToTop" class="material-icons-outlined">arrow_upward</span>
         <div class="navmenu_mobile">
             <nav class="navsez">
                 <a href="index.html"><span class="material-icons-outlined">home</span>Home</a>
