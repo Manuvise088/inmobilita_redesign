@@ -324,6 +324,10 @@ footer p {
     }
 }
 
+.invert{
+    filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg);
+}
+
 .menu-header {
     display: flex;
     justify-content: space-between;
@@ -575,26 +579,28 @@ p {
 
 #first_year{
     position: absolute;
-    margin-top: 10vh;
+    margin-top: 17vh;
     width: 40vw;
 }
 #second_year{
     position: absolute;
-    margin-top: 10vh;
-    margin-left: 53vw;
+    margin-top: 17vh;
+    margin-left: 52vw;
     width: 40vw;
 }
 
 #first_year_title{
     position: absolute;
+    text-align: center;
     margin-top: 10vh;
     width: 40vw;
     color: black;
 }
 #second_year_title{
     position: absolute;
+    text-align: center;
     margin-top: 10vh;
-    margin-left: 50vw;
+    margin-left: 52vw;
     width: 40vw;
     color: black;
 }
@@ -603,7 +609,7 @@ p {
     position: absolute;
     width:0.2vh;
     height: 35vh;
-    margin-left: 47vw;
+    margin-left: 46vw;
     margin-top: 8vh;
     background-color: black;
     z-index: 0;
