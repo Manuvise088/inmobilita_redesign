@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeMenuButton = document.getElementById('close-menu');
     const ActivityButton = document.getElementById('activity');
     const HomeButton = document.getElementById('home');
-
     // Open menu
     footerMenuIcon.addEventListener('click', (e) => {
         e.preventDefault();

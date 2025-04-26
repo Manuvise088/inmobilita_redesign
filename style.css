@@ -39,10 +39,15 @@
     }
     100%{
         opacity: 1;
+        visibility: visible;
         transform: translateX(0);
     }
 }
 #inmobilita{
+    margin-top: 1vh;
+}
+
+#inmob_parag{
     margin-top: 1vh;
 }
 #home{
@@ -540,47 +545,68 @@ p {
     text-align: center;
     margin-bottom: 2.5vh;
     font-size: 6vh;
+   
     color: #000000;
 }
 #activity_div{
     position: absolute;
     align-items: center;
     text-align: center;
-    margin-top: 4vh;
+    margin-top: 6vh;
     margin-left: 2vw;
     background-color: #f8f8f87a;
     width: 94vw;
-    height: 50vh;
-    border-radius: 4vw;
+    height: 59vh;
+    border-radius: 2vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding-top: 2vh;
     visibility: hidden;
+    color: black;
 }
 
 #activity_title{
-    position: relative;
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    margin-left: 2vw;
+    padding-top: 4vh;
+    margin-bottom: -6vh;
     color: black;
-    max-width: 47vw;
-    margin-left: 24.5vw;
-    padding-top: 1.5vh;
-    padding-bottom: 1.5vh;
-    background-color: white;
-    border-radius: 4vw;
-    border: solid 0.5vh #3888aa;
+    font-size: 6.5vh;
 }
 
 #first_year{
     position: absolute;
-    margin-top: 5vh;
+    margin-top: 10vh;
     width: 40vw;
 }
 #second_year{
     position: absolute;
-    margin-top: 5vh;
+    margin-top: 10vh;
+    margin-left: 53vw;
+    width: 40vw;
+}
+
+#first_year_title{
+    position: absolute;
+    margin-top: 10vh;
+    width: 40vw;
+    color: black;
+}
+#second_year_title{
+    position: absolute;
+    margin-top: 10vh;
     margin-left: 50vw;
     width: 40vw;
+    color: black;
+}
+
+#sep_line{
+    position: absolute;
+    width:0.2vh;
+    height: 35vh;
+    margin-left: 47vw;
+    margin-top: 8vh;
+    background-color: black;
+    z-index: 0;
 }
 
 @media screen and (orientation: portrait){
