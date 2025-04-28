@@ -69,15 +69,15 @@ h3{
     font-size: 1.5vw;
 }
 h1, h2, h3, h4, h5, h6, p {
-    color: white;
+    color: black;
 }
 body {
-    background-color: #d8d8d8;
     font-family: 'National Park';
     font-size: 1.75vh;
-    color: white;
-    background-color: #16305d;
+    color: black;
+    background: linear-gradient(to bottom,#4DCC8E,#FF3EB7) no-repeat;
     overflow-x: hidden;
+    min-height: 210vh; /*GRANDEZZA PAGINA*/
 }
 
 body button {
@@ -96,7 +96,7 @@ body button {
     top: 3vh;
     max-width: 12vh;
     border-radius: 100px;
-    background-color: white;
+    background-color: #FF3EB7;
     left: 6vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -104,7 +104,7 @@ body button {
     position: absolute;
     top: 3vh;
     left: 20vh;
-    font-size: 7vh;
+    font-size: 9vh;
 }
 #header-container h2 {
     position: absolute;
@@ -116,7 +116,7 @@ body button {
     position: absolute;
     top: 25px;
     right: 35px;
-    background-color: #ffffff;
+    background-color: #FF3EB7;
     padding-top: 2.1vh;
     padding-bottom: 2vh;
     padding-left: 2.1vh;
@@ -170,11 +170,10 @@ body button {
     flex: 1 1 calc(100% / 6 - 10px);
     max-width: calc(100% / 6 - 10px); 
     box-sizing: border-box;
-    border: solid 0.5vh rgb(56, 136, 170);
     border-radius: 100px;
     display: inline-flex;
     align-items: center;
-    background-color: #d8d8d8;
+    background-color: #FF3EB7;
     text-decoration: none;
     color: black;
     display: inline-flex;
@@ -187,11 +186,10 @@ body button {
 }
 
 .sezione:active {
-    background-color: #3c9dc9;
+    background-color: #FF3EB7;
     transform: scale(0.9);
-    color: white;
+    color: FF3EB7;
     font-weight: bold;
-    border-color: white;
 }
 
 @media screen and (max-width: 1280px) {
@@ -205,7 +203,7 @@ body button {
     left: 0;
     right: 0;
     width: 100%;
-    background-color: #204586;
+    background-color: #4DCC8E;
     border-top: solid 2px #ffffff;
     padding: 10px;
     display: flex;
@@ -237,7 +235,7 @@ body button {
     transition-duration: 0.3s;
 }
 .navsez span:hover {
-    background-color: rgb(34, 92, 162);
+    background-color: #4DCC8E;
     padding-right: 10px;
     padding-left: 10px;
     border-radius: 100px;
@@ -415,7 +413,7 @@ p {
 #intro_content {
     max-width: 97%; /* Limita la larghezza complessiva */
     margin: 0 auto; /* Centra orizzontalmente il contenitore */
-    background-color: white; /* Sfondo bianco */
+    background-color: #4DCC8E; /* Sfondo bianco */
     border-radius: 1vw; /* Angoli arrotondati */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombra per migliorare l'estetica */
     height: 55vh;
@@ -431,7 +429,7 @@ p {
 #intro-text{
     position: relative;
     color: black;
-    background-color: white;
+    background-color: #4DCC8E; 
     border-radius: 4vw;
     margin-top: -5vh;
     margin-left: 2vh;
@@ -490,6 +488,7 @@ p {
     margin-left: 2vw;
     position: absolute;
     top: 4vh;
+    padding-top: 4vh;
 }
 .card {
     background-color: #f9f9f9;
@@ -498,7 +497,7 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 30%;
     margin: 10px;
-    margin-top: 7vh;
+    margin-top: 17vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -653,17 +652,16 @@ p {
     height: 0.5vh; /* Sets a slim, clean line */
     background-color: #d8d8d8; /* Custom color */
     border: none; /* Removes the default border */
-    margin: 30px 0 0 0; /* Adds 30px space above the <hr> */
-    padding-bottom: 1vh;
-    border-radius: 100px;
-
+    margin: 4.5vh 0 0 0; /* Adds 30px space above the <hr> */
+    padding-bottom: 2vh;
+    border-radius: 10vh;
 }
 #scrollToTop {
     position: fixed;
     bottom: 2vh; /* Position at the bottom-right */
     right: 2vh;
-    background-color: #3888aa; /* Match your website theme */
-    color: #ffffff;
+    background-color: #FF3EB7;
+    color: black;
     padding: 1vh;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
