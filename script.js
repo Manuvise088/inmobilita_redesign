@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('what').style.animation = 'slideout 1s forwards 0s 1 normal';
         document.getElementById('goals').style.animation = 'slideout 1s forwards 0s 1 normal';
         document.getElementById('activity_div').style.animation = 'slidein 1s forwards 0s 1 normal';
+        document.getElementById('separatore_1').style.animation = 'slidein 1s forwards 0s 1 normal';
         document.getElementById('activity_div').style.visibility = 'visible';
         document.getElementById('activity').style.backgroundColor = '#3c9dc9';
         document.getElementById('activity').style.transform = 'scale(0.9)';
@@ -66,6 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('activity_div').style.animation = 'slideout 1s forwards 0s 1 normal';
             document.getElementById('what').style.animation = 'slidein 1s forwards 0s 1 normal';
             document.getElementById('goals').style.animation = 'slidein 1s forwards 0s 1 normal';
+            document.getElementById('separatore_1').style.animation = 'slideout 1s forwards 0s 1 normal';
+            document.getElementById('separatore_1').style.animation = 'slidein 1s forwards 0s 1 normal';
             HomeButton.classList.add('selected');
             HomeButton.style.pointerEvents = 'none';
             HomeButton.style.backgroundColor = '#3c9dc9';

@@ -60,7 +60,7 @@
           </div>
       </div>
 
-      <hr class="separatore_1"> <!-- Placed directly under the "what" section -->
+      <hr id="separatore_1"> <!-- Placed directly under the "what" section -->
 
       <div id = "goals">
         <div id="obiettivi_container">
@@ -84,16 +84,35 @@
         <div id = "mobile_obiettivi">
           <div class="obiettivi_content">
             <h2>Obiettivi</h2>
-            <div class="obiettivi_layout">
-              <p id="intro-text">Il progetto IN-MOBILITÀ nasce con l’obiettivo di trasformare spazi urbani sottoutilizzati in luoghi vitali e funzionali, promuovendo la mobilità sostenibile. Il cuore del progetto si trova nell’unione tra la comunità scolastica — composta da studenti e insegnanti — e la rigenerazione degli spazi urbani. Il nostro approccio è semplice ma ambizioso: muovere luoghi immobili verso un futuro più sostenibile e accessibile per tutti. IN-MOBILITÀ è un progetto che vuole fare la differenza, coinvolgendo direttamente la scuola e la comunità locale in un processo di trasformazione che guarda al futuro, alla sostenibilità e al benessere collettivo. Un piccolo passo per una grande mobilità.</p>
-              <img src="goals_svg.svg" id="logo_body">
+            <div id="obiettivi_carousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="..." class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="..." class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="..." class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#obiettivi_container_mobile" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon invert" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#first_year" data-bs-slide="next">
+                <span class="carousel-control-next-icon invert" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
         </div>
       </div>
+
+      <div id="separatore_2"></div>
       
       <div id = 'activity_div'>
-        <div id = 'intro_content'>
+        <div id = 'act_content'>
           <h2 id = 'activity_title'>Attività</h2>
           <h3 id = "first_year_title">Primo Anno</h3>
           <h3 id = 'second_year_title'>Secondo Anno</h3>
