@@ -697,7 +697,7 @@ p {
     }
     #goals {
         position: absolute;
-        margin-top: 43.5vh;
+        margin-top: 50vh;
         background-color: #f8f8f87a;
         width: 95%;
         margin-left: 1.5vh;
@@ -707,11 +707,9 @@ p {
         padding-top: 2vh;
         animation: fadeinup 0.3s linear 0s 1 normal;
     }
-    #obiettivi_container {
-        display: none;
-    }
     .separatore_1 {
-        margin-top: 3vh;
+        position: absolute; 
+        top: 67vh;
     }
     .obiettivi_content {
         background-color: white;
