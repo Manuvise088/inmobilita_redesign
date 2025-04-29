@@ -43,6 +43,7 @@
         transform: translateX(0);
     }
 }
+
 #inmobilita{
     margin-top: 1vh;
 }
@@ -50,9 +51,7 @@
 #inmob_parag{
     margin-top: 1vh;
 }
-#home{
-    opacity: 0.5;
-}
+
 :root{
     --blur-var:0;
 }
@@ -76,7 +75,7 @@ body {
     font-family: 'National Park';
     font-size: 1.75vh;
     color: white;
-    background-color: #16305d;
+    background-image: linear-gradient(to bottom, #4DCC8E, #FF3EB7);
     overflow-x: hidden;
 }
 
@@ -182,14 +181,12 @@ body button {
     flex: 1 1 calc(100% / 7 - 10px);
     max-width: calc(100% / 7 - 10px); 
     box-sizing: border-box;
-    border: solid 0.5vh rgb(56, 136, 170);
-    border-radius: 2vw;
+    border-radius: 1vw;
     display: inline-flex;
     align-items: center;
-    background-color: #d8d8d8;
+    background-color: #4DCC8E;
     text-decoration: none;
-    color: black;
-    display: inline-flex;
+    color: white;
     justify-content: center;
     gap: 2vh;
     transition-duration: 0.3s;
@@ -198,11 +195,35 @@ body button {
     opacity: 1;
 }
 
-.sezione:active {
-    background-color: #3c9dc9;
+.sezione:hover{
+    background-color: #FF3EB7;
     transform: scale(0.9);
-    color: white;
     font-weight: bold;
+    border : solid 0.5vh #FF3EB7;
+}
+
+.sezione_selezionata {
+    pointer-events : none;
+    opacity: 1; 
+    background-color : #FF3EB7;
+    transform : scale(0.9);
+    color : white;
+    border : solid 0.5vh white;
+    font-weight : bold;
+    border-color : white;
+}
+
+.sezione_precedente {
+    pointer-events : auto;
+    background-color : rgb(255, 148, 216); /* COLORE DI PROVA */
+    transform : none;
+    font-weight : 400;
+    border : solid 0.5vh rgb(255, 148, 216);
+    /*HomeButton.style.color = 'black';*/
+}
+
+.sezione:active {
+    background-color: #FF3EB7;
     border-color: white;
 }
 
@@ -755,7 +776,7 @@ p {
 #separatore_1 {
     opacity: 1 !important;
     height: 1vh; /* Sets a slim, clean line */
-    background-color: #8290a8; /* Custom color */
+    background-color: #f8f8f87a;
     border: none; /* Removes the default border */
     margin: 94vh 0 0 2.5vw; /* Adds 30px space above the <hr> */
     border-radius: 100px;
@@ -766,7 +787,7 @@ p {
     position: fixed;
     bottom: 2vh; /* Position at the bottom-right */
     right: 2vh;
-    background-color: #3888aa; /* Match your website theme */
+    background-color: #4DCC8E;
     color: #ffffff;
     padding: 1vh;
     border-radius: 50%;
