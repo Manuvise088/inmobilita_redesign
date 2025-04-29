@@ -179,11 +179,11 @@ body button {
 .sezione {
     margin: 0.4vh;
     padding: 2vh;
-    flex: 1 1 calc(100% / 6 - 10px);
-    max-width: calc(100% / 6 - 10px); 
+    flex: 1 1 calc(100% / 7 - 10px);
+    max-width: calc(100% / 7 - 10px); 
     box-sizing: border-box;
     border: solid 0.5vh rgb(56, 136, 170);
-    border-radius: 100px;
+    border-radius: 2vw;
     display: inline-flex;
     align-items: center;
     background-color: #d8d8d8;
@@ -513,7 +513,7 @@ p {
 }
 #goals {
     position: absolute;
-    margin-top: 71vh;
+    margin-top: 1vh;
     margin-left: 2vw;
     background-color: #f8f8f87a;
     width: 95%;
@@ -697,7 +697,7 @@ p {
     }
     #goals {
         position: absolute;
-        margin-top: 50vh;
+        margin-top: 43vh;
         background-color: #f8f8f87a;
         width: 95%;
         margin-left: 1.5vh;
@@ -708,8 +708,9 @@ p {
         animation: fadeinup 0.3s linear 0s 1 normal;
     }
     .separatore_1 {
-        position: absolute; 
-        top: 67vh;
+        position: absolute;
+        margin-top: 40.5vh !important;
+        margin-left: 2vw !important;
     }
     .obiettivi_content {
         background-color: white;
@@ -733,12 +734,12 @@ p {
     }
 }
 .separatore_1 {
-    width: 100%; /* Matches the width of the #what container */
     height: 0.5vh; /* Sets a slim, clean line */
     background-color: #d8d8d8; /* Custom color */
     border: none; /* Removes the default border */
-    margin: 30px 0 0 0; /* Adds 30px space above the <hr> */
+    margin: 90vh 0 0 3.5vh; /* Adds 30px space above the <hr> */
     border-radius: 100px;
+    max-width: 95%;
 
 }
 #scrollToTop {
