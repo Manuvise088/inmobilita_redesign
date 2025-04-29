@@ -165,7 +165,7 @@ body button {
     justify-content: center;
     flex-wrap: wrap;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 100px;
+    border-radius: 2vw;
     left: 0;
     right: 0;
     margin: auto;
@@ -414,7 +414,7 @@ p {
 #what{
     position: absolute;
     margin-top: 6vh;
-    margin-left: 2vw;
+    margin-left: 2.5vw;
     background-color: #f8f8f87a;
     width: 95%;
     height: 60vh;
@@ -514,7 +514,7 @@ p {
 #goals {
     position: absolute;
     margin-top: 1vh;
-    margin-left: 2vw;
+    margin-left: 2.5vw;
     background-color: #f8f8f87a;
     width: 95%;
     height: 110vh;
@@ -737,7 +737,7 @@ p {
     height: 0.5vh; /* Sets a slim, clean line */
     background-color: #d8d8d8; /* Custom color */
     border: none; /* Removes the default border */
-    margin: 90vh 0 0 3.5vh; /* Adds 30px space above the <hr> */
+    margin: 90vh 0 0 2.5vw; /* Adds 30px space above the <hr> */
     border-radius: 100px;
     max-width: 95%;
 
