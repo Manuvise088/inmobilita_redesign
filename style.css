@@ -75,7 +75,7 @@ body {
     font-family: 'National Park';
     font-size: 1.75vh;
     color: white;
-    background-image: linear-gradient(to bottom, #4DCC8E, #FF3EB7);
+    background-image: linear-gradient(to bottom, #3ba974, #c52e8e);
     overflow-x: hidden;
 }
 
@@ -196,16 +196,16 @@ body button {
 }
 
 .sezione:hover{
-    background-color: #FF3EB7;
+    background-color: #cf3295;
     transform: scale(0.9);
     font-weight: bold;
-    border : solid 0.5vh #FF3EB7;
+    border : solid 0.5vh #ffffff;
 }
 
 .sezione_selezionata {
     pointer-events : none;
     opacity: 1; 
-    background-color : #FF3EB7;
+    background-color : #ca2d91;
     transform : scale(0.9);
     color : white;
     border : solid 0.5vh white;
@@ -476,7 +476,6 @@ p {
 #intro-text{
     position: relative;
     color: black;
-    background-color: white;
     border-radius: 4vw;
     margin-left: 2vh;
     padding-left: 1vw;
@@ -486,6 +485,21 @@ p {
     padding-bottom: 5vh;
     font-size: 2.5vh;
     max-width: 55%;
+}
+
+#intro-mobile{
+    position: relative;
+    color: black;
+    border-radius: 4vw;
+    margin-left: 2vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-top: 5vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    font-size: 2.5vh;
+    max-width: 55%;
+    visibility: hidden;
 }
 
 #img_body {
@@ -695,7 +709,7 @@ p {
     #what{
         top: 12vh;
         width: 95%;
-        height: 47.8vh;
+        height: 90vh !important;
         align-items: center;
         margin-left: 1.5vh;
         border-radius: 3vh;
@@ -711,14 +725,12 @@ p {
         display: none;
     }
     #intro-text{
-        font-size: 1.5vh;
-        display: flex;
-        align-items: left;
-        text-align: left;
-        margin-top: 6vh;
-        margin-left: 5vw;
-        max-width: 80%;
-        padding-top: 4vh;
+        visibility: hidden !important;
+    }
+    #intro-mobile{
+        position: absolute;
+        top: 5vh;
+        visibility: visible !important;
     }
     #intro_content {
         height: auto;

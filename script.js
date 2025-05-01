@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Restore the Home button state and its icon
         HomeButton.classList.remove('selected');
         HomeButton.classList.remove('sezione_selezionata');
-        HomeButton.classList.add('sezione_precedente');
 
         const homeIcon = HomeButton.querySelector('.material-icons, .material-icons-outlined');
         if (homeIcon) {
@@ -68,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             ActivityButton.classList.remove('selected');
             ActivityButton.classList.remove('sezione_selezionata');
-            ActivityButton.classList.add('sezione_precedente');
 
             const activityIcon = ActivityButton.querySelector('.material-icons, .material-icons-outlined');
             if (activityIcon) {
