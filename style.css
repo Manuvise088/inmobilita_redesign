@@ -763,6 +763,7 @@ p {
     border-radius: 20px;
     padding: 20px;
     background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #organization_partner{
@@ -777,6 +778,7 @@ p {
     border-radius: 20px;
     padding: 20px;
     background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #project_partner{
@@ -791,6 +793,7 @@ p {
     border-radius: 20px;
     padding: 20px;
     background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #institutional_partner{
@@ -806,6 +809,7 @@ p {
     border-radius: 20px;
     padding: 20px;
     background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 640px){
