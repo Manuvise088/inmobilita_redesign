@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fullscreenMenu = document.getElementById('fullscreen-menu');
     const closeMenuButton = document.getElementById('close-menu');
     const ActivityButton = document.getElementById('activity');
+    const PartnerButton = document.getElementById('partner');
     const HomeButton = document.getElementById('home');
 
     // Set Home button as default
@@ -29,30 +30,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     ActivityButton.addEventListener('click', () => {
-        document.getElementById('what').style.animation = 'slideout 1s forwards 0s 1 normal';
-        document.getElementById('goals').style.animation = 'slideout 1s forwards 0s 1 normal';
-        document.getElementById('activity_div').style.animation = 'slidein 1s forwards 0s 1 normal';
-        document.getElementById('activity_div').style.visibility = 'visible';
-        
         // Set Activity button as new default
         ActivityButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         ActivityButton.classList.remove('sezione_precedente');
         ActivityButton.classList.add('sezione_selezionata');
 
-        // Restore the Home button state and its icon
-        HomeButton.classList.remove('selected');
-        HomeButton.classList.remove('sezione_selezionata');
+        if(HomeButton.classList.contains('selected')){
+            document.getElementById('what').style.animation = 'slideout 1s forwards 0s 1 normal';
+            document.getElementById('goals').style.animation = 'slideout 1s forwards 0s 1 normal';
+            HomeButton.classList.remove('selected');
+            HomeButton.classList.remove('sezione_selezionata');
 
-        const homeIcon = HomeButton.querySelector('.material-icons, .material-icons-outlined');
-        if (homeIcon) {
-            homeIcon.classList.remove('material-icons');
-            homeIcon.classList.add('material-icons-outlined');
+            const homeIcon = HomeButton.querySelector('.material-icons, .material-icons-outlined');
+            if (homeIcon) {
+                homeIcon.classList.remove('material-icons');
+                homeIcon.classList.add('material-icons-outlined');
+            }
         }
+        else if (PartnerButton.classList.contains('selected')){
+            document.getElementById('partner_div').style.animation = 'slideout 1s forwards 0s 1 normal';
+            PartnerButton.classList.remove('selected');
+            PartnerButton.classList.remove('sezione_selezionata');
+            const partnerIcon = PartnerButton.querySelector('.material-icons, .material-icons-outlined');
+            if (partnerIcon) {
+                partnerIcon.classList.remove('material-icons');
+                partnerIcon.classList.add('material-icons-outlined');
+            }
+        }
+        document.getElementById('activity_div').style.animation = 'slidein 1s forwards 0s 1 normal';
+        document.getElementById('activity_div').style.visibility = 'visible';
     });
 
     HomeButton.addEventListener('click', () => {
         if (!HomeButton.classList.contains('selected')) {
-            document.getElementById('activity_div').style.animation = 'slideout 1s forwards 0s 1 normal';
+            if(ActivityButton.classList.contains('selected')){
+                document.getElementById('activity_div').style.animation = 'slideout 1s forwards 0s 1 normal';
+                ActivityButton.classList.remove('selected');
+                ActivityButton.classList.remove('sezione_selezionata');
+                const activityIcon = ActivityButton.querySelector('.material-icons, .material-icons-outlined');
+                if (activityIcon) {
+                    activityIcon.classList.remove('material-icons');
+                    activityIcon.classList.add('material-icons-outlined');
+                }
+            }
+            else if(PartnerButton.classList.contains('selected')){
+                document.getElementById('partner_div').style.animation = 'slideout 1s forwards 0s 1 normal';
+                PartnerButton.classList.remove('selected');
+                PartnerButton.classList.remove('sezione_selezionata');
+                const partnerIcon = PartnerButton.querySelector('.material-icons, .material-icons-outlined');
+                if (partnerIcon) {
+                    partnerIcon.classList.remove('material-icons');
+                    partnerIcon.classList.add('material-icons-outlined');
+                }
+            }
+
             document.getElementById('what').style.animation = 'slidein 1s forwards 0s 1 normal';
             document.getElementById('goals').style.animation = 'slidein 1s forwards 0s 1 normal';
             HomeButton.classList.add('selected');
@@ -64,17 +95,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 homeIcon.classList.remove('material-icons-outlined');
                 homeIcon.classList.add('material-icons');
             }
+        }
+    });
 
+    PartnerButton.addEventListener('click', () =>{
+        // Set Activity button as new default
+        PartnerButton.classList.add('selected'); // Add 'selected' class to indicate it's active
+        PartnerButton.classList.remove('sezione_precedente');
+        PartnerButton.classList.add('sezione_selezionata');
+
+        if(HomeButton.classList.contains('selected')){
+            document.getElementById('what').style.animation = 'slideout 1s forwards 0s 1 normal';
+            document.getElementById('goals').style.animation = 'slideout 1s forwards 0s 1 normal';
+            HomeButton.classList.remove('selected');
+            HomeButton.classList.remove('sezione_selezionata');
+
+            const homeIcon = HomeButton.querySelector('.material-icons, .material-icons-outlined');
+            if (homeIcon) {
+                homeIcon.classList.remove('material-icons');
+                homeIcon.classList.add('material-icons-outlined');
+            }
+        }
+        else if (ActivityButton.classList.contains('selected')){
+            document.getElementById('activity_div').style.animation = 'slideout 1s forwards 0s 1 normal';
             ActivityButton.classList.remove('selected');
             ActivityButton.classList.remove('sezione_selezionata');
-
             const activityIcon = ActivityButton.querySelector('.material-icons, .material-icons-outlined');
             if (activityIcon) {
                 activityIcon.classList.remove('material-icons');
                 activityIcon.classList.add('material-icons-outlined');
             }
         }
-    });
+        document.getElementById('partner_div').style.animation = 'slidein 1s forwards 0s 1 normal';
+        document.getElementById('partner_div').style.visibility = 'visible';
+    })
 
     // Scroll to Top functionality
     const scrollToTopButton = document.getElementById("scrollToTop");
