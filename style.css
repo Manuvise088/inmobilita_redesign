@@ -706,7 +706,7 @@ p {
 
 #separatore_1 {
     opacity: 1 !important;
-    height: 1vh; /* Sets a slim, clean line */
+    height: 2vh; /* Sets a slim, clean line */
     background-color: #f8f8f87a;
     border: none; /* Removes the default border */
     margin: 94vh 0 0 2.5vw; /* Adds 30px space above the <hr> */
@@ -740,11 +740,11 @@ p {
     position: absolute;
     align-items: center;
     text-align: center;
-    top: 33.5vh;
-    margin-left: 2vw;
+    top: 35vh;
+    margin-left: 2.5vw;
     background-color: #f8f8f87a;
     width: 94vw;
-    height: 80vh;
+    height: 95vh;
     border-radius: 2vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding-top: 2vh;
@@ -753,56 +753,56 @@ p {
 }
 
 #school_partner{
-    display: flex;
+    position: absolute;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 15px;
     height: 40vh;
-    max-width: 45%;
+    width: 45%;
     margin-left: 1.5vw;
-    margin-top: 1vh;
     border-radius: 20px;
     padding: 20px;
     background-color: white;
 }
 
 #organization_partner{
-    display: flex;
+    position: absolute;
     justify-content: space-between;
     flex-wrap: wrap;
+    left: 0;
     gap: 15px;
     height: 40vh;
-    max-width: 45%;
-    margin-left: 55vw;
-    margin-top: 1vh;
+    width: 45vw;
+    margin-left: 47vw;
     border-radius: 20px;
     padding: 20px;
     background-color: white;
 }
 
-#school_partner{
-    display: flex;
+#project_partner{
+    position: absolute;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 15px;
     height: 20vh;
-    max-width: 97%;
-    margin-left: 55vw;
+    width: 97%;
     margin-top: 46vh;
+    margin-left: 1.5vw;
     border-radius: 20px;
     padding: 20px;
     background-color: white;
 }
 
 #institutional_partner{
+    position: absolute;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 15px;
     height: 20vh;
-    max-width: 97%;
-    margin-left: 55vw;
-    margin-top: 46vh;
+    width: 97%;
+    margin-left: 1.5vw;
+    margin-top: 70vh;
     border-radius: 20px;
     padding: 20px;
     background-color: white;

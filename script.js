@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ActivityButton.addEventListener('click', () => {
         // Set Activity button as new default
+        document.getElementById('separatore_1').style.marginTop = "94vh";
         ActivityButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         ActivityButton.classList.remove('sezione_precedente');
         ActivityButton.classList.add('sezione_selezionata');
@@ -63,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     HomeButton.addEventListener('click', () => {
         if (!HomeButton.classList.contains('selected')) {
+            document.getElementById('separatore_1').style.marginTop = "94vh";
             if(ActivityButton.classList.contains('selected')){
                 document.getElementById('activity_div').style.animation = 'slideout 1s forwards 0s 1 normal';
                 ActivityButton.classList.remove('selected');
@@ -103,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         PartnerButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         PartnerButton.classList.remove('sezione_precedente');
         PartnerButton.classList.add('sezione_selezionata');
+        document.getElementById('separatore_1').style.marginTop = "128vh";
 
         if(HomeButton.classList.contains('selected')){
             document.getElementById('what').style.animation = 'slideout 1s forwards 0s 1 normal';
