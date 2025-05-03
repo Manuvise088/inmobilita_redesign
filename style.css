@@ -798,18 +798,40 @@ p {
 
 #institutional_partner{
     position: absolute;
-    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 15px;
     height: 20vh;
     width: 97%;
-    margin-left: 1.5vw;
     margin-top: 70vh;
+    margin-left: 1.5vw;
     border-radius: 20px;
     padding: 20px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#partner_div h3{
+    text-align: center;
+    color:black;
+    font-size: 4vh;
+}
+
+#partner_div p{
+    text-align: center;
+    color: black;
+    font-size: 2.5vh;
+}
+
+#project_partner p{
+    margin-top: 3vh;
+}
+
+#school_partner p{
+    margin-top: 5vh;
+}
+
+#organization_partner p{
+    margin-top: 3vh;
 }
 
 @media screen and (max-width: 640px){
