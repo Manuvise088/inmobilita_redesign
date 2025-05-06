@@ -842,7 +842,7 @@ p {
     margin-top: 3vh;
 }
 
-#why{
+#webapp_div{
     position: absolute;
     align-items: center;
     text-align: center;
@@ -857,6 +857,17 @@ p {
     visibility: hidden;
     color: black;
 }
+
+#webapp_container{
+    max-width: 97%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 1vw;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    height: 55vh;
+    margin-top: 0.5vh;
+}
+
 @media screen and (max-width: 640px){
     #what{
         top: 12vh;
