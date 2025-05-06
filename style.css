@@ -294,6 +294,15 @@ footer p {
     #scrollToTop {
         margin-bottom: 10vh;
     }
+    .logo {
+        max-width: 6vh;
+        margin-bottom: none;
+        position: absolute;
+        left: 2vh;
+    }
+    #inmobilita {
+        font-size: 2vh;
+    }
 }
 @media screen and (min-width: 1281px) {
     .navmenu_mobile {
