@@ -211,9 +211,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Scroll to Top functionality
-    document.addEventListener("DOMContentLoaded", function () {
-        const scrollToTopButton = document.getElementById("scrollToTop");
-    
+    const scrollToTopButton = document.getElementById("scrollToTop");
+
+    // Check if the button exists in the DOM to avoid errors
+    if (scrollToTopButton) {
+        // Handle scroll events
         window.addEventListener("scroll", function () {
             if (window.scrollY > 300) {
                 scrollToTopButton.style.display = "block";
@@ -221,15 +223,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrollToTopButton.style.display = "none";
             }
         });
-    
+
+        // Handle click events for the button to scroll back to top
         scrollToTopButton.addEventListener("click", function () {
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
         });
-    });
-    
+    }
+
+
     const sezioni = document.querySelectorAll('.sezione');
 
     sezioni.forEach(sezione => {
