@@ -339,7 +339,7 @@ footer p {
     }
     .icon-container {
         position: absolute;
-        top: 4.5vh;
+        top: 3vh;
         right: 3vh;
         background-color: #ffffff;
         padding-top: 2.1vh;
@@ -813,7 +813,11 @@ p {
 #mobile_obiettivi {
     display: none;
 }
-
+@media screen and (max-width: 640px) {
+    #mobile_obiettivi {
+        display: flex;
+    }
+}
 #partner_div{
     position: absolute;
     align-items: center;
@@ -846,6 +850,7 @@ p {
     padding: 20px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #d8ffe7;
 }
 
 #organization_partner{
@@ -861,6 +866,7 @@ p {
     padding: 20px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #d8ffe7;
 }
 
 #project_partner{
@@ -876,6 +882,7 @@ p {
     padding: 20px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #d8ffe7;
 }
 
 #institutional_partner{
@@ -889,17 +896,17 @@ p {
     margin-left: 1.5vw;
     border-radius: 20px;
     padding: 20px;
-    background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #d8ffe7;
 }
 #partner_div h3{
-    text-align: center;
+    text-align: left;
     color:black;
     font-size: 4vh;
 }
 
 #partner_div p{
-    text-align: center;
+    text-align: left;
     color: black;
     font-size: 2.5vh;
 }
