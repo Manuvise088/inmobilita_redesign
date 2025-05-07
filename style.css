@@ -995,9 +995,9 @@ p {
     #what{
         top: 8vh;
         width: 95%;
-        height: 90vh !important;
+        min-height: 65vh !important;
         align-items: center;
-        margin-left: 1.5vh;
+        margin-left: 2vw;
         border-radius: 3vh;
     }
     #obiettivi_container {
@@ -1019,7 +1019,7 @@ p {
         visibility: visible !important;
     }
     #intro_content {
-        height: auto;
+        min-height: 60vh;
         border-radius: 3vh;
         width: 93%;
     }
@@ -1034,10 +1034,10 @@ p {
     }
     #goals {
         position: absolute;
-        margin-top: 44vh;
+        margin-top: 60vh;
         background-color: #f8f8f87a;
         width: 95%;
-        margin-left: 1.5vh;
+        margin-left: 2vw;
         height: 70vh;
         border-radius: 3vh;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -1046,7 +1046,7 @@ p {
     }
     #separatore_1 {
         position: absolute;
-        top: 47.5vh;
+        top: 63vh;
         margin-top: 20vh !important;
         margin-left: 2vw !important;
     }
@@ -1055,8 +1055,8 @@ p {
         width: 93%;
         align-items: center;
         margin-left: 2vh;
-        max-height: 70vh !important;
-        border-radius: 3vh;
+        height: 65vh !important;
+        border-radius: 3.5vh;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     .obiettivi_content h2 {
@@ -1070,6 +1070,13 @@ p {
         height: auto;
         border-radius: 3vh;
         width: 93%;
+    }
+    #obiettivi_carousel{
+        margin-top: 25vh;
+    }
+
+    #navmenu_mobile{
+        position:fixed !important;
     }
 }
 #copyright {
