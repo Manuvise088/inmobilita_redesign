@@ -9,10 +9,10 @@
     }
 }
 
-@keyframes fadeinright{
+@keyframes fadeinleft{
     0%{
         opacity: 0.7;
-        transform: translateX(-3vw);
+        transform: translateX(3vw);
     }
     100%{
         opacity: 1;
@@ -255,14 +255,18 @@ body button {
     left: 0;
     right: 0;
     width: 100%;
-    background-color: #502086;
+    background-color: #00000060;
     border-top: solid 2px #ffffff;
-    padding: 10px;
+    padding: 2vh;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    border-top-right-radius: 2vh;
+    border-top-left-radius: 2vh;
 }
 
 .navsez {
@@ -287,7 +291,7 @@ body button {
     transition-duration: 0.3s;
 }
 .navsez span:hover {
-    background-color: rgb(148, 80, 212);
+    background-color: rgb(79, 36, 119);
     padding-right: 10px;
     padding-left: 10px;
     border-radius: 100px;
@@ -307,11 +311,68 @@ footer p {
     #scrollToTop {
         margin-bottom: 10vh;
     }
+    #what {
+        top: 15vh;
+        left: -0.5vh;
+        padding-bottom: 2vh;
+    }
+    .logo {
+        max-width: 9vh;
+        margin-bottom: none;
+        position: absolute;
+        left: 4vh;
+    }
+    #header-container h1 {
+        font-size: 4.5vh;
+        position: absolute;
+        top: 2vh;
+        left: 15vh;
+    }
+    #header-container h2 {
+        font-size: 2.5vh;
+        position: absolute;
+        top: 8vh;
+        left: 15vh;
+    }
+    #obiettivi_container {
+        display: none;
+    }
+    .icon-container {
+        position: absolute;
+        top: 4.5vh;
+        right: 3vh;
+        background-color: #ffffff;
+        padding-top: 2.1vh;
+        padding-bottom: 2vh;
+        padding-left: 2.1vh;
+        padding-right: 2.1vh;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        color: black;
+        border-radius: 2vh;
+        display: inline-flex;
+    }
+}
+@media screen and (min-width: 1281px) {
+    .navmenu_mobile {
+        display: none;
+    }
+}
+@media screen and (max-width: 640px) {
+    .icon-container {
+        display: none;
+    }
     .logo {
         max-width: 9vh;
         margin-bottom: none;
         position: absolute;
         left: 2vh;
+    }
+    #what {
+        max-height: 50vh;
+        left: 0.5vh;
+    }
+    #intro-layout {
+        max-height: 36vh;
     }
     #header-container h1 {
         font-size: 4.5vh;
@@ -325,26 +386,6 @@ footer p {
         top: 8vh;
         left: 12vh;
     }
-    #obiettivi_container {
-        display: none;
-    }
-}
-@media screen and (min-width: 1281px) {
-    .navmenu_mobile {
-        display: none;
-    }
-}
-@media screen and (max-width: 640px) {
-    .icon-container {
-        display: none;
-    }
-    #what {
-        max-height: 50vh;
-    }
-    #intro-layout {
-        max-height: 36vh;
-    }
-
 }
 .fullscreen-menu {
     position: fixed;
@@ -500,7 +541,7 @@ p {
     border-radius: 1vw;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     height: 55vh;
-    margin-top: 0.5vh;
+    margin-top: 0.2vh;
 }
 #act_content {
     max-width: 97%;
@@ -750,7 +791,6 @@ p {
     margin: 94vh 0 0 2.5vw; /* Adds 30px space above the <hr> */
     border-radius: 100px;
     max-width: 95%;
-
 }
 #scrollToTop {
     position: fixed;
@@ -763,7 +803,7 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 6vh;
     z-index: 999;
-    animation: fadeinup 0.2s linear 0s 1 normal;
+    animation: fadeinleft 0.2s linear 0s 1 normal;
     cursor: pointer;
     transition-duration: 0.3s;
 }
@@ -999,7 +1039,8 @@ p {
     }
     #separatore_1 {
         position: absolute;
-        margin-top: 40.5vh !important;
+        top: 47.5vh;
+        margin-top: 20vh !important;
         margin-left: 2vw !important;
     }
     .obiettivi_content {
@@ -1027,4 +1068,29 @@ p {
 #copyright {
     color: white;
     font-size: 2.5vh;
+}
+@media screen and (max-width: 1280px) {
+    #separatore_1 {
+        opacity: 1 !important;
+        height: 2vh; /* Sets a slim, clean line */
+        background-color: #f8f8f87a;
+        border: none; /* Removes the default border */
+        margin: 74vh 0 -1vh 2.5vw; /* Adds 30px space above the <hr> */
+        border-radius: 100px;
+        max-width: 95%;
+    }
+    #copyright {
+        padding-bottom: 100vh;
+    }
+}
+@media screen and (max-width: 640px) {
+        #separatore_1 {
+            opacity: 1 !important;
+            height: 2vh; /* Sets a slim, clean line */
+            background-color: #f8f8f87a;
+            border: none; /* Removes the default border */
+            margin: 94vh 0 0 2.5vw; /* Adds 30px space above the <hr> */
+            border-radius: 100px;
+            max-width: 95%;
+        }
 }
