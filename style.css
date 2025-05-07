@@ -295,13 +295,22 @@ footer p {
         margin-bottom: 10vh;
     }
     .logo {
-        max-width: 6vh;
+        max-width: 9vh;
         margin-bottom: none;
         position: absolute;
         left: 2vh;
     }
-    #inmobilita {
-        font-size: 2vh;
+    #header-container h1 {
+        font-size: 4.5vh;
+        position: absolute;
+        top: 2vh;
+        left: 12vh;
+    }
+    #header-container h2 {
+        font-size: 2.5vh;
+        position: absolute;
+        top: 8vh;
+        left: 12vh;
     }
 }
 @media screen and (min-width: 1281px) {
