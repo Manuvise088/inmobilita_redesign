@@ -158,6 +158,19 @@ body button {
     transition-duration: 0.3s;
     transform: scale(0.9);
 }
+#obiettivi_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    height: 105vh;
+    max-width: 97%;
+    margin-left: 1.5vw;
+    margin-top: 1vh;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: white;
+}
 .sezioni-container {
     position: absolute;
     top: 18vh;
@@ -242,7 +255,7 @@ body button {
     left: 0;
     right: 0;
     width: 100%;
-    background-color: #204586;
+    background-color: #502086;
     border-top: solid 2px #ffffff;
     padding: 10px;
     display: flex;
@@ -274,7 +287,7 @@ body button {
     transition-duration: 0.3s;
 }
 .navsez span:hover {
-    background-color: rgb(34, 92, 162);
+    background-color: rgb(148, 80, 212);
     padding-right: 10px;
     padding-left: 10px;
     border-radius: 100px;
@@ -312,6 +325,9 @@ footer p {
         top: 8vh;
         left: 12vh;
     }
+    #obiettivi_container {
+        display: none;
+    }
 }
 @media screen and (min-width: 1281px) {
     .navmenu_mobile {
@@ -322,6 +338,13 @@ footer p {
     .icon-container {
         display: none;
     }
+    #what {
+        max-height: 50vh;
+    }
+    #intro-layout {
+        max-height: 36vh;
+    }
+
 }
 .fullscreen-menu {
     position: fixed;
@@ -516,14 +539,14 @@ p {
     position: relative;
     color: black;
     border-radius: 4vw;
-    margin-left: 2vh;
+    margin-left: 4vh;
     padding-left: 1vw;
     padding-right: 1vw;
     margin-top: 5vh;
     padding-top: 5vh;
     padding-bottom: 5vh;
     font-size: 2.5vh;
-    max-width: 55%;
+    max-width: 85%;
     visibility: hidden;
 }
 
@@ -649,20 +672,6 @@ p {
     font-size: 2.5vh;
 }
 
-#obiettivi_container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
-    height: 105vh;
-    max-width: 97%;
-    margin-left: 1.5vw;
-    margin-top: 1vh;
-    border-radius: 20px;
-    padding: 20px;
-    background-color: white;
-}
-
 #goals_title {
     text-align: center;
     margin-bottom: 2.5vh;
@@ -780,7 +789,11 @@ p {
     visibility: hidden;
     color: black;
 }
-
+@media screen and (min-width: 641px) and (max-width: 1280px) {
+    #mobile_obiettivi {
+        display: flex;
+    }
+}
 #school_partner{
     position: absolute;
     justify-content: space-between;
@@ -933,7 +946,7 @@ p {
 }
 @media screen and (max-width: 640px){
     #what{
-        top: 12vh;
+        top: 8vh;
         width: 95%;
         height: 90vh !important;
         align-items: center;
@@ -974,7 +987,7 @@ p {
     }
     #goals {
         position: absolute;
-        margin-top: 43vh;
+        margin-top: 44vh;
         background-color: #f8f8f87a;
         width: 95%;
         margin-left: 1.5vh;
