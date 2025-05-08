@@ -451,20 +451,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check if the button exists in the DOM to avoid errors
     if (scrollToTopButton) {
         // Handle scroll events
-        window.addEventListener("scroll", function () {
+        window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
                 scrollToTopButton.style.display = "block";
             } else {
                 scrollToTopButton.style.display = "none";
+                scrollToTopButton.classList.remove('scrollToTop_scrolling');
             }
         });
 
         // Handle click events for the button to scroll back to top
-        scrollToTopButton.addEventListener("click", function () {
+        scrollToTopButton.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
+            //scrollToTopButton.style.background_color = "#faaacd";
+            scrollToTopButton.classList.add('scrollToTop_scrolling');
         });
     }
 
