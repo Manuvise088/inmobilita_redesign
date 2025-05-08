@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const ActivityMob = document.getElementById('activity_mob');
     const HomeMob = document.getElementById('home_mob');
     const WebappMob = document.getElementById('webapp_mob');
+    const CreditsButton = document.getElementById('credits');
 
     // Set Home button as default
     HomeButton.classList.add('selected'); // Add 'selected' class to indicate it's active
@@ -72,6 +73,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 webappIcon.classList.add('material-icons-outlined');
             }
         }
+        else if (CreditsButton.classList.contains('selected')){
+            document.getElementById('credits_div').style.animation = 'slideout 1s forwards 0s 1 normal';
+            CreditsButton.classList.remove('selected');
+            CreditsButton.classList.remove('sezione_selezionata');
+            const creditsIcon = CreditsButton.querySelector('.material-icons, .material-icons-outlined');
+            if (creditsIcon) {
+                creditsIcon.classList.remove('material-icons');
+                creditsIcon.classList.add('material-icons-outlined');
+            }
+        }
 
         document.getElementById('activity_div').style.animation = 'slidein 1s forwards 0s 1 normal';
         document.getElementById('activity_div').style.visibility = 'visible';
@@ -109,6 +120,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (webappIcon) {
                     webappIcon.classList.remove('material-icons');
                     webappIcon.classList.add('material-icons-outlined');
+                }
+            }
+            else if (CreditsButton.classList.contains('selected')){
+                document.getElementById('credits_div').style.animation = 'slideout 1s forwards 0s 1 normal';
+                CreditsButton.classList.remove('selected');
+                CreditsButton.classList.remove('sezione_selezionata');
+                const creditsIcon = CreditsButton.querySelector('.material-icons, .material-icons-outlined');
+                if (creditsIcon) {
+                    creditsIcon.classList.remove('material-icons');
+                    creditsIcon.classList.add('material-icons-outlined');
                 }
             }
 
@@ -164,6 +185,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 webappIcon.classList.add('material-icons-outlined');
             }
         }
+        else if (CreditsButton.classList.contains('selected')){
+            document.getElementById('credits_div').style.animation = 'slideout 1s forwards 0s 1 normal';
+            CreditsButton.classList.remove('selected');
+            CreditsButton.classList.remove('sezione_selezionata');
+            const creditsIcon = CreditsButton.querySelector('.material-icons, .material-icons-outlined');
+            if (creditsIcon) {
+                creditsIcon.classList.remove('material-icons');
+                creditsIcon.classList.add('material-icons-outlined');
+            }
+        }
 
         document.getElementById('partner_div').style.animation = 'slidein 1s forwards 0s 1 normal';
         document.getElementById('partner_div').style.visibility = 'visible';
@@ -208,9 +239,74 @@ document.addEventListener('DOMContentLoaded', () => {
                 activityIcon.classList.add('material-icons-outlined');
             }
         }
+        else if (CreditsButton.classList.contains('selected')){
+            document.getElementById('credits_div').style.animation = 'slideout 1s forwards 0s 1 normal';
+            CreditsButton.classList.remove('selected');
+            CreditsButton.classList.remove('sezione_selezionata');
+            const creditsIcon = CreditsButton.querySelector('.material-icons, .material-icons-outlined');
+            if (creditsIcon) {
+                creditsIcon.classList.remove('material-icons');
+                creditsIcon.classList.add('material-icons-outlined');
+            }
+        }
 
         document.getElementById('webapp_div').style.animation = 'slidein 1s forwards 0s 1 normal';
         document.getElementById('webapp_div').style.visibility = 'visible';
+    });
+
+    CreditsButton.addEventListener('click', () => {
+        // Set Credits button as new default
+        document.body.style.height = 'auto';
+        document.getElementById('separatore_1').style.marginTop = "94vh";
+        CreditsButton.classList.add('selected'); // Add 'selected' class to indicate it's active
+        CreditsButton.classList.add('sezione_selezionata');
+
+        if(HomeButton.classList.contains('selected')){
+            document.getElementById('what').style.animation = 'slideout 1s forwards 0s 1 normal';
+            document.getElementById('goals').style.animation = 'slideout 1s forwards 0s 1 normal';
+            HomeButton.classList.remove('selected');
+            HomeButton.classList.remove('sezione_selezionata');
+
+            const homeIcon = HomeButton.querySelector('.material-icons, .material-icons-outlined');
+            if (homeIcon) {
+                homeIcon.classList.remove('material-icons');
+                homeIcon.classList.add('material-icons-outlined');
+            }
+        }
+        else if (PartnerButton.classList.contains('selected')){
+            document.getElementById('partner_div').style.animation = 'slideout 1s forwards 0s 1 normal';
+            PartnerButton.classList.remove('selected');
+            PartnerButton.classList.remove('sezione_selezionata');
+            const partnerIcon = PartnerButton.querySelector('.material-icons, .material-icons-outlined');
+            if (partnerIcon) {
+                partnerIcon.classList.remove('material-icons');
+                partnerIcon.classList.add('material-icons-outlined');
+            }
+        }
+        else if (ActivityButton.classList.contains('selected')){
+            document.getElementById('activity_div').style.animation = 'slideout 1s forwards 0s 1 normal';
+            ActivityButton.classList.remove('selected');
+            ActivityButton.classList.remove('sezione_selezionata');
+            const activityIcon = ActivityButton.querySelector('.material-icons, .material-icons-outlined');
+            if (activityIcon) {
+                activityIcon.classList.remove('material-icons');
+                activityIcon.classList.add('material-icons-outlined');
+            }
+        }
+        else if (WebappButton.classList.contains('selected')){
+            document.getElementById('webapp_div').style.animation = 'slideout 1s forwards 0s 1 normal';
+            WebappButton.classList.remove('selected');
+            WebappButton.classList.remove('sezione_selezionata');
+            const webappIcon = WebappButton.querySelector('.material-icons, .material-icons-outlined');
+            if (webappIcon) {
+                webappIcon.classList.remove('material-icons');
+                webappIcon.classList.add('material-icons-outlined');
+            }
+        }
+        
+        document.getElementById('credits_div').style.animation = 'slidein 1s forwards 0s 1 normal';
+        document.getElementById('credits_div').style.visibility = 'visible';
+
     });
 
     ActivityMob.addEventListener('click', () => {

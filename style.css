@@ -957,7 +957,6 @@ p {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     height: 55vh;
     margin-top: 0.5vh;
-    
 }
 
 #webapp_container h3{
@@ -985,6 +984,7 @@ p {
 }
 
 #webapp_link{
+    position: absolute;
     align-items: center;
     background-color: #157fc7;
     text-decoration: none;
@@ -1002,7 +1002,78 @@ p {
     border-radius: 3vw;
     display: inline-flex;
     font-size: 2vh;
+    left: 3vw;
 }
+
+#credits_div{
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    top: 35vh;
+    margin-left: 2.5vw;
+    background-color: #f8f8f87a;
+    width: 94vw;
+    height: 60vh;
+    border-radius: 2vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding-top: 2vh;
+    visibility: hidden;
+    color: black;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#credits_container{
+    max-width: 97%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 1vw;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    height: 55vh;
+    margin-top: 0.5vh;
+}
+
+#credits_container h3{
+    text-align: left;
+    margin-left: 2vw;
+    padding-top: 4vh;
+    margin-bottom: -6vh;
+    color: black;
+    font-size: 6.5vh;
+}
+
+#programmers{
+    position: absolute;
+    top: 22vh;
+    text-align:left;
+    left: 3.5vw;
+}
+
+#programmers p{
+    color: black;
+    font-size: 2.5vh;
+}
+
+#programmers h4{
+    color: black;
+}
+
+#designers{
+    position: absolute;
+    top: 40vh;
+    text-align:left;
+    left: 3.5vw;
+}
+
+#designers p{
+    color: black;
+    font-size: 2.5vh;
+}
+
+#designers h4{
+    color: black;
+}
+
 @media screen and (max-width: 640px){
     #what{
         top: 8vh;
