@@ -177,7 +177,7 @@ body button {
     margin-top: 1vh;
     border-radius: 20px;
     padding: 20px;
-    background-color: white;
+    background-color: #d8ffe7;
 }
 .sezioni-container {
     position: absolute;
@@ -545,7 +545,7 @@ p {
 #intro_content {
     max-width: 97%;
     margin: 0 auto;
-    background-color: white;
+    background-color: #d8ffe7;
     border-radius: 1vw;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     height: 55vh;
@@ -554,7 +554,7 @@ p {
 #act_content {
     max-width: 97%;
     margin: 0 auto;
-    background-color: white;
+    background-color: #d8ffe7;
     border-radius: 1vw;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     height: 55vh;
@@ -681,7 +681,7 @@ p {
     margin-top: 115vh;
 }
 .card {
-    background-color: #f9f9f9;
+    background-color: #e4fff6;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -952,7 +952,7 @@ p {
 #webapp_container{
     max-width: 97%;
     margin: 0 auto;
-    background-color: white;
+    background-color: #d8ffe7;
     border-radius: 1vw;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     height: 55vh;
@@ -1026,7 +1026,7 @@ p {
 #credits_container{
     max-width: 97%;
     margin: 0 auto;
-    background-color: white;
+    background-color: #d8ffe7;
     border-radius: 1vw;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     height: 55vh;
