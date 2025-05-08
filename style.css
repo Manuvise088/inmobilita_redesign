@@ -79,7 +79,7 @@ body {
     font-family: 'National Park';
     font-size: 1.75vh;
     color: white;
-    background-image: linear-gradient(to bottom, #3ba974, #c52e8e);
+    background-image: linear-gradient(to bottom, #04399e, #157fc7);
     overflow-x: hidden;
 }
 
@@ -201,7 +201,7 @@ body button {
     border-radius: 1vw;
     display: inline-flex;
     align-items: center;
-    background-color: #4DCC8E;
+    background-color: #b9bfff;
     text-decoration: none;
     color: white;
     justify-content: center;
@@ -213,7 +213,7 @@ body button {
 }
 
 .sezione:hover{
-    background-color: #cf3295;
+    background-color: #5f72c1;
     transform: scale(0.9);
     font-weight: bold;
     border : solid 0.5vh #ffffff;
@@ -222,7 +222,7 @@ body button {
 .sezione_selezionata {
     pointer-events : none;
     opacity: 1; 
-    background-color : #ca2d91;
+    background-color : #5364a8;
     transform : scale(0.9);
     color : white;
     border : solid 0.5vh white;
@@ -240,7 +240,7 @@ body button {
 }
 
 .sezione:active {
-    background-color: #FF3EB7;
+    background-color: #4d5c9a;
     border-color: white;
 }
 
@@ -255,7 +255,7 @@ body button {
     left: 0;
     right: 0;
     width: 100%;
-    background-color: #00000060;
+    background-image: linear-gradient(to right, #04399e, #157fc7);
     border-top: solid 2px #ffffff;
     padding: 2vh;
     display: flex;
@@ -291,7 +291,7 @@ body button {
     transition-duration: 0.3s;
 }
 .navsez span:hover {
-    background-color: rgb(79, 36, 119);
+    background-image: linear-gradient(to bottom, #557cc6, #157fc7);
     padding-right: 10px;
     padding-left: 10px;
     border-radius: 100px;
@@ -796,7 +796,7 @@ p {
     position: fixed;
     bottom: 2vh; /* Position at the bottom-right */
     right: 2vh;
-    background-color: #4DCC8E;
+    background-color: #98a2c7;
     color: #ffffff;
     padding: 1vh;
     border-radius: 50%;
