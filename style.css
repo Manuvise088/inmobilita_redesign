@@ -209,9 +209,9 @@ body button {
     border-radius: 1vw;
     display: inline-flex;
     align-items: center;
-    background-color: #b9bfff;
+    background-color: #afd4ff;
     text-decoration: none;
-    color: white;
+    color: black;
     justify-content: center;
     gap: 2vh;
     transition-duration: 0.3s;
@@ -225,6 +225,7 @@ body button {
     transform: scale(0.9);
     font-weight: bold;
     border : solid 0.5vh #ffffff;
+    color: white;
 }
 
 .sezione_selezionata {
