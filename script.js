@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ActivityMob.addEventListener('click', () => {
         // Set Activity button as new default
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.marginTop = "94vh";
+        document.getElementById('separatore_1').style.top = "12vh";
         ActivityButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         ActivityButton.classList.add('sezione_selezionata');
 
