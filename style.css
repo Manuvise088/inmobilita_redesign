@@ -1089,6 +1089,7 @@ p {
     padding-left: 1vw;
     padding-right: 1vw;
     border-radius: 3vw;
+    margin-top: -3vh;
     display: inline-flex;
     font-size: 2.5vh;
     left: 3vw;
@@ -1258,6 +1259,42 @@ p {
 
     #navmenu_mobile{
         position:fixed !important;
+    }
+
+    #first_year_title{
+        position: absolute;
+        top: -35vh;
+    }
+    #first_year{
+        margin-top: 20vh;
+        width: 98% !important;
+    }
+
+    #second_year_title{
+        position: absolute;
+        top: -10vh;
+        left: -71vw;
+    }
+    #second_year{
+        margin-top: 45vh;
+        width: 98% !important;
+        left: -49vw;
+    }
+    #activity_div{
+        height: 68vh !important;
+    }
+    #act_content{
+        height: 65vh !important;
+    }
+
+    #webapp_div{
+        height: 100vh;
+    }
+    #webapp_container{
+        height: 96vh !important;
+    }
+    #webapp_link{
+        margin-top: 32vh;
     }
 }
 #copyright {
