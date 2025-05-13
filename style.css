@@ -91,6 +91,13 @@ body {
     margin: 0;
     overflow-x: hidden;
 }
+#partner_div span {
+    text-decoration: none;
+    color: #76d5a2;
+    display: inline-flex;
+    position: relative;
+    top: 0.5vh;
+}
 body button {
     font-family: 'National Park';
 }
