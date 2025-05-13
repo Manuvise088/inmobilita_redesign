@@ -91,13 +91,6 @@ body {
     margin: 0;
     overflow-x: hidden;
 }
-#partner_div span {
-    text-decoration: none;
-    color: #76d5a2;
-    display: inline-flex;
-    position: relative;
-    top: 0.5vh;
-}
 body button {
     font-family: 'National Park';
 }
@@ -194,6 +187,7 @@ body button {
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .sezioni-container {
     position: absolute;
     top: 18vh;
@@ -372,6 +366,7 @@ footer p {
         padding-left: 2.1vh;
         padding-right: 2.1vh;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        color: white;
         border-radius: 2vh;
         display: inline-flex;
     }
@@ -753,7 +748,6 @@ p {
     background-color: #f8f8f87a;
     width: 95%;
     height: 114vh;
-    margin-bottom: none !important;
     border-radius: 2vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding-top: 2vh;
@@ -777,10 +771,12 @@ p {
     width: 30%;
     margin: 4vh;
     margin-top: 17vh;
+    height: 82.4vh;
     overflow: hidden;
     display: flex;
     align-items: center;
 }
+
 #first_year{
     position: absolute;
     margin-top: 17vh;
@@ -800,6 +796,7 @@ p {
     margin-top: 10vh;
     width: 40vw;
     color: rgb(0, 0, 0);
+    margin-left: 4vh;
 }
 #second_year_title{
     position: absolute;
@@ -808,12 +805,15 @@ p {
     margin-left: 52vw;
     width: 40vw;
     color: rgb(0, 0, 0);
+    margin-right: 4vw;
 }
 
 .title_activity{
+    margin-top: 4vh;
     position: relative;
     color: rgb(0, 0, 0);
-    margin-left: 19vh;
+    margin-left: 20vh;
+    margin-right: 20vh;
     font-size: 2.5vh;
     max-width: 55%;
 }
@@ -821,17 +821,20 @@ p {
 .text_activity{
     position: relative;
     color: rgb(0, 0, 0);
-    margin-left: 19vh;
+    margin-left: 20vh;
+    margin-right: 20vh;
     margin-bottom: 5vh;
     font-size: 2.5vh;
     max-width: 55%;
 }
 
 .img_activity{
-    margin-top: 6vh;
+    margin-bottom: 10vh;
+    margin-top: 5;
     height: 35vh;
     width: 60vh !important;
-    margin-left: 6vw;
+    margin-left: 5.5vw;
+    margin-right: 5.5vw;
     margin-bottom: 4vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
@@ -938,7 +941,6 @@ p {
     color: rgb(0, 0, 0);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    margin-bottom: none;
 }
 @media screen and (min-width: 641px) and (max-width: 1280px) {
     #mobile_obiettivi {
@@ -1175,11 +1177,6 @@ p {
     color: rgb(0, 0, 0);
 }
 
-.dark-mode body{
-    background-color: #121212;
-    color: #ffffff;
-}
-
 @media screen and (max-width: 640px){
     #what{
         top: 8vh;
@@ -1308,94 +1305,10 @@ p {
     #webapp_link{
         margin-top: 32vh;
     }
-    #separatore_1 {
-        opacity: 1 !important;
-        height: 2vh; /* Sets a slim, clean line */
-        background-color: #f8f8f87a;
-        border: none; /* Removes the default border */
-        margin: 94vh 0 0 2.5vw; /* Adds 30px space above the <hr> */
-        border-radius: 100px;
-        max-width: 95%;
-    }
-    #activity_div, #webapp_div {
-            top: 16vh;
-            width: 95%;
-            min-height: 65vh !important;
-            align-items: center;
-            margin-left: 2vw;
-            border-radius: 3vh;
-    }
-    #act_content {
-        height: 61.5vh;
-        margin-top: -0.5vh;
-        border-radius: 3vh;
-        width: 95%;
-    }
-    #activity_title, #webapp_container h3 {
-        font-size: 5vh;
-        margin-left: 5vh;
-    }
-    #webapp_container {
-        height: 61.5vh;
-        border-radius: 3vh;
-        margin-top: -0.2vh;
-        width: 95%;
-    }
-  #webapp_container p {
-        position: relative;
-        color: rgb(0, 0, 0);
-        border-radius: 4vw;
-        margin-left: 4vh;
-        padding-left: 1vw;
-        padding-right: 1vw;
-        margin-top: 2.5vh;
-        padding-top: 5vh;
-        padding-bottom: 5vh;
-        font-size: 2.5vh;
-        max-width: 85%;
-    }
-    #webapp_link {
-        top: 56vh;
-        padding: 1vh;
-        align-items: center;
-        display: flex;
-        right: 6vh;
-        left: 6vh;
-        border-radius: 100px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    #first_year_title, #second_year_title {
-        margin-top: 50vh;
-        font-size: 2.5vh;
-    }
-    #obiettivi_carousel {
-        margin-top: 10vh;
-    }
-    .img_carousel {
-        max-width: 95%;
-        display: flex; /* Makes it a block-level element */
-        margin: 0 auto; /* Centers horizontally */
-        z-index: 999;
-        border-radius: 2vh;
-    }
-    #second_year_title {
-        text-align: left;
-        margin-left: 37vh;
-    }
-    .invert {
-        display: none;
-    }
-    #copyright {
-        padding-bottom: 100vh;
-    }
-    body {
-        height: 175vh;
-    }
 }
 #copyright {
     color: white;
     font-size: 2.5vh;
-    margin-top: -60vh !important;
 }
 @media screen and (max-width: 1280px) {
     #separatore_1 {
@@ -1407,6 +1320,9 @@ p {
         border-radius: 100px;
         max-width: 95%;
     }
+    #copyright {
+        padding-bottom: 100vh;
+    }
     #activity_div {
         top: 17vh;
         height: 59vh;
@@ -1416,4 +1332,89 @@ p {
         height: 56vh;
         margin-top: -0.5vh;
     }
+}
+@media screen and (max-width: 640px) {
+        #separatore_1 {
+            opacity: 1 !important;
+            height: 2vh; /* Sets a slim, clean line */
+            background-color: #f8f8f87a;
+            border: none; /* Removes the default border */
+            margin: 94vh 0 0 2.5vw; /* Adds 30px space above the <hr> */
+            border-radius: 100px;
+            max-width: 95%;
+        }
+        #activity_div, #webapp_div {
+                top: 16vh;
+                width: 95%;
+                min-height: 65vh !important;
+                align-items: center;
+                margin-left: 2vw;
+                border-radius: 3vh;
+        }
+        #act_content {
+            height: 61.5vh;
+            margin-top: -0.5vh;
+            border-radius: 3vh;
+            width: 95%;
+        }
+        #activity_title, #webapp_container h3 {
+            font-size: 5vh;
+            margin-left: 5vh;
+        }
+        #webapp_container {
+            height: 61.5vh;
+            border-radius: 3vh;
+            margin-top: -0.2vh;
+            width: 95%;
+        }
+      #webapp_container p {
+            position: relative;
+            color: rgb(0, 0, 0);
+            border-radius: 4vw;
+            margin-left: 4vh;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            margin-top: 2.5vh;
+            padding-top: 5vh;
+            padding-bottom: 5vh;
+            font-size: 2.5vh;
+            max-width: 85%;
+        }
+        #webapp_link {
+            top: 56vh;
+            padding: 1vh;
+            align-items: center;
+            display: flex;
+            right: 6vh;
+            left: 6vh;
+            border-radius: 100px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #first_year_title, #second_year_title {
+            margin-top: 50vh;
+            font-size: 2.5vh;
+        }
+        #obiettivi_carousel {
+            margin-top: 10vh;
+        }
+        .img_carousel {
+            max-width: 95%;
+            display: flex; /* Makes it a block-level element */
+            margin: 0 auto; /* Centers horizontally */
+            z-index: 999;
+            border-radius: 2vh;
+        }
+        #second_year_title {
+            text-align: left;
+            margin-left: 37vh;
+        }
+        .invert {
+            display: none;
+        }
+        #copyright {
+            padding-bottom: 100vh;
+        }
+        body {
+            height: 175vh;
+        }
 }
