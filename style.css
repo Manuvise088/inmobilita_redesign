@@ -372,7 +372,6 @@ footer p {
         padding-left: 2.1vh;
         padding-right: 2.1vh;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        color: white;
         border-radius: 2vh;
         display: inline-flex;
     }
@@ -781,7 +780,6 @@ p {
     display: flex;
     align-items: center;
 }
-
 #first_year{
     position: absolute;
     margin-top: 17vh;
@@ -1415,4 +1413,8 @@ p {
         body {
             height: 175vh;
         }
+}
+.dark-mode body{
+    background-color: #121212;
+    color: #ffffff;
 }
