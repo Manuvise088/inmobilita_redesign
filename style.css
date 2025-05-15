@@ -255,7 +255,7 @@ body button {
     transform : none;
     font-weight : 400;
     border : solid 0.5vh rgb(255, 148, 216);
-    /*HomeButton.style.color = 'black';*/
+    
 }
 
 .sezione:active {
@@ -786,7 +786,7 @@ p {
 #second_year{
     position: absolute;
     margin-top: 17vh;
-    margin-left: 52vw;
+    margin-left: 49.5vw;
     width: 40vw;
 }
 
@@ -802,7 +802,7 @@ p {
     position: absolute;
     text-align: center;
     margin-top: 10vh;
-    margin-left: 52vw;
+    margin-left: 49.5vw;
     width: 40vw;
     color: rgb(0, 0, 0);
     margin-right: 4vw;
@@ -832,8 +832,9 @@ p {
     margin-bottom: 10vh;
     margin-top: 5;
     height: 35vh;
-    width: 60vh !important;
-    margin-left: 5.5vw;
+    width: 100% !important;
+    max-width: 60vh !important;
+    margin-left: 5.25vw;
     margin-right: 5.5vw;
     margin-bottom: 4vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -846,8 +847,8 @@ p {
     border-radius: 100px;
     width:2vh;
     height: 89vh;
-    margin-left: 46vw;
-    margin-top: 8vh;
+    margin-left: 48%;
+    margin-top: 9.5vh;
     background-color: #ffffff;
     z-index: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -871,7 +872,8 @@ p {
     height: 2vh; /* Sets a slim, clean line */
     background-color: #f8f8f87a;
     border: none; /* Removes the default border */
-    margin: 94vh 0 0 2.5vw; /* Adds 30px space above the <hr> */
+    margin-top: 94vh;
+    margin-left: 2.5vw;
     border-radius: 100px;
     max-width: 95%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -1084,7 +1086,7 @@ p {
 #webapp_link{
     position: absolute;
     align-items: center;
-    background-color: #f98bcc;
+    background-color: #51cd92;
     text-decoration: none;
     color: rgb(255, 255, 255);
     justify-content: center;
@@ -1103,11 +1105,23 @@ p {
     font-size: 2.5vh;
     left: 3vw;
     transition-duration: 0.3s;
+    border : solid 0.5vh #51cd92;
 }
 #webapp_link:hover {
-    background-color: #368b62;
+    background-color: #f98bcc;
     transition-duration: 0.3s;
+    transform: scale(0.9);
+    border-color: #f98bcc;
+    font-weight: bold;
 }
+
+#wabapp_link:active {
+    background-color: #f98bcc;
+    border-color: white;
+    transform: scale(0.9);
+    font-weight: bold;
+}
+
 #credits_div{
     position: absolute;
     align-items: center;
@@ -1309,6 +1323,7 @@ p {
 #copyright {
     color: white;
     font-size: 2.5vh;
+    margin-top: -200vh !important; /*DA MODIFICARE PER OGNI PAGINA*/
 }
 @media screen and (max-width: 1280px) {
     #separatore_1 {

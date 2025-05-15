@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     ActivityButton.addEventListener('click', () => {
-        document.getElementById('separatore_1').style.marginTop = "148vh";
+        document.getElementById('separatore_1').style.marginTop = '148vh';
         ActivityButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         ActivityButton.classList.add('sezione_selezionata');
 
