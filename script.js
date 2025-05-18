@@ -762,7 +762,12 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.innerText = "light_mode";
             document.querySelectorAll(".sezione").forEach(function(element){
                 if(element.classList.contains("sezione_selezionata") === false){
-                    element.style.setProperty('background-color', '#4CAF50', 'important');
+                    element.style.setProperty('background-color', '#4CAF50');
+                }
+                else{
+                    element.classList.toggle("sezione_selezionata");
+                    element.style.setProperty('background-color', '#4CAF50');
+                    element.classList.toggle("sezione_selezionata");
                 }
                 document.querySelectorAll(".logo_general").forEach(function(el){
                     el.src = "logo/logo_nero.jpg";
@@ -772,7 +777,12 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.innerText = "dark_mode";
             document.querySelectorAll(".sezione").forEach(function(element){
                 if(element.classList.contains("sezione_selezionata") === false){
-                    element.style.setProperty('background-color', '#76d5a2', 'important');
+                    element.style.setProperty('background-color', '#76d5a2');
+                }
+                else{
+                    element.classList.toggle("sezione_selezionata");
+                    element.style.setProperty('background-color', '#76d5a2');
+                    element.classList.toggle("sezione_selezionata");
                 }
                 document.querySelectorAll(".logo_general").forEach(function(el){
                     el.src = "logo/logo_bianco.jpg";

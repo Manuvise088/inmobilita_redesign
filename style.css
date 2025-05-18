@@ -269,7 +269,7 @@ body button {
 .sezione_selezionata {
     pointer-events : none;
     opacity: 1; 
-    background-color : #f98bcc;
+    background-color : #f98bcc !important;
     transform : scale(0.9);
     color : white;
     border : solid 0.5vh white;
