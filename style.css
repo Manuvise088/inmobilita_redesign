@@ -72,6 +72,15 @@
     }
 }
 
+body.inverted {
+    filter: invert(0.9) hue-rotate(180deg);
+    background-image: linear-gradient(to bottom, #1f4f38, #6b3e58);
+}
+
+body.inverted img{
+    filter: invert(1.1) hue-rotate(180deg);
+}
+
 #inmobilita{
     margin-top: 1vh;
 }
