@@ -18,7 +18,7 @@
 </head>
     <header>
         <div id="header-container">
-            <a href="index.html"><img class="logo" alt="logo" src="logo.png" id = 'inmob_logo'></a>
+            <a href="index.html"><img class="logo" alt="logo" src="logo/logo_trasparent.png" id = 'inmob_logo'></a>
             <h1 id = 'inmobilita'>INMOBILITÀ</h1>
             <h2 id = 'inmob_parag'> Progetto di sostenibilità</h2>
             <div class="icon-container">
@@ -38,7 +38,7 @@
         <div id="fullscreen-menu" class="fullscreen-menu">
             <div class="menu-header">
                 <div class="logo-container">
-                    <img src="logo.png" class="logo_menu" alt="logo" style="padding: 10px;"> 
+                    <img src="logo/logo_trasparent.png" class="logo_menu" alt="logo" style="padding: 10px;"> 
                     <h1 class="menu-text">MENU</h1>
                 </div>
                 <button id="close-menu" class="close-button">
@@ -66,17 +66,17 @@
           <h2 id="goals_title">Obiettivi del progetto</h2>
           <div class="card" id="goal1">
               <h3>Rigenerazione degli spazi per la mobilità sostenibile</h3>
-              <img src="..." alt="Mobilità sostenibile">
+              <img src="obbietivi_imgs/r_urbana.jpg" class="img_obiettivi" alt="Mobilità sostenibile">
               <p>Il nostro primo obiettivo è quello di rigenerare un’area dedicata alla mobilità sostenibile, creando spazi che incentivano l’uso di mezzi di trasporto eco-friendly. Parliamo di stazioni di bike-sharing, aree di sosta per mezzi elettrici.</p>
           </div>
           <div class="card" id="goal2">
               <h3>Spazi scolastici innovativi e green</h3>
-              <img src="..." alt="Spazi scolastici green">
+              <img src="obbietivi_imgs/mobility_corner.jpg" class="img_obiettivi" alt="Spazi scolastici green">
               <p>All'interno di questo progetto, un altro obiettivo fondamentale è lo sviluppo di luoghi legati agli interessi delle scuole, come un’aula in legno immersa nel verde.</p>
           </div>
           <div class="card" id="goal3">
               <h3>Raccolta di dati sul tragitto casa-scuola</h3>
-              <img src="..." alt="Dati casa-scuola">
+              <img src="obbietivi_imgs/tragitto.jpg" class="img_obiettivi" alt="Dati casa-scuola">
               <p>Comprendere i percorsi degli studenti è essenziale per migliorare la mobilità sostenibile, attraverso questionari e analisi delle abitudini di viaggio.</p>
           </div>
         </div>
@@ -107,8 +107,6 @@
           </div>
         </div>
       </div>
-
-      <div id="separatore_2"></div>
       
       <div id = 'activity_div'>
         <div id = 'act_content'>
@@ -116,6 +114,12 @@
           <h3 id = "first_year_title">Primo Anno</h3>
           <h3 id = 'second_year_title'>Secondo Anno</h3>
           <div id="first_year" class="card_act carousel slide" data-bs-ride="carousel">
+            
+            <button id="scrollact" class="material-icons-outlined arrow_carousel_left" type="button" data-bs-target="#first_year" data-bs-slide="prev" aria-hidden="true">
+              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
+              <span class="visually-hidden"></span>
+              </button>
+
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <h4 class="title_activity">1° Cittadinanza Attiva e Partecipazione</h4>
@@ -158,19 +162,25 @@
                 <img src="actvity_imgs/mobility_corner.jpg" class="img_activity d-block w-100" alt="...">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#first_year" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon invert carousel-control-newadjust" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#first_year" data-bs-slide="next">
-              <span class="carousel-control-next-icon invert carousel-control-newadjust" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            
+            <button id="scrollact" class="material-icons-outlined arrow_carousel_right" type="button" data-bs-target="#first_year" data-bs-slide="next" aria-hidden="true">
+              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
+              <span class="visually-hidden"></span>
+              </button>
+
           </div>
+          
+
         
           <div id = 'sep_line'></div>
 
             <div id="second_year" class="card_act carousel slide" data-bs-ride="carousel">
+              
+              <button id="scrollact" class="material-icons-outlined arrow_carousel_left" type="button" data-bs-target="#second_year" data-bs-slide="prev" aria-hidden="true">
+              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
+              <span class="visually-hidden"></span>
+              </button>
+
               <div class="carousel-inner">
                 <div class="carousel-item active">
                 <h4 class="title_activity">1° Feedback e Rilancio</h4>
@@ -203,14 +213,12 @@
                 <img src="actvity_imgs/6giornata_2anno.jpg" class="img_activity d-block w-100" alt="...">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#second_year" data-bs-slide="prev" aria-hidden="true">
-              <span class="carousel-control-prev-icon invert carousel-control-newadjust" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#second_year" data-bs-slide="next" aria-hidden="true">
-              <span class="carousel-control-next-icon invert carousel-control-newadjust" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            
+            <button id="scrollact" class="material-icons-outlined arrow_carousel_right" type="button" data-bs-target="#second_year" data-bs-slide="next" aria-hidden="true">
+              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
+              <span class="visually-hidden"></span>
+              </button>
+
           </div>
         </div>
       </div>

@@ -35,12 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     ActivityButton.addEventListener('click', () =>{
-        document.getElementById('copyright').style.setProperty('margin-top', '-55vh', 'important');
+        document.getElementById('copyright').style.setProperty('margin-top', '0vh', 'important');
         // Set Activity button as new default
         ActivityButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         ActivityButton.classList.add('sezione_selezionata');
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.marginTop = "148vh";
+        document.getElementById('separatore_1').style.marginTop = "168vh";
 
         if(HomeButton.classList.contains('selected')){
             document.getElementById('what').style.animation = 'slideout 1s forwards 0s 1 normal';
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     HomeButton.addEventListener('click', () => {
-        document.getElementById('copyright').style.setProperty('margin-top', '0vh', 'important');
+        document.getElementById('copyright').style.setProperty('margin-top', '123vh', 'important');
         if (!HomeButton.classList.contains('selected')) {
             document.getElementById('separatore_1').style.marginTop = "94vh";
             document.body.style.height = 'auto';
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     PartnerButton.addEventListener('click', () =>{
-        document.getElementById('copyright').style.setProperty('margin-top', '-115vh', 'important');
+        document.getElementById('copyright').style.setProperty('margin-top', '0vh', 'important');
         // Set Partner button as new default
         PartnerButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         PartnerButton.classList.add('sezione_selezionata');
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     WebappButton.addEventListener('click', () => {
-        document.getElementById('copyright').style.setProperty('margin-top', '-115vh', 'important');
+        document.getElementById('copyright').style.setProperty('margin-top', '0vh', 'important');
         // Set Webapp button as new default
         document.body.style.height = 'auto';
         document.getElementById('separatore_1').style.marginTop = "94vh";
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     CreditsButton.addEventListener('click', () => {
-        document.getElementById('copyright').style.setProperty('margin-top', '-115vh', 'important');
+        document.getElementById('copyright').style.setProperty('margin-top', '0vh', 'important');
         // Set Credits button as new default
         document.body.style.height = 'auto';
         document.getElementById('separatore_1').style.marginTop = "94vh";
@@ -473,11 +473,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 top: 0,
                 behavior: "smooth"
             });
-            //scrollToTopButton.style.background_color = "#faaacd";
             scrollToTopButton.classList.add('scrollToTop_scrolling');
         });
     }
 
+
+    // scroll act carousel
+    const scrollact = document.getElementById("scrollact");
+    // ...
 
     const sezioni = document.querySelectorAll('.sezione');
 
@@ -537,7 +540,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ActivityButton.addEventListener('click', () => {
         // Set Activity button as new default
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.marginTop = "94vh";
+        document.getElementById('separatore_1').style.marginTop = "168vh";
         ActivityButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         ActivityButton.classList.add('sezione_selezionata');
 
