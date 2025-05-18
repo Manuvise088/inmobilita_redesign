@@ -756,39 +756,42 @@ document.addEventListener('DOMContentLoaded', () => {
             sezione.classList.add('selected');
         });
     });
-});
-    if (themeButton) {
-        themeButton.addEventListener('click', () => {
-            // Toggle dark mode class on body
-            document.body.classList.toggle('dark-mode');
-            
-            // Toggle icon between sun and moon
-            const themeIcon = themeButton.querySelector('.material-icons, .material-icons-outlined');
-            if (themeIcon) {
-                if (themeIcon.textContent === 'dark_mode') {
-                    themeIcon.textContent = 'light_mode';
-                    themeIcon.classList.remove('material-icons');
-                    themeIcon.classList.add('material-icons-outlined');
-                } else {
-                    themeIcon.textContent = 'dark_mode';
-                    themeIcon.classList.remove('material-icons-outlined');
-                    themeIcon.classList.add('material-icons');
+
+    document.getElementById("theme_button").addEventListener('click', function () {
+        document.body.classList.toggle("inverted");
+
+        let btn = document.getElementById("theme_button");
+        if (btn.innerText === "dark_mode") {
+            btn.innerText = "light_mode";
+            document.querySelectorAll(".sezione").forEach(function(element){
+                if(element.classList.contains("sezione_selezionata") === false){
+                    element.style.setProperty('background-color', '#4CAF50');
                 }
-            }
-            
-            // Save preference to localStorage
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            localStorage.setItem('darkMode', isDarkMode);
-        });
-        
-        // Check for saved preference
-        if (localStorage.getItem('darkMode') === 'true') {
-            document.body.classList.add('dark-mode');
-            const themeIcon = themeButton.querySelector('.material-icons, .material-icons-outlined');
-            if (themeIcon) {
-                themeIcon.textContent = 'light_mode';
-                themeIcon.classList.remove('material-icons');
-                themeIcon.classList.add('material-icons-outlined');
-            }
+                else{
+                    element.classList.toggle("sezione_selezionata");
+                    element.style.setProperty('background-color', '#4CAF50');
+                    element.classList.toggle("sezione_selezionata");
+                }
+                document.querySelectorAll(".logo_general").forEach(function(el){
+                    el.src = "logo/logo_nero.jpg";
+                })
+            });
+        } else {
+            btn.innerText = "dark_mode";
+            document.querySelectorAll(".sezione").forEach(function(element){
+                if(element.classList.contains("sezione_selezionata") === false){
+                    element.style.setProperty('background-color', '#76d5a2');
+                }
+                else{
+                    element.classList.toggle("sezione_selezionata");
+                    element.style.setProperty('background-color', '#76d5a2');
+                    element.classList.toggle("sezione_selezionata");
+                }
+                document.querySelectorAll(".logo_general").forEach(function(el){
+                    el.src = "logo/logo_bianco.jpg";
+                })
+            });
         }
-    }
+    });
+
+});

@@ -72,6 +72,15 @@
     }
 }
 
+body.inverted {
+    filter: invert(0.9) hue-rotate(180deg);
+    background-image: linear-gradient(to bottom, #1f4f38, #6b3e58);
+}
+
+body.inverted img{
+    filter: invert(1.1) hue-rotate(180deg);
+}
+
 #inmobilita{
     margin-top: 1vh;
 }
@@ -260,7 +269,7 @@ body button {
 .sezione_selezionata {
     pointer-events : none;
     opacity: 1; 
-    background-color : #f98bcc;
+    background-color : #f98bcc !important;
     transform : scale(0.9);
     color : white;
     border : solid 0.5vh white;
@@ -928,6 +937,14 @@ p {
     align-items: center;
     justify-content: center;
     text-align: center;
+.carousel-item{
+    animation: fadein 0.3s linear 0s 1 normal;
+}
+
+.carousel-control-newadjust{
+    height: 75px;
+    width: 75px;
+    border-radius: 20px;
     transition-duration: 0.3s;
 }
 
@@ -1570,4 +1587,5 @@ p {
         body {
             height: 175vh;
         }
+}
 }
