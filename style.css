@@ -701,7 +701,7 @@ p {
 }
 #what{
     position: absolute;
-    margin-top: 8vh;
+    margin-top: 2vh;
     margin-left: 2.5vw;
     background-color: #f8f8f87a;
     width: 95%;
@@ -1148,7 +1148,7 @@ p {
     height: 2vh; /* Sets a slim, clean line */
     background-color: #f8f8f87a;
     border: none; /* Removes the default border */
-    margin-top: 94vh;
+    margin-top: 65vh;
     margin-left: 2.5vw;
     border-radius: 100px;
     max-width: 95%;
@@ -1537,7 +1537,7 @@ p {
 
 @media screen and (max-width: 640px){
     #what{
-        top: 8vh;
+        top: 14vh;
         width: 95%;
         min-height: 65vh !important;
         align-items: center;
@@ -1579,7 +1579,7 @@ p {
     }
     #goals {
         position: absolute;
-        margin-top: 60vh;
+        margin-top: 52vh;
         background-color: #f8f8f87a;
         width: 95%;
         margin-left: 2vw;
@@ -1800,6 +1800,8 @@ p {
 
     #partner_div{
         top: 15vh;
+        height: 356vh;
+        border-radius: 5vw;
     }
     #school_partner{
         width: 92vw;

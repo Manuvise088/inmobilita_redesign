@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ActivityButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         ActivityButton.classList.add('sezione_selezionata');
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.marginTop = "168vh";
+        document.getElementById('separatore_1').style.marginTop = "145vh";
 
         if(HomeButton.classList.contains('selected')){
             document.getElementById('what').style.animation = 'slideout 1s forwards 0s 1 normal';
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     HomeButton.addEventListener('click', () => {
         document.getElementById('copyright').style.setProperty('margin-top', '123vh', 'important');
         if (!HomeButton.classList.contains('selected')) {
-            document.getElementById('separatore_1').style.marginTop = "94vh";
+            document.getElementById('separatore_1').style.marginTop = "65vh";
             document.body.style.height = 'auto';
             if(ActivityButton.classList.contains('selected')){
                 document.getElementById('activity_div').style.animation = 'slideout 1s forwards 0s 1 normal';
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
         PartnerButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         PartnerButton.classList.add('sezione_selezionata');
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.marginTop = "370vh";
+        document.getElementById('separatore_1').style.marginTop = "347vh";
 
         if(HomeButton.classList.contains('selected')){
             document.getElementById('what').style.animation = 'slideout 1s forwards 0s 1 normal';
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('copyright').style.setProperty('margin-top', '0vh', 'important');
         // Set Webapp button as new default
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.marginTop = "94vh";
+        document.getElementById('separatore_1').style.marginTop = "71vh";
         WebappButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         WebappButton.classList.add('sezione_selezionata');
 
@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('copyright').style.setProperty('margin-top', '0vh', 'important');
         // Set Credits button as new default
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.marginTop = "94vh";
+        document.getElementById('separatore_1').style.marginTop = "65vh";
         CreditsButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         CreditsButton.classList.add('sezione_selezionata');
 
@@ -795,7 +795,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ActivityButton.addEventListener('click', () => {
         // Set Activity button as new default
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.marginTop = "168vh";
+        document.getElementById('separatore_1').style.marginTop = "139vh";
         ActivityButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         ActivityButton.classList.add('sezione_selezionata');
 
@@ -838,7 +838,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     HomeButton.addEventListener('click', () => {
         if (!HomeButton.classList.contains('selected')) {
-            document.getElementById('separatore_1').style.marginTop = "94vh";
+            document.getElementById('separatore_1').style.marginTop = "65vh";
             document.body.style.height = 'auto';
             if(ActivityButton.classList.contains('selected')){
                 document.getElementById('activity_div').style.animation = 'slideout 1s forwards 0s 1 normal';
@@ -889,7 +889,7 @@ document.addEventListener('DOMContentLoaded', () => {
         PartnerButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         PartnerButton.classList.add('sezione_selezionata');
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.marginTop = "184vh";
+        document.getElementById('separatore_1').style.marginTop = "156vh";
 
         if(HomeButton.classList.contains('selected')){
             document.getElementById('what').style.animation = 'slideout 1s forwards 0s 1 normal';
@@ -931,7 +931,7 @@ document.addEventListener('DOMContentLoaded', () => {
     WebappButton.addEventListener('click', () => {
         // Set Webapp button as new default
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.marginTop = "94vh";
+        document.getElementById('separatore_1').style.marginTop = "65vh";
         WebappButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         WebappButton.classList.add('sezione_selezionata');
 
