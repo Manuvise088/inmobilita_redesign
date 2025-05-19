@@ -360,6 +360,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 webappIcon.classList.add('material-icons-outlined');
             }
         }
+        else if (CreditsButton.classList.contains('selected')){
+            document.getElementById('credits_div').style.animation = 'slideout 1s forwards 0s 1 normal';
+            CreditsButton.classList.remove('selected');
+            CreditsButton.classList.remove('sezione_selezionata');
+            const creditsIcon = CreditsButton.querySelector('.material-icons, .material-icons-outlined');
+            if (creditsIcon) {
+                creditsIcon.classList.remove('material-icons');
+                creditsIcon.classList.add('material-icons-outlined');
+            }
+        }
 
         document.getElementById('activity_div').style.animation = 'slidein 1s forwards 0s 1 normal';
         document.getElementById('activity_div').style.visibility = 'visible';
@@ -397,6 +407,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (webappIcon) {
                     webappIcon.classList.remove('material-icons');
                     webappIcon.classList.add('material-icons-outlined');
+                }
+            }
+            else if (CreditsButton.classList.contains('selected')){
+                document.getElementById('credits_div').style.animation = 'slideout 1s forwards 0s 1 normal';
+                CreditsButton.classList.remove('selected');
+                CreditsButton.classList.remove('sezione_selezionata');
+                const creditsIcon = CreditsButton.querySelector('.material-icons, .material-icons-outlined');
+                if (creditsIcon) {
+                    creditsIcon.classList.remove('material-icons');
+                    creditsIcon.classList.add('material-icons-outlined');
                 }
             }
 
@@ -450,6 +470,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (activityIcon) {
                 activityIcon.classList.remove('material-icons');
                 activityIcon.classList.add('material-icons-outlined');
+            }
+        }
+        else if (CreditsButton.classList.contains('selected')){
+            document.getElementById('credits_div').style.animation = 'slideout 1s forwards 0s 1 normal';
+            CreditsButton.classList.remove('selected');
+            CreditsButton.classList.remove('sezione_selezionata');
+            const creditsIcon = CreditsButton.querySelector('.material-icons, .material-icons-outlined');
+            if (creditsIcon) {
+                creditsIcon.classList.remove('material-icons');
+                creditsIcon.classList.add('material-icons-outlined');
             }
         }
 
@@ -608,6 +638,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 webappIcon.classList.add('material-icons-outlined');
             }
         }
+        else if (CreditsButton.classList.contains('selected')){
+            document.getElementById('credits_div').style.animation = 'slideout 1s forwards 0s 1 normal';
+            CreditsButton.classList.remove('selected');
+            CreditsButton.classList.remove('sezione_selezionata');
+            const creditsIcon = CreditsButton.querySelector('.material-icons, .material-icons-outlined');
+            if (creditsIcon) {
+                creditsIcon.classList.remove('material-icons');
+                creditsIcon.classList.add('material-icons-outlined');
+            }
+        }
 
         document.getElementById('activity_div').style.animation = 'slidein 1s forwards 0s 1 normal';
         document.getElementById('activity_div').style.visibility = 'visible';
@@ -650,6 +690,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (activityIcon) {
                 activityIcon.classList.remove('material-icons');
                 activityIcon.classList.add('material-icons-outlined');
+            }
+        }
+        else if (CreditsButton.classList.contains('selected')){
+            document.getElementById('credits_div').style.animation = 'slideout 1s forwards 0s 1 normal';
+            CreditsButton.classList.remove('selected');
+            CreditsButton.classList.remove('sezione_selezionata');
+            const creditsIcon = CreditsButton.querySelector('.material-icons, .material-icons-outlined');
+            if (creditsIcon) {
+                creditsIcon.classList.remove('material-icons');
+                creditsIcon.classList.add('material-icons-outlined');
             }
         }
 

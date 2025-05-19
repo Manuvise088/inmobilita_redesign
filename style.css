@@ -72,6 +72,10 @@
     }
 }
 
+.menu-footer{
+    visibility: hidden !important;
+}
+
 body.inverted {
     filter: invert(0.9) hue-rotate(180deg);
     background-image: linear-gradient(to bottom, #1f4f38, #6b3e58);
@@ -514,9 +518,7 @@ footer p {
     padding: 2rem 0;
     flex-grow: 1;
 }
-.menu_footer{
-    visibility: none;
-}
+
 .nav-column {
     display: flex;
     flex-direction: column;
