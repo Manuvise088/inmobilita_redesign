@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ActivityMob.addEventListener('click', () => {
         // Set Activity button as new default
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.top = "12vh";
+        document.getElementById('separatore_1').style.top = "168vh";
         ActivityButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         ActivityButton.classList.add('sezione_selezionata');
 
@@ -361,8 +361,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     HomeMob.addEventListener('click', () => {
+        document.getElementById('separatore_1').style.top = "9vh";
         if (!HomeButton.classList.contains('selected')) {
-            document.getElementById('separatore_1').style.marginTop = "94vh";
             document.body.style.height = 'auto';
             if(ActivityButton.classList.contains('selected')){
                 document.getElementById('activity_div').style.animation = 'slideout 1s forwards 0s 1 normal';
@@ -411,7 +411,7 @@ document.addEventListener('DOMContentLoaded', () => {
     WebappMob.addEventListener('click', () => {
         // Set Webapp button as new default
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.marginTop = "94vh";
+        document.getElementById('separatore_1').style.top = "44vh";
         WebappButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         WebappButton.classList.add('sezione_selezionata');
 
