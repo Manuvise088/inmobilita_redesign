@@ -1338,7 +1338,7 @@ p {
     background-color: #f8f8f87a;
     width: 95%;
     height: 60vh;
-    border-radius: 2vw;
+    border-radius: 3vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding-top: 2vh;
     visibility: hidden;
@@ -1351,7 +1351,7 @@ p {
     max-width: 97%;
     margin: 0 auto;
     background-color: #ffffff;
-    border-radius: 1vw;
+    border-radius: 3vh;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     height: 55vh;
     margin-top: 0.5vh;
@@ -1364,6 +1364,12 @@ p {
     margin-bottom: -6vh;
     color: rgb(0, 0, 0);
     font-size: 6.5vh;
+}
+
+@media screen and (max-width: 640px){
+    #credits_div{
+        margin-top: -19vh !important;
+    }
 }
 
 #programmers{
