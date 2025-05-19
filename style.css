@@ -1598,6 +1598,53 @@ p {
     #webapp_link{
         margin-top: 32vh;
     }
+
+    #partner_div{
+        top: 15vh;
+    }
+    #school_partner{
+        width: 92vw;
+    }
+    #organization_partner{
+        width: 92vw;
+        margin-left: 1.5vw;
+        margin-top: 43vh;
+        height: 57vh;
+    }
+    #institutional_partner{
+        height: 25vh;
+        margin-top: 103vh;
+    }
+    #project_partner{
+        margin-top: 131vh;
+    }
+    #rossi_div{
+        margin-top: 202vh;
+        width: 92vw;
+        margin-left: 1.5vw;
+        height: 47vh;
+    }
+    #canova_div{
+        margin-top: 156vh;
+        width: 92vw;
+        height: 45vh;
+    }
+    #tron-zanella_div{
+        margin-top: 252vh;
+        margin-left: 1.5vw;
+        width: 92vw;
+        height: 45vh;
+    }
+    #aulo-ceccato_div{
+        margin-top: 300vh;
+        margin-left: 1.5vw;
+        width: 92vw;
+        height: 52vh;
+    }
+    #separatore_3{
+        height: 13vh;
+        margin-top: 352vh;
+    }
 }
 
 #copyright {
