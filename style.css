@@ -72,13 +72,13 @@
     }
 }
 
-.inverted h1, .inverted h2 {
-    color: white;
+body.inverted {
+    filter: invert(0.9) hue-rotate(180deg);
+    background-image: linear-gradient(to bottom, #1f4f38, #6b3e58);
 }
 
-body.inverted {
-    color: white;
-    background-image: linear-gradient(to bottom, #1f4f38, #6b3e58);
+body.inverted img{
+    filter: invert(1.1) hue-rotate(180deg);
 }
 
 
@@ -864,8 +864,8 @@ p {
     margin-top: 4vh;
     position: relative;
     color: rgb(0, 0, 0);
-    margin-left: 20vh;
-    margin-right: 20vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
     font-size: 2.5vh;
     max-width: 55%;
 }
@@ -1436,25 +1436,97 @@ p {
     }
     #first_year{
         margin-top: 20vh;
-        width: 98% !important;
+        width: 90% !important;
+        margin-left: 2vw;
     }
 
     #second_year_title{
         position: absolute;
-        top: -10vh;
-        left: -71vw;
+        top: -60vh;
+        left: -47.25vw;
+        margin-top: 180vh !important;
     }
     #second_year{
         margin-top: 45vh;
-        width: 98% !important;
-        left: -49vw;
+        width: 90% !important;
+        margin-left: 2vw;
     }
     #activity_div{
-        height: 68vh !important;
+        height: 223vh !important;
+        margin-left: 2.8vw !important;
+        margin-bottom: 25vh !important;
     }
     #act_content{
-        height: 65vh !important;
+        height: 220vh !important;
+        /*display: flex;
+        flex-direction: column;*/
     }
+
+    #sep_line {
+        display: none;
+    }
+    
+    .card_act{
+        width: 65% !important;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        height: 92.4vh;
+        margin-top: 15vh !important;
+        margin-left: 2.5vw !important;
+    }
+    .card2{
+        margin-top: 120vh !important;
+    }
+
+    .carousel-inner{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .title_activity{
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+    }
+    .text_activity{
+        max-width: 100%;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+    .img_activity{
+        max-width: 40vh !important;
+    }
+
+    .arrow_carousel_left{
+        left: 13vw;
+        margin-top: 82vh;
+        position: fixed;
+    }
+
+    .arrow_carousel_right{
+        right: 13vw;
+        margin-top: 82vh;
+        position: fixed;
+    }
+
+    .arrow_carousel_left:active{
+    background-color: #f98bcc;
+    transform: scale(0.9);
+    font-weight: bold;
+    border : solid 0.5vh white;
+    color: white;
+    transform: rotate(270deg);
+    }
+
+    .arrow_carousel_right:active{
+    background-color: #f98bcc;
+    transform: scale(0.9);
+    font-weight: bold;
+    border : solid 0.5vh white;
+    color: white;
+    transform: rotate(90deg);
+    }  
 
     #webapp_div{
         height: 100vh;
@@ -1580,7 +1652,4 @@ p {
         body {
             height: 175vh;
         }
-}
-body, .inverted {
-    color: white;
 }
