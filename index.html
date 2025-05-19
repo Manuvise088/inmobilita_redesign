@@ -103,7 +103,7 @@
 
       <hr id="separatore_1"> <!-- Placed directly under the "what" section -->
 
-      <div id = "goals">
+      <div id ="goals">
         <div id="obiettivi_container">
           <h2 id="goals_title">Obiettivi del progetto</h2>
           <div class="card" id="goal1">
@@ -125,26 +125,38 @@
         <div id = "mobile_obiettivi">
           <div class="obiettivi_content">
             <h2>Obiettivi</h2>
-            <div id="obiettivi_carousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="obiettivi_carousel" class="card_goals_mobile carousel slide" data-bs-ride="carousel">
+              
+              <button id="scrollact" class="material-icons-outlined arrow_carousel_left" type="button" data-bs-target="#obiettivi_carousel" data-bs-slide="prev" aria-hidden="true">
+              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
+              <span class="visually-hidden"></span>
+              </button>
+
               <div class="carousel-inner">
+
                 <div class="carousel-item active">
-                  <img src="img.png" class="img_carousel" alt="...">
+                  <h3 class="title_goals_mobile">Rigenerazione degli spazi per la mobilità sostenibile</h3>
+                  <img src="obbietivi_imgs/r_urbana.jpg" class="img_goals_mobile" alt="Mobilità sostenibile">
+                  <p class="text_goals_mobile">Il nostro primo obiettivo è quello di rigenerare un’area dedicata alla mobilità sostenibile, creando spazi che incentivano l’uso di mezzi di trasporto eco-friendly. Parliamo di stazioni di bike-sharing, aree di sosta per mezzi elettrici.</p>
                 </div>
                 <div class="carousel-item">
-                  <img src="img.png" class="img_carousel" alt="...">
+                  <h3 class="title_goals_mobile">Spazi scolastici innovativi e green</h3>
+                  <img src="obbietivi_imgs/mobility_corner.jpg" class="img_goals_mobile" alt="Spazi scolastici green">
+                  <p class="text_goals_mobile">All'interno di questo progetto, un altro obiettivo fondamentale è lo sviluppo di luoghi legati agli interessi delle scuole, come un’aula in legno immersa nel verde.</p>
                 </div>
                 <div class="carousel-item">
-                  <img src="img.png" class="d-block w-100" alt="...">
+                  <h3 class="title_goals_mobile">Raccolta di dati sul tragitto casa-scuola</h3>
+                  <img src="obbietivi_imgs/tragitto.jpg" class="img_goals_mobile" alt="Dati casa-scuola">
+                  <p class="text_goals_mobile">Comprendere i percorsi degli studenti è essenziale per migliorare la mobilità sostenibile, attraverso questionari e analisi delle abitudini di viaggio.</p>
                 </div>
+
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#obiettivi_carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon invert" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+
+              <button id="scrollact" class="material-icons-outlined arrow_carousel_right" type="button" data-bs-target="#obiettivi_carousel" data-bs-slide="next" aria-hidden="true">
+              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
+              <span class="visually-hidden"></span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#obiettivi_carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon invert" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+
             </div>
           </div>
         </div>

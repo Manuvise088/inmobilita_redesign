@@ -994,8 +994,8 @@ p {
     margin-top: 4vh;
     position: relative;
     color: rgb(0, 0, 0);
-    margin-left: 10vh;
-    margin-right: 10vh;
+    margin-left: 15vh;
+    margin-right: 15vh;
     font-size: 2.5vh;
     max-width: 55%;
 }
@@ -1334,7 +1334,7 @@ p {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 15px;
-    height: 51.3h;
+    height: 51.3vh;
     width: 20%;
     margin-top: 95vh;
     margin-left: 71vw;
@@ -1468,7 +1468,7 @@ p {
     background-color: #f8f8f87a;
     width: 95%;
     height: 60vh;
-    border-radius: 2vw;
+    border-radius: 3vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding-top: 2vh;
     visibility: hidden;
@@ -1481,7 +1481,7 @@ p {
     max-width: 97%;
     margin: 0 auto;
     background-color: #ffffff;
-    border-radius: 1vw;
+    border-radius: 3vh;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     height: 55vh;
     margin-top: 0.5vh;
@@ -1494,6 +1494,12 @@ p {
     margin-bottom: -6vh;
     color: rgb(0, 0, 0);
     font-size: 6.5vh;
+}
+
+@media screen and (max-width: 640px){
+    #credits_div{
+        margin-top: -19vh !important;
+    }
 }
 
 #programmers{
@@ -1564,7 +1570,6 @@ p {
     }
     #intro_content h2 {
         font-size: 5vh;
-
     }
     #logo_body {
         width: 6vh;
@@ -1595,17 +1600,77 @@ p {
         background-color: rgb(255, 255, 255);
         max-width: 95%;
         align-items: center;
-        margin-left: 2vh;
-        height: 70vh !important;
+        margin: 0 auto;
+        height: 110vh !important;
         border-radius: 3.5vh;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
     }
+    
+    #goals{
+        height: 114vh !important;
+    }
+
+    .card_goals_mobile{
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        height: 92.4vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 95% !important;
+        margin: auto;
+        margin-top: 10vh !important;
+        margin-left: 2.5vw !important;
+
+        --bs-card-border-width: var(--bs-border-width);
+        --bs-card-border-color: var(--bs-border-color-translucent);
+        --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+        border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    }
+
+    .title_goals_mobile{
+        margin-top: 4vh;
+        position: relative;
+        color: rgb(0, 0, 0);
+        font-size: 2.5vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        max-width: 100%;
+    }
+
+    .text_goals_mobile{
+        position: relative;
+        color: rgb(0, 0, 0);
+        margin: auto;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        font-size: 2.5vh;
+        max-width: 100%;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+
+    .img_goals_mobile{
+        margin-top: 5vh !important;
+        max-height: 30vh;
+        width: auto !important;
+        max-width: 40vh !important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        display: inline-flex;
+    }
+
     .obiettivi_content h2 {
         font-size: 5vh;
-        color: white;
+        color: black;
         padding-top: 4vh;
         padding-left: 6vw;
         margin-bottom: -6vh;
+        text-align: left;
     }
     #intro_content {
         height: 100%;
@@ -1613,9 +1678,9 @@ p {
         margin-top: -0.1vh;
         width: 95%;
     }
-    #obiettivi_carousel{
-        margin-top: 25vh;
-    }
+    /*#obiettivi_carousel{
+        margin-top: 0vh !important;
+    }*/
 
     #navmenu_mobile{
         position:fixed !important;
@@ -1624,6 +1689,8 @@ p {
     #first_year_title{
         position: absolute;
         top: -35vh;
+        margin-left: 9vw !important;
+        text-align: left;
     }
     #first_year{
         margin-top: 20vh;
@@ -1634,7 +1701,8 @@ p {
     #second_year_title{
         position: absolute;
         top: -60vh;
-        left: -47.25vw;
+        left: -55vw;
+        text-align: left;
         margin-top: 180vh !important;
     }
     #second_year{
@@ -1676,8 +1744,8 @@ p {
     }
 
     .title_activity{
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 3vw;
+        margin-right: 3vw;
         max-width: 100%;
     }
     .text_activity{

@@ -930,6 +930,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollToTopButton.style.display = "block";
         } else {
             scrollToTopButton.style.display = "none";
+            scrollToTopButton.classList.remove('scrollToTop_scrolling');
         }
     });
 
@@ -938,6 +939,7 @@ document.addEventListener('DOMContentLoaded', () => {
             top: 0,
             behavior: "smooth"
         });
+        scrollToTopButton.classList.add('scrollToTop_scrolling');
     });
     
     const sezioni = document.querySelectorAll('.sezione');
