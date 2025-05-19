@@ -634,7 +634,7 @@ document.addEventListener('DOMContentLoaded', () => {
         PartnerButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         PartnerButton.classList.add('sezione_selezionata');
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.marginTop = "128vh";
+        document.getElementById('separatore_1').style.marginTop = "184vh";
 
         if(HomeButton.classList.contains('selected')){
             document.getElementById('what').style.animation = 'slideout 1s forwards 0s 1 normal';
