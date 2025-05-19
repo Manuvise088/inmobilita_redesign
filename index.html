@@ -35,57 +35,17 @@
           <a class="sezione" id = 'partner'><span class="material-icons-outlined">handshake</span>Partner</a>
           <a class="sezione" id = 'credits'><span class="material-icons-outlined">people</span>Crediti</a>
         </div>
-        <!-- Updated Menu Navigation Section -->
-<div id="fullscreen-menu" class="fullscreen-menu">
-    <div class="menu-header">
-        <div class="logo-container">
-            <img src="logo/logo_trasparent.png" class="logo_menu" alt="logo"> 
-            <h1 class="menu-title">INMOBILITÀ</h1>
-        </div>
-        <button id="close-menu" class="close-button">
-            <span class="material-icons-outlined">close</span>
-        </button>
-    </div>
-    
-    <nav class="menu-nav">
-        <div class="nav-column">
-            <a href="index.html" class="nav-item">
-                <span class="material-icons-outlined">home</span>
-                <span class="nav-text">Home</span>
-            </a>
-            <a href="#activity" class="nav-item">
-                <span class="material-icons-outlined">campaign</span>
-                <span class="nav-text">Attività</span>
-            </a>
-        </div>
-        <div class="nav-column">
-            <a href="#webapp" class="nav-item">
-                <span class="material-icons-outlined">web</span>
-                <span class="nav-text">Webapp</span>
-            </a>
-            <a href="#partner" class="nav-item">
-                <span class="material-icons-outlined">handshake</span>
-                <span class="nav-text">Partner</span>
-            </a>
-        </div>
-        <div class="nav-column">
-            <a href="#credits" class="nav-item">
-                <span class="material-icons-outlined">people</span>
-                <span class="nav-text">Crediti</span>
-            </a>
-            <div class="language-switcher">
-                <a href="index_en.html" class="nav-item">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAFVBMVEX///8AkkbOKzcAjz9otofeeoDNIS7QkpT1AAAAPklEQVRoge3MCREAIAADoPn2j2yDBfAgABnN2qnOnU3kcrlcLpfL5XK5XC6Xy+VyuVwul8vlcrlcLpfL/8ofekklvck8DdwAAAAASUVORK5CYII=" class="bandiera">
-                    <span class="nav-text">Stai visualizzando in Italiano</span>
-                </a>
+        <div id="fullscreen-menu" class="fullscreen-menu">
+            <div class="menu-header">
+                <div class="logo-container">
+                    <img src="logo/logo_trasparent.png" class="logo_menu" alt="logo" style="padding: 10px;"> 
+                    <h1 class="menu-text">MENU</h1>
+                </div>
+                <button id="close-menu" class="close-button">
+                    <span class="material-icons-outlined">close</span>
+                </button>
             </div>
-        </div>
-    </nav>
-    
-    <div class="menu-footer">
-        <p>Copyright 2025 - Cooperativa Urbana</p>
-    </div>
-</div>
+        </div> 
 
       <div id="what">
         <div id="intro_content">
@@ -101,7 +61,7 @@
 
       <hr id="separatore_1"> <!-- Placed directly under the "what" section -->
 
-      <div id = "goals">
+      <div id ="goals">
         <div id="obiettivi_container">
           <h2 id="goals_title">Obiettivi del progetto</h2>
           <div class="card" id="goal1">
@@ -123,26 +83,38 @@
         <div id = "mobile_obiettivi">
           <div class="obiettivi_content">
             <h2>Obiettivi</h2>
-            <div id="obiettivi_carousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="obiettivi_carousel" class="card_goals_mobile carousel slide" data-bs-ride="carousel">
+              
+              <button id="scrollact" class="material-icons-outlined arrow_carousel_left" type="button" data-bs-target="#obiettivi_carousel" data-bs-slide="prev" aria-hidden="true">
+              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
+              <span class="visually-hidden"></span>
+              </button>
+
               <div class="carousel-inner">
+
                 <div class="carousel-item active">
-                  <img src="img.png" class="img_carousel" alt="...">
+                  <h3 class="title_goals_mobile">Rigenerazione degli spazi per la mobilità sostenibile</h3>
+                  <img src="obbietivi_imgs/r_urbana.jpg" class="img_goals_mobile" alt="Mobilità sostenibile">
+                  <p class="text_goals_mobile">Il nostro primo obiettivo è quello di rigenerare un’area dedicata alla mobilità sostenibile, creando spazi che incentivano l’uso di mezzi di trasporto eco-friendly. Parliamo di stazioni di bike-sharing, aree di sosta per mezzi elettrici.</p>
                 </div>
                 <div class="carousel-item">
-                  <img src="img.png" class="img_carousel" alt="...">
+                  <h3 class="title_goals_mobile">Spazi scolastici innovativi e green</h3>
+                  <img src="obbietivi_imgs/mobility_corner.jpg" class="img_goals_mobile" alt="Spazi scolastici green">
+                  <p class="text_goals_mobile">All'interno di questo progetto, un altro obiettivo fondamentale è lo sviluppo di luoghi legati agli interessi delle scuole, come un’aula in legno immersa nel verde.</p>
                 </div>
                 <div class="carousel-item">
-                  <img src="img.png" class="d-block w-100" alt="...">
+                  <h3 class="title_goals_mobile">Raccolta di dati sul tragitto casa-scuola</h3>
+                  <img src="obbietivi_imgs/tragitto.jpg" class="img_goals_mobile" alt="Dati casa-scuola">
+                  <p class="text_goals_mobile">Comprendere i percorsi degli studenti è essenziale per migliorare la mobilità sostenibile, attraverso questionari e analisi delle abitudini di viaggio.</p>
                 </div>
+
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#obiettivi_carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon invert" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+
+              <button id="scrollact" class="material-icons-outlined arrow_carousel_right" type="button" data-bs-target="#obiettivi_carousel" data-bs-slide="next" aria-hidden="true">
+              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
+              <span class="visually-hidden"></span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#obiettivi_carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon invert" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+
             </div>
           </div>
         </div>
@@ -214,7 +186,7 @@
         
           <div id = 'sep_line'></div>
 
-            <div id="second_year" class="card_act carousel slide" data-bs-ride="carousel">
+            <div id="second_year" class="card_act card2 carousel slide" data-bs-ride="carousel">
               
               <button id="scrollact" class="material-icons-outlined arrow_carousel_left" type="button" data-bs-target="#second_year" data-bs-slide="prev" aria-hidden="true">
               <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
@@ -302,6 +274,24 @@
           <p>- Provincia di Vicenza <a href = "https://www.provincia.vicenza.it/"><span class="material-icons-outlined">open_in_new</span></a></p>
           <p>- USRV-Ufficio VIII - Ambito Territoriale di Vicenza <a href = "https://vicenza.istruzioneveneto.gov.it/"><span class="material-icons-outlined">open_in_new</span></a></p>
         </div>
+
+        <div id="canova_div">
+          <h3>IIS Canova</h3>
+          <p>L’IIS Antonio Canova di Vicenza, che comprende un istituto tecnico e un liceo artistico, partecipa al progetto In-mobilità con una classe dell’indirizzo CAT, oggi composta da 18 alunni. L’istituto valorizza l’innovazione, la preparazione professionale e una solida formazione di base.</p>
+        </div>
+        <div id="rossi_div">
+          <h3>ITIS Rossi</h3>
+          <p>L’ITIS “Alessandro Rossi” di Vicenza, vicino al centro, è un istituto storico attento all’innovazione e al dialogo con il territorio. Offre cinque indirizzi e ha partecipato al progetto In-mobilità con un gruppo misto di studenti volontari di seconde. Oggi il gruppo conta circa dieci ragazzi.</p>
+        </div>
+        <div id="tron-zanella_div">
+          <h3>Liceo Tron-Zanella</h3>
+          <p></p>
+        </div>
+        <div id="aulo-ceccato_div">
+          <h3>ITET Aulo Ceccato</h3>
+          <p>Al progetto hanno partecipato due classi CAT, una per anno, per un totale di 39 studenti. L’indirizzo “Costruzioni, Ambiente e Territorio” forma competenze su materiali, strumenti di rilievo, software tecnici, valutazioni economiche, gestione ambientale e cantieri in sicurezza.</p>
+        </div>
+        <div id="separatore_3"></div>
       </div>
 
       <div id="webapp_div">
