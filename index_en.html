@@ -18,11 +18,11 @@
 </head>
     <header>
         <div id="header-container">
-            <a href="index.html"><img class="logo" alt="logo" src="logo.png" id = 'inmob_logo'></a>
+            <a href="index.html"><img class="logo logo_general" alt="logo" src="logo/logo_trasparent.png" id = 'inmob_logo'></a>
             <h1 id = 'inmobilita'>INMOBILITÀ</h1>
-            <h2 id = 'inmob_parag'>Sustenibility project</h2>
+            <h2 id = 'inmob_parag'> Sustenibility project</h2>
             <div class="icon-container">
-                <span class="material-icons-outlined">dark_mode</span>
+                <span class="material-icons-outlined" id ="theme_button">dark_mode</span>
                 <a href="index.html"><img src="ulk.png" class="bandiera"></a>
             </div>
         </div>
@@ -35,7 +35,7 @@
           <a class="sezione" id = 'partner'><span class="material-icons-outlined">handshake</span>Partner</a>
           <a class="sezione" id = 'credits'><span class="material-icons-outlined">people</span>Credits</a>
         </div>
-                <div id="fullscreen-menu" class="fullscreen-menu">
+        <div id="fullscreen-menu" class="fullscreen-menu">
         <div class="menu-header">
             <div class="logo-container">
                 <img src="logo/logo_trasparent.png" class="logo_menu" alt="logo"> 
@@ -54,7 +54,7 @@
                 </a>
                 <a id = "activity_mob2"class="nav-item">
                     <span class="material-icons-outlined">campaign</span>
-                    <span class="nav-text">Activity</span>
+                    <span class="nav-text">Activities</span>
                 </a>
             </div>
             <div id = "webapp_mob2" class="nav-column">
@@ -66,7 +66,7 @@
             <div id="partner_mob" class ="nav-column">
               <a class="nav-item">
                     <span class="material-icons-outlined">handshake</span>
-                    <span class="nav-text">Partners</span>
+                    <span class="nav-text">Partner</span>
                 </a>
             </div>
             <div id = "credits_mob" class="nav-column">
@@ -75,9 +75,9 @@
                     <span class="nav-text">Credits</span>
                 </a>
                 <div class="language-switcher">
-                    <a href="index.html" class="nav-item">
-                        <img src="ulk.png" class="bandiera">
-                        <span class="nav-text">You're viewing in English</span>
+                    <a href="index_en.html" class="nav-item">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAFVBMVEX///8AkkbOKzcAjz9otofeeoDNIS7QkpT1AAAAPklEQVRoge3MCREAIAADoPn2j2yDBfAgABnN2qnOnU3kcrlcLpfL5XK5XC6Xy+VyuVwul8vlcrlcLpfL/8ofekklvck8DdwAAAAASUVORK5CYII=" class="bandiera">
+                        <span class="nav-text">You are seeing the english version</span>
                     </a>
                 </div>
             </div> 
@@ -85,7 +85,7 @@
       </nav>
     
       <div class="menu-footer">
-          <p>Copyright 2025 - Urbana Social Cooperative</p>
+          <p>Copyright 2025 - Cooperativa Urbana</p>
       </div>
     </div>
 
@@ -93,158 +93,248 @@
         <div id="intro_content">
             <h2 id="introduction">Introduction</h2>
             <div id="intro-layout">
-                <p id="intro-text">The IN-MOBILITY project was created with the goal of transforming underutilized urban spaces into vibrant and functional places, promoting sustainable mobility. The heart of the project lies in the union between the school community — made up of students and teachers — and the regeneration of urban spaces. Our approach is simple yet ambitious: to move immobile places towards a more sustainable and accessible future for all. IN-MOBILITY is a project that aims to make a difference by directly involving the school and the local community in a transformation process focused on the future, sustainability, and collective well-being. A small step for great mobility. This is a project of urban regeneration and sustainable mobility, led by Capofila Urbana Cooperativa Sociale.</p>
-                <p id = "intro-mobile">The IN-MOBILITÀ project aims to regenerate unused urban spaces, making them lively and functional, with a particular focus on sustainable mobility. At the heart of the initiative is the collaboration between schools and the local community to transform the area in a participatory and future-oriented way. The goal is to promote a concrete shift towards a more accessible and sustainable urban environment.</p>
+                <p id="intro-text">The IN-MOBILITÀ project was created with the goal of transforming underused urban spaces into vibrant and functional places, while promoting sustainable mobility. At the heart of the project lies the collaboration between the school community — made up of students and teachers — and the regeneration of urban spaces. Our approach is simple yet ambitious: to move immobile places toward a more sustainable and accessible future for everyone. IN-MOBILITÀ is a project that aims to make a difference, directly involving schools and the local community in a transformation process focused on the future, sustainability, and collective well-being. A small step for great mobility. This is an urban regeneration and sustainable mobility project, led by the social cooperative Urbana Cooperativa Sociale.</p>
+                <p id = "intro-mobile">The IN-MOBILITÀ project aims to regenerate unused urban spaces, turning them into vibrant and functional areas, with a strong focus on sustainable mobility. At the core of the initiative is the collaboration between schools and the local community, working together to transform the area in a participatory and future-oriented way. The goal is to promote real change toward a more accessible and sustainable urban environment.</p>
                 <img id="img_body" src="body_img.jpg" alt="Progetto IN-MOBILITÀ">
-                <img id="logo_body" src="logo.png" alt="Progetto IN-MOBILITÀ">
+                <img id="logo_body" src="logo/logo_bianco.jpg" alt="Progetto IN-MOBILITÀ" class = "logo_general">
             </div>
           </div>
       </div>
 
       <hr id="separatore_1"> <!-- Placed directly under the "what" section -->
 
-      <div id = "goals">
+      <div id ="goals">
         <div id="obiettivi_container">
-          <h2 id="goals_title">Project Goals</h2>
+          <h2 id="goals_title">Project goals</h2>
           <div class="card" id="goal1">
-              <h3>Regeneration of spaces for sustainable mobility</h3>
-              <img src="./goals_img/g3.png" alt="Mobilità sostenibile">
-              <p>Our primary goal is to regenerate an area dedicated to sustainable mobility by creating spaces that encourage the use of eco-friendly means of transport. We're talking about bike-sharing stations and parking areas for electric vehicles.</p>
+              <h3>Regeneration of Spaces for Sustainable Mobility</h3>
+              <img src="obbietivi_imgs/r_urbana.jpg" class="img_obiettivi" alt="Mobilità sostenibile">
+              <p>Our primary goal is to regenerate an area dedicated to sustainable mobility by creating spaces that encourage the use of eco-friendly means of transportation. We're talking about bike-sharing stations and parking areas for electric vehicles.</p>
           </div>
           <div class="card" id="goal2">
-              <h3>Spazi scolastici innovativi e green</h3>
-              <img src="./goals_img/g2.png" alt="Spazi scolastici green">
-              <p>Within this project, another key objective is the development of spaces aligned with the interests of schools, such as a wooden classroom surrounded by greenery.</p>
+              <h3>Innovative and Green School Spaces</h3>
+              <img src="obbietivi_imgs/mobility_corner.jpg" class="img_obiettivi" alt="Spazi scolastici green">
+              <p>As part of this project, another key objective is the development of spaces connected to the interests of schools, such as a wooden classroom surrounded by greenery.</p>
           </div>
           <div class="card" id="goal3">
-              <h3>Data collection on home-to-school travel.</h3>
-              <img src="./goals_img/g1.png" alt="Dati casa-scuola">
-              <p>Understanding students’ travel patterns is essential for improving sustainable mobility, through surveys and analysis of travel habits.</p>
+              <h3>Data Collection on the Home-to-School Route</h3>
+              <img src="obbietivi_imgs/tragitto.jpg" class="img_obiettivi" alt="Dati casa-scuola">
+              <p>Understanding students’ routes is essential to improving sustainable mobility, through surveys and analysis of travel habits.</p>
           </div>
         </div>
         <div id = "mobile_obiettivi">
           <div class="obiettivi_content">
             <h2>Goals</h2>
-            <div id="obiettivi_carousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="obiettivi_carousel" class="card_goals_mobile carousel slide" data-bs-ride="carousel">
+              
+              <button id="scrollact" class="material-icons-outlined arrow_carousel_left" type="button" data-bs-target="#obiettivi_carousel" data-bs-slide="prev" aria-hidden="true">
+              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
+              <span class="visually-hidden"></span>
+              </button>
+
               <div class="carousel-inner">
+
                 <div class="carousel-item active">
-                  <img src="artworks-NKn7SdyyvKRS2lWl-NeFOKg-t500x500.jfif" class="img_carousel" alt="...">
+                  <h3 class="title_goals_mobile">Regeneration of Spaces for Sustainable Mobility</h3>
+                  <img src="obbietivi_imgs/r_urbana.jpg" class="img_goals_mobile" alt="Mobilità sostenibile">
+                  <p class="text_goals_mobile">Our primary goal is to regenerate an area dedicated to sustainable mobility by creating spaces that encourage the use of eco-friendly means of transportation. We're talking about bike-sharing stations and parking areas for electric vehicles.</p>
                 </div>
                 <div class="carousel-item">
-                  <img src="artworks-NKn7SdyyvKRS2lWl-NeFOKg-t500x500.jfif" class="img_carousel" alt="...">
+                  <h3 class="title_goals_mobile">Innovative and Green School Spaces</h3>
+                  <img src="obbietivi_imgs/mobility_corner.jpg" class="img_goals_mobile" alt="Spazi scolastici green">
+                  <p class="text_goals_mobile">As part of this project, another key objective is the development of spaces connected to the interests of schools, such as a wooden classroom surrounded by greenery.</p>
                 </div>
                 <div class="carousel-item">
-                  <img src="..." class="d-block w-100" alt="...">
+                  <h3 class="title_goals_mobile">Data Collection on the Home-to-School Route</h3>
+                  <img src="obbietivi_imgs/tragitto.jpg" class="img_goals_mobile" alt="Dati casa-scuola">
+                  <p class="text_goals_mobile">Understanding students’ routes is essential to improving sustainable mobility, through surveys and analysis of travel habits.</p>
                 </div>
+
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#obiettivi_carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon invert" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+
+              <button id="scrollact" class="material-icons-outlined arrow_carousel_right" type="button" data-bs-target="#obiettivi_carousel" data-bs-slide="next" aria-hidden="true">
+              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
+              <span class="visually-hidden"></span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#obiettivi_carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon invert" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+
             </div>
           </div>
         </div>
       </div>
-
-      <div id="separatore_2"></div>
       
       <div id = 'activity_div'>
         <div id = 'act_content'>
-          <h2 id = 'activity_title'>Activity</h2>
+          <h2 id = 'activity_title'>Activities</h2>
           <h3 id = "first_year_title">First Year</h3>
           <h3 id = 'second_year_title'>Second Year</h3>
-          <div id="first_year" class="carousel slide" data-bs-ride="carousel">
+          <div id="first_year" class="card_act carousel slide" data-bs-ride="carousel">
+            
+            <button id="scrollact" class="material-icons-outlined arrow_carousel_left" type="button" data-bs-target="#first_year" data-bs-slide="prev" aria-hidden="true">
+              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
+              <span class="visually-hidden"></span>
+              </button>
+
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="...">
+                <h4 class="title_activity">1st Active Citizenship and Participation</h4>
+                <p class="text_activity">A journey that begins with dialogue: we divided into groups to answer questions that challenged us. The theme? School. Can students truly make a difference in their own school environment? The discussion was lively, thought-provoking, and made us reflect on our active role within the educational community.</p>
+                <img src="actvity_imgs/1giornata_1anno.jpg" class="img_activity d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+                <h4 class="title_activity">2° Community</h4>
+                <p class="text_activity">The community: a concept that goes beyond mere coexistence. It is sharing, it is relationship. We explored how a group of people come together around a common goal, acting and interacting to build something greater.</p>
+                <img src="actvity_imgs/2giornata_1anno.jpg" class="img_activity d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+                <h4 class="title_activity">3° Mobility</h4>
+                <p class="text_activity">Through surveys and discussions with other students, we reflected on our travel habits. Watching a video about Northern European countries opened our eyes to the potential of sustainable mobility, giving us new ideas to think about our future.</p>
+                <img src="actvity_imgs/3giornata_1anno.jpg" class="img_activity d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <h4 class="title_activity">4° Spaces and Relationships</h4>
+                <p class="text_activity">School is not just a physical place, but an ecosystem that grows and shapes itself according to the needs of those who experience it. In this meeting, we discussed how we would like our school space to be—from the routes to get there to the spaces that welcome us every day.</p>
+                <img src="actvity_imgs/4giornata_1anno.jpg" class="img_activity d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <h4 class="title_activity">5° Towards the Mobility Corner</h4>
+                <p class="text_activity">The idea is taking shape! We measured, designed, and imagined what our mobility corner would look like. The educators introduced us to Camposaz, sharing their ideas for a sustainable wooden structure.</p>
+                <img src="actvity_imgs/5giornata_1anno.jpg" class="img_activity d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <h4 class="title_activity">6° Peer Mobility</h4>
+                <p class="text_activity">We brought to life concrete proposals on how to design and promote the mobility corner. Our goal? To create a space that fosters meeting, exchange, and collaboration among peers, with a particular focus on expanding it to include an additional space for holding classes.</p>
+                <img src="actvity_imgs/6giornata_1anno(1).jpg" class="img_activity d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <h4 class="title_activity">7° Trip to Vicenza</h4>
+                <p class="text_activity">A hands-on experience that allowed us to meet experts in design and communication. In Vicenza, we gathered ideas and inspiration, giving a tangible form to our project.</p>
+                <img src="actvity_imgs/7giornata_1anno(1).jpg" class="img_activity d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <h4 class="title_activity">8° Project Presentation</h4>
+                <p class="text_activity">The journey culminates in a moment of great satisfaction: the presentation of our work. Municipal and provincial authorities attended our project presentation, and the mobility corner was finally inaugurated, symbolizing a year of growth and participation.</p>
+                <img src="actvity_imgs/mobility_corner.jpg" class="img_activity d-block w-100" alt="...">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#first_year" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon invert carousel-control-newadjust" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#first_year" data-bs-slide="next">
-              <span class="carousel-control-next-icon invert carousel-control-newadjust" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            
+            <button id="scrollact" class="material-icons-outlined arrow_carousel_right" type="button" data-bs-target="#first_year" data-bs-slide="next" aria-hidden="true">
+              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
+              <span class="visually-hidden"></span>
+              </button>
+
           </div>
+          
+
         
           <div id = 'sep_line'></div>
 
-            <div id="second_year" class="carousel slide" data-bs-ride="carousel">
+            <div id="second_year" class="card_act card2 carousel slide" data-bs-ride="carousel">
+              
+              <button id="scrollact" class="material-icons-outlined arrow_carousel_left" type="button" data-bs-target="#second_year" data-bs-slide="prev" aria-hidden="true">
+              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
+              <span class="visually-hidden"></span>
+              </button>
+
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="..." class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="..." class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="..." class="d-block w-100" alt="...">
+                <h4 class="title_activity">1° Feedback and Relaunch</h4>
+                <p class="text_activity">We took a step back to reflect on the impact of last year’s activities. What did we learn? What can we improve? This meeting was an opportunity to gather challenges and ideas for the new year.</p>
+                <img src="actvity_imgs/1giornata_2anno.jpg" class="img_activity d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <h4 class="title_activity">2° Ethical Finance</h4>
+                <p class="text_activity">We explored a crucial topic: ethical finance. A system that places people and the environment at its center and guides decisions on where to allocate resources. We reflected on how ethics can steer financial choices, while also learning about some organizations that embrace this approach.</p>
+                <img src="actvity_imgs/2giornata_2anno.jpg" class="img_activity d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <h4 class="title_activity">3° Cultural Planning</h4>
+                <p class="text_activity">What is a cultural action? We analyzed various examples, from the most formal to the more informal, and put into practice what we learned by planning our own swap party: an event to promote reuse, creativity, and sustainability.</p>
+                <img src="actvity_imgs/3giornata_2anno.jpg" class="img_activity d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <h4 class="title_activity">4° Swap Party</h4>
+                <p class="text_activity">The art of exchanging! At our swap party, we experienced exchanging items—from clothing to stationery, and even books. A fun and practical way to raise awareness about sustainability and conscious consumption.</p>
+                <img src="actvity_imgs/4giornata_2anno.jpg" class="img_activity d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <h4 class="title_activity">5° Bicycle Maintenance</h4>
+                <p class="text_activity">The bicycle is one of the symbols of sustainable mobility. We learned about its components, how to repair it, and how to ensure our safety. A hands-on session that taught us how to keep our means of transport in perfect condition.</p>
+                <img src="actvity_imgs/5giornata_2anno.jpg" class="img_activity d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <h4 class="title_activity">6th What Do We Say to the Institutions?</h4>
+                <p class="text_activity">The journey has come to an end, and it’s time to prepare for the final conference. We split into two groups: one focused on preparing the speech to explain how the website was created and the path we followed throughout the two years of the project, and the other dedicated to writing a letter to the institutions.</p>
+                <img src="actvity_imgs/6giornata_2anno.jpg" class="img_activity d-block w-100" alt="...">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#second_year" data-bs-slide="prev" aria-hidden="true">
-              <span class="carousel-control-prev-icon invert carousel-control-newadjust" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#second_year" data-bs-slide="next" aria-hidden="true">
-              <span class="carousel-control-next-icon invert carousel-control-newadjust" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            
+            <button id="scrollact" class="material-icons-outlined arrow_carousel_right" type="button" data-bs-target="#second_year" data-bs-slide="next" aria-hidden="true">
+              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
+              <span class="visually-hidden"></span>
+              </button>
+
           </div>
         </div>
       </div>
 
       <div id="partner_div">
         <div id="project_partner">
-          <h3>Project Partners</h3>
+          <h3>Project Partner</h3>
           <p>
-            - Urbana cooperativa sociale
+            - Urbana cooperativa sociale <a href = "https://www.urbanfair.it/"><span class="material-icons-outlined">open_in_new</span></a>
           </p>
         </div>
         <div id="school_partner">
           <h3>School Partners</h3>
           <p>
-            - Vicenza: IIS Canova <br>
-            - Vicenza: ITIS Rossi <br>
-            - Schio: Liceo Tron-Zanella <br>
-            - Montecchio: IIS Silvio Ceccato <br>
-            - Thiene: ITET Aulo Ceccato <br>
+            - Vicenza: IIS Canova <a href = "https://www.iiscanova.edu.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
+            - Vicenza: ITIS Rossi <a href = "https://www.itisrossi.edu.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
+            - Schio: Liceo Tron-Zanella <a href = "https://www.liceischio.edu.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
+            - Montecchio: IIS Silvio Ceccato <a href = "https://www.silvioceccato.edu.it"><span class="material-icons-outlined">open_in_new</span></a><br>
+            - Thiene: ITET Aulo Ceccato <a href = "https://www.auloceccato.edu.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
           </p>
         </div>
         <div id="organization_partner">
-          <h3>Partners and Operating Organizations</h3>
+          <h3>Organizational Partners</h3>
           <p>
-            - referente mobilità: civi&co e veloCittà <br>
-            - referente Mobility Corner: Camposaz <br>
-            - Vicenza: Arci Servizio Civile <br>
-            - Schio: Samarcanda coop. sociale <br>
-            - Montecchio: Piano Infinito <br>
-            - Thiene: Radicà cooperativa sociale <br>
+            - mobility coordinator: civi&co e veloCittà <a href = "https://www.velocitta.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
+            - mobility corner coordinator: Camposaz <a href = "https://www.camposaz.com/"><span class="material-icons-outlined">open_in_new</span></a><br>
+            - Vicenza: Arci Servizio Civile <a href = "https://www.arciserviziocivile.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
+            - Schio: Samarcanda coop. sociale <a href = "https://www.samarcandaonlus.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
+            - Montecchio: Piano Infinito <a href = "https://www.pianoinfinitocoop.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
+            - Thiene: Radicà cooperativa sociale <a href = "https://www.radicaonlus.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
           </p>
         </div>
         <div id="institutional_partner">
           <h3>Institutional Partners</h3>
-          <p>- Provincia di Vicenza</p>
-          <p>- USRV-Ufficio VIII - Ambito Territoriale di Vicenza</p>
+          <p>- Province of Vicenza <a href = "https://www.provincia.vicenza.it/"><span class="material-icons-outlined">open_in_new</span></a></p>
+          <p>- USRV-Ufficio VIII - Territorial Area of Vicenza <a href = "https://vicenza.istruzioneveneto.gov.it/"><span class="material-icons-outlined">open_in_new</span></a></p>
         </div>
+
+        <div id="canova_div">
+          <h3>IIS Canova</h3>
+          <p>The IIS Antonio Canova of Vicenza, which includes a technical institute and an art high school, participates in the In-mobilità project with a class from the CAT program, currently made up of 18 students. The institute values innovation, professional training, and a solid foundational education.</p>
+        </div>
+        <div id="rossi_div">
+          <h3>ITIS Rossi</h3>
+          <p>The ITIS “Alessandro Rossi” of Vicenza, located near the city center, is a historic institute attentive to innovation and dialogue with the local area. It offers five study programs and participated in the In-mobilità project with a mixed group of volunteer second-year students. Today, the group consists of about ten students.</p>
+        </div>
+        <div id="tron-zanella_div">
+          <h3>Liceo Tron-Zanella</h3>
+          <p>The Tron-Zanella-Martini institute includes all the high schools in Schio: scientific, classical, linguistic, artistic, and human sciences. The class that participated in the project was 4BI, consisting of 22 students. This program places special emphasis on critical analysis, encouraging thoughtful reflection.</p>
+        </div>
+        <div id="aulo-ceccato_div">
+          <h3>ITET Aulo Ceccato</h3>
+          <p>Two CAT classes participated in the project, one per year, totaling 39 students. The "Construction, Environment, and Territory" program develops skills in materials, surveying tools, technical software, economic evaluations, environmental management, and safe construction site practices.</p>
+        </div>
+        <div id="separatore_3"></div>
       </div>
 
       <div id="webapp_div">
         <div id="webapp_container">
           <h3>Webapp</h3>
-          <p>PlaNet is a sustainable education platform designed to be accessible, engaging, and stimulating. It focuses on key topics such as sustainable food, circular economy, sustainable mobility, energy consumption, and diversity and inclusion (D&I). By using gamification as a learning technique, PlaNet makes skill acquisition an interactive and motivating experience, fostering greater awareness and responsibility toward a more sustainable and inclusive future.</p>
-          <a href="" id="webapp_link"><span class="material-icons-outlined webapp">arrow_forward</span>Find out more</a>
+          <p>PlaNet is a sustainable training platform designed to be accessible, engaging, and inspiring. It focuses on crucial topics such as sustainable food, circular economy, sustainable mobility, energy consumption, and diversity and inclusion (D&I). Using gamification as a learning technique, PlaNet makes skill acquisition an interactive and motivating experience, promoting greater awareness and responsibility toward a more sustainable and inclusive future.</p>
+          <a href="" id="webapp_link"><span class="material-icons-outlined webapp">arrow_forward</span>Learn More</a>
         </div>
       </div>
       
@@ -252,7 +342,7 @@
         <div id="credits_container">
           <h3>Credits</h3>
           <div id="programmers">
-            <h4>Programmers</h4>
+            <h4>Programmersi</h4>
             <p>Pratham Madaan <br> Manuel Visentin <br> Giordano Peressini</p>
           </div>
           <div id="designers">
@@ -267,7 +357,7 @@
         <div class="navmenu_mobile">
             <nav class="navsez">
                 <a id ="home_mob"><span class="material-icons-outlined">home</span>Home</a>
-                <a id ="activity_mob"><span class="material-icons-outlined">campaign</span>Attività</a>
+                <a id ="activity_mob"><span class="material-icons-outlined">campaign</span>Activities</a>
                 <a id ="webapp_mob"><span class="material-icons-outlined">web</span>WebApp</a>
                 <a href="#" id="footer-menu-icon"><span class="material-icons-outlined">menu</span>Menu</a>
             </nav>
