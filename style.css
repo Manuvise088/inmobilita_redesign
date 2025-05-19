@@ -177,6 +177,7 @@ body button {
     padding: 0.2vh;
     transition: all 0.3s ease;
     display: inline-block; /* Migliora il posizionamento dell'underline */
+    color: black;
 }
 
 .icon-container span::after {
@@ -314,7 +315,7 @@ body button {
     justify-content: center;
     align-items: center;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    z-index: 1;
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
     border-top-right-radius: 2vh;
@@ -497,7 +498,6 @@ footer p {
 }
 
 .close-button {
-    background: none;
     border: none;
     color: white;
     font-size: 2.5rem;
@@ -634,7 +634,6 @@ footer p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
 }
 .logo-container {
     display: inline-flex;
@@ -643,11 +642,11 @@ footer p {
     display: flex;
     align-items: center;
     max-width: 80px;
-    margin-left: 5px;;
-    margin-top: 5px;
-    margin-bottom: -30px;
+    margin-left: 5px;
+    margin-top: -6vh;
     background-color: white;
     border-radius: 100px;
+    margin-bottom: -3vh;
 }
 
 .menu-text {
@@ -680,7 +679,7 @@ hr {
     font-weight: weight;
 }
 .menu-nav a:hover {
-    background-color: white;
+    background-image: linear-gradient(to bottom, #1f4f38, #6b3e58);
 }
 
 p {
@@ -692,9 +691,8 @@ p {
     margin-right: 10px;
 }
 .close-button {
-    color: white;
+    background: #ffffff00;
     border-radius: 100px;
-    background-color: #FFFFFF39;
     border: none;
     padding-top: 1vh;
     padding-left: 1vh;
@@ -794,6 +792,7 @@ p {
     border-radius: 100px;
     position: absolute;
     right: 6vh;
+    z-index: 1;
     transition-duration: 0.5s;
 }
 
@@ -1167,7 +1166,7 @@ p {
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 6vh;
-    z-index: 999;
+    z-index: 1;
     animation: fadeinleft 0.2s linear 0s 1 normal;
     cursor: pointer;
     transition-duration: 0.3s;
