@@ -81,6 +81,7 @@ body.inverted img{
     filter: invert(1.1) hue-rotate(180deg);
 }
 
+
 #inmobilita{
     margin-top: 1vh;
 }
@@ -259,7 +260,7 @@ body button {
 }
 
 .sezione:hover{
-    background-color: #faaacd;
+    background-color: #faaacd !important;
     transform: scale(0.9);
     font-weight: bold;
     border : solid 0.5vh #faaacd;
@@ -937,14 +938,6 @@ p {
     align-items: center;
     justify-content: center;
     text-align: center;
-.carousel-item{
-    animation: fadein 0.3s linear 0s 1 normal;
-}
-
-.carousel-control-newadjust{
-    height: 75px;
-    width: 75px;
-    border-radius: 20px;
     transition-duration: 0.3s;
 }
 
@@ -1587,5 +1580,4 @@ p {
         body {
             height: 175vh;
         }
-}
 }

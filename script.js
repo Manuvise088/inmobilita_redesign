@@ -772,7 +772,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     element.style.setProperty('background-color', '#4CAF50');
                     element.classList.toggle("sezione_selezionata");
                 }
-                document.querySelectorAll(".logo_general").forEach(function(el){
+            document.querySelectorAll(".logo_general").forEach(function(el){
                     el.src = "logo/logo_nero.jpg";
                 })
             });
@@ -793,5 +793,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
 
 });
