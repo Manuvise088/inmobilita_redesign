@@ -72,13 +72,13 @@
     }
 }
 
-body.inverted {
-    filter: invert(0.9) hue-rotate(180deg);
-    background-image: linear-gradient(to bottom, #1f4f38, #6b3e58);
+.inverted h1, .inverted h2 {
+    color: white;
 }
 
-body.inverted img{
-    filter: invert(1.1) hue-rotate(180deg);
+body.inverted {
+    color: white;
+    background-image: linear-gradient(to bottom, #1f4f38, #6b3e58);
 }
 
 
@@ -169,6 +169,7 @@ body button {
 .icon-container span {
     position: relative; /* Necessario per posizionare il pseudo-elemento */
     font-size: 5vh;
+    color: black;
     margin-left: 0.3vh;
     padding: 0.2vh;
     transition: all 0.3s ease;
@@ -435,29 +436,154 @@ footer p {
         left: 12vh;
     }
 }
+/* Improved Menu Styles */
 .fullscreen-menu {
     position: fixed;
-    top: 100%;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.95);
     display: none;
     flex-direction: column;
+    z-index: 9999;
+    color: white;
+    padding: 2rem;
+    box-sizing: border-box;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    z-index: 9999;
-    color: white; 
+    overflow-y: auto;
 }
 
 .fullscreen-menu.show {
     display: flex;
-    animation: slideUp 0.3s ease-out forwards;
+    animation: fadeIn 0.3s ease-out forwards;
 }
 
-.fullscreen-menu.hide {
+.menu-header {
     display: flex;
-    animation: slideDown 0.3s ease-out forwards;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3vh;
+    padding-top: 2vh;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo_menu {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+}
+
+.menu-title {
+    font-size: 2rem;
+    color: white;
+    margin-top: -4vh;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-top: -4vh;
+}
+
+.close-button:hover {
+    transform: rotate(90deg);
+}
+
+.menu-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem 0;
+    flex-grow: 1;
+}
+
+.nav-column {
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    margin-top: -2vh;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(10px);
+}
+
+.nav-item .material-icons-outlined {
+    font-size: 2rem;
+}
+
+.menu-footer {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.language-switcher {
+    margin-top: 2rem;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .menu-nav {
+        flex-direction: column;
+    }
+    
+    .nav-column {
+        min-width: 100%;
+    }
+    
+    .nav-item {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .menu-title {
+        font-size: 1.5rem;
+    }
+    
+    .logo_menu {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 
@@ -498,12 +624,6 @@ footer p {
     filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg);
 }
 
-.menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
 .logo-container {
     display: inline-flex;
 }
@@ -512,8 +632,7 @@ footer p {
     align-items: center;
     max-width: 80px;
     margin-left: 5px;;
-    margin-top: 5px;
-    margin-bottom: -30px;
+    margin-top: -5vh;
     background-color: white;
     border-radius: 100px;
 }
@@ -521,7 +640,7 @@ footer p {
 .menu-text {
     color: white;
     position: fixed;
-    top: 25px;
+    top: 2vh;
     left: 110px;
 }
 
@@ -535,7 +654,7 @@ hr {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 10px;
     font-weight: weight;
     padding: 3vw;
 }
@@ -548,7 +667,7 @@ hr {
     font-weight: weight;
 }
 .menu-nav a:hover {
-    background-color: white;
+    background-image: linear-gradient(to bottom, #1f4f38, #6b3e58);
 }
 
 p {
@@ -558,16 +677,6 @@ p {
 }
 .menu-nav span {
     margin-right: 10px;
-}
-.close-button {
-    color: white;
-    border-radius: 100px;
-    background-color: #FFFFFF39;
-    border: none;
-    padding-top: 1vh;
-    padding-left: 1vh;
-    padding-right: 1vh;
-    cursor: pointer;
 }
 #what{
     position: absolute;
@@ -864,8 +973,8 @@ p {
     margin-top: 4vh;
     position: relative;
     color: rgb(0, 0, 0);
-    margin-left: 10vh;
-    margin-right: 10vh;
+    margin-left: 20vh;
+    margin-right: 20vh;
     font-size: 2.5vh;
     max-width: 55%;
 }
@@ -1081,7 +1190,7 @@ p {
     margin-left: 2.5vw;
     background-color: #f8f8f87a;
     width: 95%;
-    height: 151vh;
+    height: 95vh;
     border-radius: 2vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding-top: 2vh;
@@ -1153,67 +1262,6 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #ffffff;
 }
-
-#canova_div{
-    position: absolute;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
-    height: 51.3vh;
-    width: 20%;
-    margin-top: 95vh;
-    margin-left: 1.5vw;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #ffffff;
-}
-
-#rossi_div{
-    position: absolute;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
-    height: 51.3vh;
-    width: 20%;
-    margin-top: 95vh;
-    margin-left: 25vw;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #ffffff;
-}
-
-#tron-zanella_div{
-    position: absolute;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
-    height: 51.3vh;
-    width: 20%;
-    margin-top: 95vh;
-    margin-left: 48vw;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #ffffff;
-}
-
-#aulo-ceccato_div{
-    position: absolute;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
-    height: 51.3h;
-    width: 20%;
-    margin-top: 95vh;
-    margin-left: 71vw;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #ffffff;
-}
-
 #partner_div h3{
     text-align: left;
     color:rgb(0, 0, 0);
@@ -1497,97 +1545,25 @@ p {
     }
     #first_year{
         margin-top: 20vh;
-        width: 90% !important;
-        margin-left: 2vw;
+        width: 98% !important;
     }
 
     #second_year_title{
         position: absolute;
-        top: -60vh;
-        left: -47.25vw;
-        margin-top: 180vh !important;
+        top: -10vh;
+        left: -71vw;
     }
     #second_year{
         margin-top: 45vh;
-        width: 90% !important;
-        margin-left: 2vw;
+        width: 98% !important;
+        left: -49vw;
     }
     #activity_div{
-        height: 223vh !important;
-        margin-left: 2.8vw !important;
-        margin-bottom: 25vh !important;
+        height: 68vh !important;
     }
     #act_content{
-        height: 220vh !important;
-        /*display: flex;
-        flex-direction: column;*/
+        height: 65vh !important;
     }
-
-    #sep_line {
-        display: none;
-    }
-    
-    .card_act{
-        width: 65% !important;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        height: 92.4vh;
-        margin-top: 15vh !important;
-        margin-left: 2.5vw !important;
-    }
-    .card2{
-        margin-top: 120vh !important;
-    }
-
-    .carousel-inner{
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    .title_activity{
-        margin-left: 0;
-        margin-right: 0;
-        max-width: 100%;
-    }
-    .text_activity{
-        max-width: 100%;
-        margin-left: 3vw;
-        margin-right: 3vw;
-    }
-    .img_activity{
-        max-width: 40vh !important;
-    }
-
-    .arrow_carousel_left{
-        left: 13vw;
-        margin-top: 82vh;
-        position: fixed;
-    }
-
-    .arrow_carousel_right{
-        right: 13vw;
-        margin-top: 82vh;
-        position: fixed;
-    }
-
-    .arrow_carousel_left:active{
-    background-color: #f98bcc;
-    transform: scale(0.9);
-    font-weight: bold;
-    border : solid 0.5vh white;
-    color: white;
-    transform: rotate(270deg);
-    }
-
-    .arrow_carousel_right:active{
-    background-color: #f98bcc;
-    transform: scale(0.9);
-    font-weight: bold;
-    border : solid 0.5vh white;
-    color: white;
-    transform: rotate(90deg);
-    }  
 
     #webapp_div{
         height: 100vh;
@@ -1597,53 +1573,6 @@ p {
     }
     #webapp_link{
         margin-top: 32vh;
-    }
-
-    #partner_div{
-        top: 15vh;
-    }
-    #school_partner{
-        width: 92vw;
-    }
-    #organization_partner{
-        width: 92vw;
-        margin-left: 1.5vw;
-        margin-top: 43vh;
-        height: 57vh;
-    }
-    #institutional_partner{
-        height: 25vh;
-        margin-top: 103vh;
-    }
-    #project_partner{
-        margin-top: 131vh;
-    }
-    #rossi_div{
-        margin-top: 202vh;
-        width: 92vw;
-        margin-left: 1.5vw;
-        height: 47vh;
-    }
-    #canova_div{
-        margin-top: 156vh;
-        width: 92vw;
-        height: 45vh;
-    }
-    #tron-zanella_div{
-        margin-top: 252vh;
-        margin-left: 1.5vw;
-        width: 92vw;
-        height: 45vh;
-    }
-    #aulo-ceccato_div{
-        margin-top: 300vh;
-        margin-left: 1.5vw;
-        width: 92vw;
-        height: 52vh;
-    }
-    #separatore_3{
-        height: 13vh;
-        margin-top: 352vh;
     }
 }
 
@@ -1760,4 +1689,7 @@ p {
         body {
             height: 175vh;
         }
+}
+body, .inverted {
+    color: white;
 }

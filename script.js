@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const HomeMob = document.getElementById('home_mob');
     const WebappMob = document.getElementById('webapp_mob');
     const CreditsButton = document.getElementById('credits');
-    const PartnerMob = document.getElementById('partner_mob')
 
     // Set Home button as default
     HomeButton.classList.add('selected'); // Add 'selected' class to indicate it's active
@@ -155,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
         PartnerButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         PartnerButton.classList.add('sezione_selezionata');
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.marginTop = "370vh";
+        document.getElementById('separatore_1').style.marginTop = "128vh";
 
         if(HomeButton.classList.contains('selected')){
             document.getElementById('what').style.animation = 'slideout 1s forwards 0s 1 normal';
@@ -319,9 +318,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ActivityMob.addEventListener('click', () => {
         // Set Activity button as new default
-        document.getElementById('copyright').style.setProperty('margin-top', '0vh', 'important');
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.top = "168vh";
+        document.getElementById('separatore_1').style.top = "12vh";
         ActivityButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         ActivityButton.classList.add('sezione_selezionata');
 
@@ -363,8 +361,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     HomeMob.addEventListener('click', () => {
-        document.getElementById('separatore_1').style.top = "9vh";
         if (!HomeButton.classList.contains('selected')) {
+            document.getElementById('separatore_1').style.marginTop = "94vh";
             document.body.style.height = 'auto';
             if(ActivityButton.classList.contains('selected')){
                 document.getElementById('activity_div').style.animation = 'slideout 1s forwards 0s 1 normal';
@@ -413,7 +411,7 @@ document.addEventListener('DOMContentLoaded', () => {
     WebappMob.addEventListener('click', () => {
         // Set Webapp button as new default
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.top = "44vh";
+        document.getElementById('separatore_1').style.marginTop = "94vh";
         WebappButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         WebappButton.classList.add('sezione_selezionata');
 
@@ -452,61 +450,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.getElementById('webapp_div').style.animation = 'slidein 1s forwards 0s 1 normal';
         document.getElementById('webapp_div').style.visibility = 'visible';
-    });
-
-    PartnerMob.addEventListener('click', () =>{
-        document.getElementById('copyright').style.setProperty('margin-top', '0vh', 'important');
-        // Set Partner button as new default
-        PartnerButton.classList.add('selected'); // Add 'selected' class to indicate it's active
-        PartnerButton.classList.add('sezione_selezionata');
-        document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.marginTop = "128vh";
-
-        if(HomeButton.classList.contains('selected')){
-            document.getElementById('what').style.animation = 'slideout 1s forwards 0s 1 normal';
-            document.getElementById('goals').style.animation = 'slideout 1s forwards 0s 1 normal';
-            HomeButton.classList.remove('selected');
-            HomeButton.classList.remove('sezione_selezionata');
-
-            const homeIcon = HomeButton.querySelector('.material-icons, .material-icons-outlined');
-            if (homeIcon) {
-                homeIcon.classList.remove('material-icons');
-                homeIcon.classList.add('material-icons-outlined');
-            }
-        }
-        else if (ActivityButton.classList.contains('selected')){
-            document.getElementById('activity_div').style.animation = 'slideout 1s forwards 0s 1 normal';
-            ActivityButton.classList.remove('selected');
-            ActivityButton.classList.remove('sezione_selezionata');
-            const activityIcon = ActivityButton.querySelector('.material-icons, .material-icons-outlined');
-            if (activityIcon) {
-                activityIcon.classList.remove('material-icons');
-                activityIcon.classList.add('material-icons-outlined');
-            }
-        }
-        else if (WebappButton.classList.contains('selected')){
-            document.getElementById('webapp_div').style.animation = 'slideout 1s forwards 0s 1 normal';
-            WebappButton.classList.remove('selected');
-            WebappButton.classList.remove('sezione_selezionata');
-            const webappIcon = WebappButton.querySelector('.material-icons, .material-icons-outlined');
-            if (webappIcon) {
-                webappIcon.classList.remove('material-icons');
-                webappIcon.classList.add('material-icons-outlined');
-            }
-        }
-        else if (CreditsButton.classList.contains('selected')){
-            document.getElementById('credits_div').style.animation = 'slideout 1s forwards 0s 1 normal';
-            CreditsButton.classList.remove('selected');
-            CreditsButton.classList.remove('sezione_selezionata');
-            const creditsIcon = CreditsButton.querySelector('.material-icons, .material-icons-outlined');
-            if (creditsIcon) {
-                creditsIcon.classList.remove('material-icons');
-                creditsIcon.classList.add('material-icons-outlined');
-            }
-        }
-
-        document.getElementById('partner_div').style.animation = 'slidein 1s forwards 0s 1 normal';
-        document.getElementById('partner_div').style.visibility = 'visible';
     });
 
     // Scroll to Top functionality
@@ -691,7 +634,7 @@ document.addEventListener('DOMContentLoaded', () => {
         PartnerButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         PartnerButton.classList.add('sezione_selezionata');
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.marginTop = "184vh";
+        document.getElementById('separatore_1').style.marginTop = "128vh";
 
         if(HomeButton.classList.contains('selected')){
             document.getElementById('what').style.animation = 'slideout 1s forwards 0s 1 normal';
