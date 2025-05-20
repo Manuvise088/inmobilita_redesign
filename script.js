@@ -373,12 +373,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.getElementById('activity_div').style.animation = 'slidein 1s forwards 0s 1 normal';
         document.getElementById('activity_div').style.visibility = 'visible';
-        fullscreenMenu.classList.remove('show');
-        fullscreenMenu.classList.add('hide');
     });
 
     HomeMob.addEventListener('click', () => {
-        document.getElementById('separatore_1').style.top = "9vh";
+        document.getElementById('separatore_1').style.top = "19vh";
         if (!HomeButton.classList.contains('selected')) {
             document.body.style.height = 'auto';
             if(ActivityButton.classList.contains('selected')){
@@ -432,8 +430,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 homeIcon.classList.remove('material-icons-outlined');
                 homeIcon.classList.add('material-icons');
             }
-            fullscreenMenu.classList.remove('show');
-            fullscreenMenu.classList.add('hide');
         }
     });
 
@@ -489,8 +485,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.getElementById('webapp_div').style.animation = 'slidein 1s forwards 0s 1 normal';
         document.getElementById('webapp_div').style.visibility = 'visible';
-        fullscreenMenu.classList.remove('show');
-        fullscreenMenu.classList.add('hide');
     });
 
     PartnerMob.addEventListener('click', () =>{
@@ -546,8 +540,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.getElementById('partner_div').style.animation = 'slidein 1s forwards 0s 1 normal';
         document.getElementById('partner_div').style.visibility = 'visible';
-        fullscreenMenu.classList.remove('show');
-        fullscreenMenu.classList.add('hide');
     });
 
     CreditsMob.addEventListener('click', () => {
@@ -603,8 +595,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         document.getElementById('credits_div').style.animation = 'slidein 1s forwards 0s 1 normal';
         document.getElementById('credits_div').style.visibility = 'visible';
-        fullscreenMenu.classList.remove('show');
-        fullscreenMenu.classList.add('hide');
 
     });
 
@@ -661,8 +651,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.getElementById('activity_div').style.animation = 'slidein 1s forwards 0s 1 normal';
         document.getElementById('activity_div').style.visibility = 'visible';
-        fullscreenMenu.classList.remove('show');
-        fullscreenMenu.classList.add('hide');
     });
 
     WebappMob2.addEventListener('click', () => {
@@ -717,8 +705,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.getElementById('webapp_div').style.animation = 'slidein 1s forwards 0s 1 normal';
         document.getElementById('webapp_div').style.visibility = 'visible';
-        fullscreenMenu.classList.remove('show');
-        fullscreenMenu.classList.add('hide');
     });
 
     // Scroll to Top functionality

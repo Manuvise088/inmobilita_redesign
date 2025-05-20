@@ -197,7 +197,6 @@ body button {
 .icon-container span:hover::after {
     width: 100%; /* Mostra la linea completa al hover */
 }
-
 .bandiera {
     width: 5vh;
     border-radius: 200px;
@@ -345,7 +344,7 @@ body button {
     transition-duration: 0.3s;
 }
 .navsez span:hover {
-    background-color: black;
+    background-image: linear-gradient(to bottom, #51cd92, #f98bcc);
     padding-right: 10px;
     padding-left: 10px;
     border-radius: 100px;
@@ -411,7 +410,7 @@ footer p {
         display: none;
     }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 640px) {
     .icon-container {
         display: none;
     }
@@ -680,7 +679,7 @@ hr {
     font-weight: weight;
 }
 .menu-nav a:hover {
-    background-image: linear-gradient(to bottom, #48ffa6, #ff70c3);
+    background-image: linear-gradient(to bottom, #1f4f38, #6b3e58);
 }
 
 p {
@@ -759,7 +758,7 @@ p {
     position: relative;
     color: rgb(0, 0, 0);
     border-radius: 4vw;
-    margin-left: 5vh;
+    margin-left: 4vh;
     padding-left: 1vw;
     padding-right: 1vw;
     margin-top: 5vh;
@@ -1536,11 +1535,11 @@ p {
     color: rgb(0, 0, 0);
 }
 
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 640px){
     #what{
         top: 14vh;
         width: 95%;
-        min-height: 65vh !important;
+        min-height: 75vh !important;
         align-items: center;
         margin-left: 2vw;
         border-radius: 3vh;
@@ -1564,6 +1563,7 @@ p {
         position: absolute;
         top: 5vh;
         visibility: visible !important;
+        margin-top: 10vh !important;
     }
     #intro_content {
         min-height: 60vh;
@@ -1574,13 +1574,11 @@ p {
         font-size: 5vh;
     }
     #logo_body {
-        width: 6vh;
-        height: 6vh;
-        margin-top: 1vh;
+        display: none;
     }
     #goals {
         position: absolute;
-        margin-top: 52vh;
+        margin-top: 62vh;
         background-color: #f8f8f87a;
         width: 95%;
         margin-left: 2vw;
@@ -1594,7 +1592,7 @@ p {
     }
     #separatore_1 {
         position: absolute;
-        top: 9vh;
+        top: 19vh;
         margin-top: 20vh !important;
         margin-left: 2vw !important;
     }
@@ -1699,6 +1697,14 @@ p {
         width: 90% !important;
         margin-left: 2vw;
     }
+
+    #second_year_title{
+        position: absolute;
+        top: -60vh;
+        left: -55vw;
+        text-align: left;
+        margin-top: 180vh !important;
+    }
     #second_year{
         margin-top: 45vh;
         width: 90% !important;
@@ -1750,9 +1756,7 @@ p {
     .img_activity{
         max-width: 40vh !important;
     }
-    #second_year_title {
-        display: none !important;
-    }
+
     .arrow_carousel_left{
         left: 13vw;
         margin-top: 82vh;
@@ -1821,7 +1825,7 @@ p {
         height: 47vh;
     }
     #canova_div{
-        margin-top: 156vh;
+        margin-top: 154vh;
         width: 92vw;
         height: 45vh;
     }
@@ -1942,6 +1946,10 @@ p {
             margin: 0 auto; /* Centers horizontally */
             z-index: 999;
             border-radius: 2vh;
+        }
+        #second_year_title {
+            text-align: left;
+            margin-left: 37vh;
         }
         .invert {
             display: none;
