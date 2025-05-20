@@ -143,11 +143,6 @@ body button {
     background-color: white;
     left: 6vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition-duration: 0.3s;
-}
-.logo:hover {
-    transition-duration: 0.3s;
-    transform: scale(0.9);
 }
 #header-container h1 {
     position: absolute;
@@ -763,7 +758,7 @@ p {
     position: relative;
     color: rgb(0, 0, 0);
     border-radius: 4vw;
-    margin-left: 5vh;
+    margin-left: 4vh;
     padding-left: 1vw;
     padding-right: 1vw;
     margin-top: 5vh;
@@ -778,7 +773,7 @@ p {
     position: absolute;
     z-index: 2;
     right: 20vh;
-    top: 7vh;
+    top: 6vh;
     height: 22vw;
     width: 29vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -1217,7 +1212,7 @@ p {
     margin-left: 2.5vw;
     background-color: #f8f8f87a;
     width: 95%;
-    height: 151vh;
+    height: 158vh;
     border-radius: 2vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding-top: 2vh;
@@ -1290,15 +1285,30 @@ p {
     background-color: #ffffff;
 }
 
+#ceccato_div{
+    position: absolute;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    height: 58.3vh;
+    width: 19%;
+    margin-top: 95vh;
+    margin-left: 1.5vw;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+
 #canova_div{
     position: absolute;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 15px;
-    height: 51.3vh;
-    width: 20%;
+    height: 58.3vh;
+    width: 18%;
     margin-top: 95vh;
-    margin-left: 1.5vw;
+    margin-left: 21vw;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -1310,10 +1320,10 @@ p {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 15px;
-    height: 51.3vh;
-    width: 20%;
+    height: 58.3vh;
+    width: 18%;
     margin-top: 95vh;
-    margin-left: 25vw;
+    margin-left: 39vw;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -1325,10 +1335,10 @@ p {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 15px;
-    height: 51.3vh;
-    width: 20%;
+    height: 58.3vh;
+    width: 18%;
     margin-top: 95vh;
-    margin-left: 48vw;
+    margin-left: 57vw;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -1340,10 +1350,10 @@ p {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 15px;
-    height: 51.3vh;
-    width: 20%;
+    height: 58.3vh;
+    width: 18%;
     margin-top: 95vh;
-    margin-left: 71vw;
+    margin-left: 75.4vw;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -1465,14 +1475,6 @@ p {
     font-weight: bold;
 }
 
-#webapp_container img{
-    position: absolute;
-    top: 3vh;
-    margin-left: 13vw;
-    width: 24vw;
-    height: 24vw;
-}
-
 #credits_div{
     position: absolute;
     align-items: center;
@@ -1510,15 +1512,6 @@ p {
     font-size: 6.5vh;
 }
 
-#credits_container img{
-    position: absolute;
-    width: auto;
-    height: 20vw;
-    border-radius: 2.5vh;
-    margin-left: 5vw;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 @media screen and (max-width: 640px){
     #credits_div{
         margin-top: -19vh !important;
@@ -1529,7 +1522,7 @@ p {
     position: absolute;
     top: 22vh;
     text-align:left;
-    left: 13vw;
+    left: 3.5vw;
 }
 
 #programmers p{
@@ -1543,9 +1536,9 @@ p {
 
 #designers{
     position: absolute;
-    top: 22vh;
-    margin-left: 30vw;
+    top: 40vh;
     text-align:left;
+    left: 3.5vw;
 }
 
 #designers p{
@@ -1561,7 +1554,7 @@ p {
     #what{
         top: 14vh;
         width: 95%;
-        min-height: 65vh !important;
+        min-height: 75vh !important;
         align-items: center;
         margin-left: 2vw;
         border-radius: 3vh;
@@ -1592,12 +1585,6 @@ p {
         border-radius: 3vh;
         width: 93%;
     }
-    #logo_body {
-        display: none;
-        width: 6vh;
-        height: 6vh;
-        margin-top: 1vh;
-    }
     #intro_content h2 {
         font-size: 5vh;
     }
@@ -1606,7 +1593,7 @@ p {
     }
     #goals {
         position: absolute;
-        margin-top: 52vh;
+        margin-top: 62vh;
         background-color: #f8f8f87a;
         width: 95%;
         margin-left: 2vw;
@@ -1620,7 +1607,7 @@ p {
     }
     #separatore_1 {
         position: absolute;
-        top: 9vh;
+        top: 19vh;
         margin-top: 20vh !important;
         margin-left: 2vw !important;
     }
@@ -1843,6 +1830,13 @@ p {
     #project_partner{
         margin-top: 131vh;
     }
+    #ceccato_div{
+        margin-top: 202vh;
+        width: 92vw;
+        margin-left: 1.5vw;
+        height: 47vh;
+    }
+
     #rossi_div{
         margin-top: 202vh;
         width: 92vw;
@@ -1850,9 +1844,10 @@ p {
         height: 47vh;
     }
     #canova_div{
-        margin-top: 156vh;
+        margin-top: 154vh;
         width: 92vw;
         height: 45vh;
+        margin-left: 1vh !important;
     }
     #tron-zanella_div{
         margin-top: 252vh;
