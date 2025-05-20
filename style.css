@@ -344,7 +344,7 @@ body button {
     transition-duration: 0.3s;
 }
 .navsez span:hover {
-    background-image: linear-gradient(to bottom, #51cd92, #f98bcc);
+    background-color: black;
     padding-right: 10px;
     padding-left: 10px;
     border-radius: 100px;
@@ -410,7 +410,7 @@ footer p {
         display: none;
     }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1280px) {
     .icon-container {
         display: none;
     }
@@ -679,7 +679,7 @@ hr {
     font-weight: weight;
 }
 .menu-nav a:hover {
-    background-image: linear-gradient(to bottom, #1f4f38, #6b3e58);
+    background-image: linear-gradient(to bottom, #48ffa6, #ff70c3);
 }
 
 p {
@@ -1535,7 +1535,7 @@ p {
     color: rgb(0, 0, 0);
 }
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 1280px){
     #what{
         top: 14vh;
         width: 95%;
@@ -1698,13 +1698,6 @@ p {
         margin-left: 2vw;
     }
 
-    #second_year_title{
-        position: absolute;
-        top: -60vh;
-        left: -55vw;
-        text-align: left;
-        margin-top: 180vh !important;
-    }
     #second_year{
         margin-top: 45vh;
         width: 90% !important;
@@ -1755,6 +1748,10 @@ p {
     }
     .img_activity{
         max-width: 40vh !important;
+    }
+
+    #second_year_title {
+        display: none !important;
     }
 
     .arrow_carousel_left{
@@ -1946,10 +1943,6 @@ p {
             margin: 0 auto; /* Centers horizontally */
             z-index: 999;
             border-radius: 2vh;
-        }
-        #second_year_title {
-            text-align: left;
-            margin-left: 37vh;
         }
         .invert {
             display: none;
