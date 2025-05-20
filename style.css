@@ -785,7 +785,7 @@ p {
 #logo_body {
     z-index: 2;
     right: 37vh;
-    top: 6vh;
+    top: 7vh;
     height: 4vw;
     width: 4vw;
     box-shadow: 0 4px 8px rgba(143, 39, 39, 0.2);
@@ -1436,6 +1436,14 @@ p {
     max-width: 55%;
 }
 
+#webapp_container img{
+    position: absolute;
+    top: 3vh;
+    margin-left: 13vw;
+    width: 24vw;
+    height: 24vw;
+}
+
 #webapp_link{
     position: absolute;
     align-items: center;
@@ -1512,6 +1520,15 @@ p {
     font-size: 6.5vh;
 }
 
+#credits_container img{
+    position: absolute;
+    width: auto;
+    height: 20vw;
+    border-radius: 2.5vh;
+    margin-left: 5vw;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 @media screen and (max-width: 640px){
     #credits_div{
         margin-top: -19vh !important;
@@ -1522,7 +1539,7 @@ p {
     position: absolute;
     top: 22vh;
     text-align:left;
-    left: 3.5vw;
+    left: 13vw;
 }
 
 #programmers p{
@@ -1536,9 +1553,9 @@ p {
 
 #designers{
     position: absolute;
-    top: 40vh;
+    top: 22vh;
+    margin-left: 30vw;
     text-align:left;
-    left: 3.5vw;
 }
 
 #designers p{
@@ -1811,7 +1828,7 @@ p {
 
     #partner_div{
         top: 15vh;
-        height: 356vh;
+        height: 409vh;
         border-radius: 5vw;
     }
     #school_partner{
@@ -1831,7 +1848,7 @@ p {
         margin-top: 131vh;
     }
     #ceccato_div{
-        margin-top: 202vh;
+        margin-top: 355vh;
         width: 92vw;
         margin-left: 1.5vw;
         height: 47vh;
@@ -1865,6 +1882,16 @@ p {
         height: 13vh;
         margin-top: 352vh;
     }
+    #designers{
+	margin-top: 20vh;
+	margin-left: 6.5vh !important;
+	}
+    #credits_container img{
+	display: none;
+	}
+    #webapp_container img{
+	display: none;
+	}
 }
 
 #copyright {
