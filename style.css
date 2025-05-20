@@ -778,7 +778,7 @@ p {
     position: absolute;
     z-index: 2;
     right: 20vh;
-    top: 6vh;
+    top: 7vh;
     height: 22vw;
     width: 29vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -1465,6 +1465,14 @@ p {
     font-weight: bold;
 }
 
+#webapp_container img{
+    position: absolute;
+    top: 3vh;
+    margin-left: 13vw;
+    width: 24vw;
+    height: 24vw;
+}
+
 #credits_div{
     position: absolute;
     align-items: center;
@@ -1502,6 +1510,15 @@ p {
     font-size: 6.5vh;
 }
 
+#credits_container img{
+    position: absolute;
+    width: auto;
+    height: 20vw;
+    border-radius: 2.5vh;
+    margin-left: 5vw;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 @media screen and (max-width: 640px){
     #credits_div{
         margin-top: -19vh !important;
@@ -1512,7 +1529,7 @@ p {
     position: absolute;
     top: 22vh;
     text-align:left;
-    left: 3.5vw;
+    left: 13vw;
 }
 
 #programmers p{
@@ -1526,9 +1543,9 @@ p {
 
 #designers{
     position: absolute;
-    top: 40vh;
+    top: 22vh;
+    margin-left: 30vw;
     text-align:left;
-    left: 3.5vw;
 }
 
 #designers p{
