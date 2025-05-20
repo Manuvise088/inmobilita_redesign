@@ -761,7 +761,7 @@ p {
     margin-left: 4vh;
     padding-left: 1vw;
     padding-right: 1vw;
-    margin-top: 5vh;
+    margin-top: 0vh !important;
     padding-top: 5vh;
     padding-bottom: 5vh;
     font-size: 2.5vh;
@@ -1593,7 +1593,7 @@ p {
     }
     #intro-mobile{
         position: absolute;
-        top: 5vh;
+        top: -2vh;
         visibility: visible !important;
         margin-top: 10vh !important;
     }
@@ -1828,59 +1828,60 @@ p {
 
     #partner_div{
         top: 15vh;
-        height: 409vh;
+        height: 416vh;
         border-radius: 5vw;
     }
     #school_partner{
+        height: 36vh;
         width: 92vw;
     }
     #organization_partner{
         width: 92vw;
         margin-left: 1.5vw;
-        margin-top: 43vh;
-        height: 57vh;
+        margin-top: 39vh;
+        height: 70vh;
     }
     #institutional_partner{
         height: 25vh;
-        margin-top: 103vh;
+        margin-top: 112vh;
     }
     #project_partner{
-        margin-top: 131vh;
+        margin-top: 140vh;
     }
     #ceccato_div{
-        margin-top: 355vh;
+        margin-top: 356vh;
         width: 92vw;
         margin-left: 1.5vw;
         height: 47vh;
     }
 
     #rossi_div{
-        margin-top: 202vh;
+        margin-top: 211vh;
         width: 92vw;
         margin-left: 1.5vw;
         height: 47vh;
     }
     #canova_div{
-        margin-top: 154vh;
+        margin-top: 163vh;
         width: 92vw;
         height: 45vh;
         margin-left: 1vh !important;
     }
     #tron-zanella_div{
-        margin-top: 252vh;
+        margin-top: 261vh;
         margin-left: 1.5vw;
         width: 92vw;
         height: 45vh;
     }
     #aulo-ceccato_div{
-        margin-top: 300vh;
+        margin-top: 309vh;
         margin-left: 1.5vw;
         width: 92vw;
-        height: 52vh;
+        height: 44vh;
     }
     #separatore_3{
         height: 13vh;
-        margin-top: 352vh;
+        margin-top: 348vh;
     }
     #designers{
 	margin-top: 20vh;
