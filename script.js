@@ -1043,7 +1043,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     element.classList.toggle("sezione_selezionata");
                 }
             document.querySelectorAll(".logo_general").forEach(function(el){
-                    el.src = "logo/logo_nero.jpg";
+                    el.src = "logo_nero.jpg";
                 })
             });
         } else {
@@ -1058,7 +1058,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     element.classList.toggle("sezione_selezionata");
                 }
                 document.querySelectorAll(".logo_general").forEach(function(el){
-                    el.src = "logo/logo_bianco.jpg";
+                    el.src = "logo_bianco.jpg";
                 })
             });
         }
