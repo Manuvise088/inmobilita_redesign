@@ -143,6 +143,11 @@ body button {
     background-color: white;
     left: 6vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.3s;
+}
+.logo:hover {
+    transition-duration: 0.3s;
+    transform: scale(0.9);
 }
 #header-container h1 {
     position: absolute;
@@ -758,7 +763,7 @@ p {
     position: relative;
     color: rgb(0, 0, 0);
     border-radius: 4vw;
-    margin-left: 4vh;
+    margin-left: 5vh;
     padding-left: 1vw;
     padding-right: 1vw;
     margin-top: 5vh;
@@ -1539,7 +1544,7 @@ p {
     #what{
         top: 14vh;
         width: 95%;
-        min-height: 75vh !important;
+        min-height: 65vh !important;
         align-items: center;
         margin-left: 2vw;
         border-radius: 3vh;
@@ -1570,6 +1575,12 @@ p {
         border-radius: 3vh;
         width: 93%;
     }
+    #logo_body {
+        display: none;
+        width: 6vh;
+        height: 6vh;
+        margin-top: 1vh;
+    }
     #intro_content h2 {
         font-size: 5vh;
     }
@@ -1578,7 +1589,7 @@ p {
     }
     #goals {
         position: absolute;
-        margin-top: 62vh;
+        margin-top: 52vh;
         background-color: #f8f8f87a;
         width: 95%;
         margin-left: 2vw;
@@ -1592,7 +1603,7 @@ p {
     }
     #separatore_1 {
         position: absolute;
-        top: 19vh;
+        top: 9vh;
         margin-top: 20vh !important;
         margin-left: 2vw !important;
     }
@@ -1822,7 +1833,7 @@ p {
         height: 47vh;
     }
     #canova_div{
-        margin-top: 154vh;
+        margin-top: 156vh;
         width: 92vw;
         height: 45vh;
     }
