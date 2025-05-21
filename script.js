@@ -440,7 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
     WebappMob.addEventListener('click', () => {
         // Set Webapp button as new default
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.top = "22vh";
+        document.getElementById('separatore_1').style.top = "48vh";
         WebappButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         WebappButton.classList.add('sezione_selezionata');
 
@@ -667,7 +667,7 @@ document.addEventListener('DOMContentLoaded', () => {
     WebappMob2.addEventListener('click', () => {
         // Set Webapp button as new default
         document.body.style.height = 'auto';
-        document.getElementById('separatore_1').style.top = "44vh";
+        document.getElementById('separatore_1').style.top = "48vh";
         WebappButton.classList.add('selected'); // Add 'selected' class to indicate it's active
         WebappButton.classList.add('sezione_selezionata');
 

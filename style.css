@@ -1436,7 +1436,7 @@ p {
 
 #webapp_container img{
     margin: auto;
-    margin-top: -39vh;
+    margin-top: -42vh;
     margin-left: 16vw;
     width: 24vw;
     height: 24vw;
@@ -1828,13 +1828,13 @@ p {
     }  
 
     #webapp_div{
-        height: 100vh;
+        height: 104vh;
     }
     #webapp_container{
-        height: 96vh !important;
+        height: 100vh !important;
     }
     #webapp_link{
-        margin-top: 32vh;
+        margin-top: 60vh;
     }
 
     #partner_div{
@@ -1945,7 +1945,7 @@ p {
             border-radius: 100px;
             max-width: 95%;
         }
-        #activity_div, {
+        #activity_div {
                 top: 16vh;
                 width: 95%;
                 min-height: 65vh !important;
@@ -1955,11 +1955,10 @@ p {
         }
 	#webapp_div {
 	    top: 16vh;
-            width: 95%;
-            height: 73.5vh !important;
-            align-items: center;
-            margin-left: 2vw;
-            border-radius: 3vh;
+        width: 95%;
+        align-items: center;
+        margin-left: 2vw;
+        border-radius: 3vh;
 	}
         #act_content {
             height: 61.5vh;
@@ -1972,7 +1971,6 @@ p {
             margin-left: 5vh;
         }
         #webapp_container {
-            height: 70vh !important;
             border-radius: 3vh;
             margin-top: -0.2vh;
             width: 95%;
