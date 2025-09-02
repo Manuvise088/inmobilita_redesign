@@ -1,389 +1,1488 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <title>INMOBILITÀ - Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <title>INMOBILITÀ - Progetto di sostenibilità</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="script.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    
+    <style>
+        :root {
+            --color-primary: #51cd92;
+            --color-primary-dark: #3a9b73;
+            --color-secondary: #f98bcc;
+            --color-secondary-dark: #d46ba9;
+            
+            --color-white: #ffffff;
+            --color-black: #000000;
+            --color-gray-light: #f8f8f8;
+            --color-gray: #cccccc;
+            --color-gray-dark: #555555;
+            
+            --gradient-primary: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+            --gradient-card: linear-gradient(145deg, #ffffff, #f0f0f0);
+            --gradient-container: linear-gradient(145deg, #FFFFFF, #F1F1F1);
+            
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+            
+            --radius-sm: 0.5rem;
+            --radius-md: 1rem;
+            --radius-lg: 1.5rem;
+            --radius-full: 50%;
+            
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-xxl: 3rem;
+            
+            --font-family: 'National Park', sans-serif;
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-md: 1rem;
+            --font-size-lg: 1.25rem;
+            --font-size-xl: 1.5rem;
+            --font-size-xxl: 2rem;
+            --font-size-xxxl: 3rem;
+            
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
 
+        [data-theme="dark"] {
+            --color-primary: #3a9b73;
+            --color-secondary: #d46ba9;
+            --color-white: #121212;
+            --color-black: #f0f0f0;
+            --color-gray-light: #222222;
+            --color-gray: #444444;
+            --color-gray-dark: #cccccc;
+            
+            --gradient-card: linear-gradient(145deg, #222222, #333333);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            font-size: var(--font-size-md);
+            color: var(--color-black);
+            background-image: var(--gradient-primary);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .header {
+            padding: var(--space-md) var(--space-lg);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 95%;
+            margin: 0 auto;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius-full);
+            background-color: var(--color-white);
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-normal);
+        }
+
+        .logo:hover {
+            transform: rotate(5deg);
+        }
+
+        .header-titles {
+            text-align: left;
+            color: var(--color-white);
+        }
+
+        .site-title {
+            font-size: var(--font-size-xxxl);
+            font-weight: 800;
+            margin-bottom: var(--space-xs);
+        }
+
+        .site-subtitle {
+            font-size: var(--font-size-lg);
+            font-weight: 400;
+        }
+
+        .header-controls {
+            display: flex;
+            gap: var(--space-md);
+            align-items: center;
+        }
+
+        .icon-button {
+            background: var(--color-white);
+            border: none;
+            border-radius: var(--radius-sm);
+            padding: var(--space-sm);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+        }
+
+        .icon-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .flag-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: var(--radius-full);
+            transition: transform var(--transition-normal);
+        }
+
+        .flag-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .main-nav {
+            background: var(--gradient-card);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-lg);
+            margin: var(--space-lg) auto;
+            max-width: 90%;
+            padding: var(--space-md);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-items {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--color-primary);
+            border: none;
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            color: var(--color-white);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            flex: 1 1 calc(100% / 5 - 10px);
+            max-width: calc(100% / 5 - 10px); 
+        }
+
+        .nav-item:hover {
+            background-color: var(--color-secondary);
+            transform: translateY(-2px);
+        }
+
+        .nav-item.active {
+            background-color: var(--color-secondary);
+            font-weight: bold;
+        }
+
+        .nav-item .material-icons,
+        .nav-item .material-icons-outlined {
+            font-size: var(--font-size-xxl);
+            margin-bottom: var(--space-xs);
+        }
+
+        .nav-label {
+            font-size: var(--font-size-sm);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            padding: var(--space-xl);
+            transform: translateY(-100%);
+            transition: transform var(--transition-normal);
+        }
+
+        .mobile-menu.open {
+            transform: translateY(0);
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .mobile-logo-container {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .mobile-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-full);
+            background-color: var(--color-white);
+        }
+
+        .mobile-menu-title {
+            color: var(--color-white);
+            font-size: var(--font-size-xxl);
+        }
+
+        .close-menu-button {
+            background: none;
+            border: none;
+            color: var(--color-white);
+            font-size: var(--font-size-xxl);
+            cursor: pointer;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+            flex-grow: 1;
+        }
+
+        .mobile-nav-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            padding: var(--space-md);
+            color: var(--color-white);
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            transition: background-color var(--transition-normal);
+        }
+
+        .mobile-nav-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu-footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: auto;
+            padding-top: var(--space-xl);
+        }
+
+        .main-content {
+            max-width: 95%;
+            margin: 0 auto;
+            padding: var(--space-lg);
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+            animation: fadeIn var(--transition-normal);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            font-size: var(--font-size-xxxl);
+            color: var(--color-black);
+            text-align: left;
+        }
+
+        .intro-container {
+            background: var(--gradient-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--space-xl);
+        }
+
+        .intro-content {
+            display: flex;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+
+        .intro-text {
+            flex: 1;
+        }
+
+        .intro-text p {
+            font-size: var(--font-size-lg);
+            line-height: 1.8;
+            color: var(--color-black);
+        }
+
+        .intro-visuals {
+            flex: 1;
+            position: relative;
+        }
+
+        .intro-image {
+            width: 100%;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .intro-logo {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius-full);
+            box-shadow: var(--shadow-md);
+            background-color: var(--color-white);
+            transition: transform var(--transition-normal);
+        }
+
+        .intro-logo:hover {
+            transform: rotate(360deg);
+        }
+
+        .divider {
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: var(--space-xxl) 0;
+            border-radius: var(--radius-full);
+        }
+
+        .goals-container {
+            background: var(--gradient-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-md);
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+
+        .goal-card {
+            background: var(--gradient-card);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            border-color: var(--color-black);
+            border: 1px solid;
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+        }
+
+        #theme-toggle {
+            color: var(--color-black);
+        }
+        .goal-card h3 {
+            font-size: var(--font-size-xl);
+            color: var(--color-primary-dark);
+            margin-bottom: var(--space-md);
+        }
+
+        .goal-image {
+            width: 100%;
+            border-radius: var(--radius-sm);
+            margin: var(--space-md) 0;
+        }
+
+        .goal-card p {
+            color: var(--color-gray-dark);
+            line-height: 1.6;
+        }
+
+        .activities-container {
+            background: var(--gradient-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--space-xl);
+        }
+
+        .year-section {
+            margin-bottom: var(--space-xl);
+            border-color: var(--color-black);
+            border: solid 1px;
+            border-radius: var(--radius-md);
+        }
+
+        .year-title {
+            font-size: var(--font-size-xxl);
+            color: var(--color-primary-dark);
+            margin-bottom: var(--space-lg);
+            text-align: center;
+        }
+
+        .activities-carousel {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .carousel-inner {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+
+        .carousel-item {
+            padding: var(--space-lg);
+            background: var(--gradient-card);
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .activity-title {
+            font-size: var(--font-size-xl);
+            color: var(--color-primary-dark);
+            margin-bottom: var(--space-md);
+            text-align: center;
+        }
+
+        .activity-text {
+            color: var(--color-gray-dark);
+            margin-bottom: var(--space-lg);
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .activity-image {
+            max-width: 100%;
+            max-height: 250px;
+            object-fit: contain;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--space-md);
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-full);
+            background-color: var(--color-primary);
+            opacity: 0.8;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .carousel-control-prev {
+            left: 10px;
+        }
+
+        .carousel-control-next {
+            right: 10px;
+        }
+
+        .carousel-control-prev:hover, .carousel-control-next:hover {
+            background-color: var(--color-secondary);
+            opacity: 1;
+        }
+
+        .partners-container {
+            background: var(--gradient-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--space-xl);
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+        }
+
+        .partner-category {
+            background: var(--gradient-card);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-black);
+        }
+
+        .partner-category h3 {
+            font-size: var(--font-size-xl);
+            color: var(--color-primary-dark);
+            margin-bottom: var(--space-md);
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: var(--space-sm);
+        }
+        .partners-grid .full-width-partner {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: var(--space-xl);
+            color: var(--color-white);
+            background: var(--gradient-card);
+        }
+
+        .partners-grid .full-width-partner h3 {
+            font-size: var(--font-size-xl);
+            color: var(--color-primary-dark);
+            margin-bottom: var(--space-md);
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: var(--space-sm);
+            text-align: left;
+        }
+
+        .partners-grid .full-width-partner .partner-link {
+            color: var(--color-black);
+        }
+
+        .partners-grid .full-width-partner .partner-link:hover {
+            color: var(--color-gray-light);
+        }
+
+        @media (max-width: 768px) {
+            .partners-grid .full-width-partner {
+                text-align: left;
+                padding: var(--space-lg);
+                background: var(--gradient-card);
+                color: var(--color-black);
+            }
+            
+            .partners-grid .full-width-partner h3 {
+                color: var(--color-primary-dark);
+                border-bottom-color: var(--color-primary);
+                font-size: var(--font-size-xl);
+            }
+            
+            .partners-grid .full-width-partner .partner-link {
+                color: var(--color-gray-dark);
+            }
+            
+            .partners-grid .full-width-partner .partner-link:hover {
+                color: var(--color-primary);
+            }
+        }
+        .partner-list {
+            list-style-type: none;
+        }
+
+        .partner-item {
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid var(--color-gray);
+        }
+
+        .partner-item:last-child {
+            border-bottom: none;
+        }
+
+        .partner-link {
+            color: var(--color-gray-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            transition: color var(--transition-normal);
+        }
+
+        .partner-link:hover {
+            color: var(--color-primary);
+        }
+
+        .schools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        .school-card {
+            background: var(--gradient-card);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-normal);
+            border: 1px solid var(--color-black);
+        }
+
+        .school-card h3 {
+            font-size: var(--font-size-lg);
+            color: var(--color-primary-dark);
+            margin-bottom: var(--space-md);
+        }
+
+        .school-card p {
+            color: var(--color-gray-dark);
+            line-height: 1.6;
+        }
+
+        .gamification-container {
+            background: var(--gradient-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--space-xl);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gamification-content {
+            display: flex;
+            gap: var(--space-xl);
+            align-items: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .gamification-text {
+            flex: 2;
+        }
+
+        .gamification-text p {
+            font-size: var(--font-size-lg);
+            line-height: 1.8;
+            color: var(--color-black);
+            margin-bottom: var(--space-lg);
+        }
+
+        .gamification-visual {
+            flex: 1;
+            text-align: center;
+        }
+
+        .gamification-image {
+            max-width: 100%;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .gamification-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            text-decoration: none;
+            padding: var(--space-md) var(--space-lg);
+            border-radius: var(--radius-md);
+            font-weight: bold;
+            transition: all var(--transition-normal);
+        }
+
+        .gamification-link:hover {
+            background-color: var(--color-secondary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .credits-container {
+            background: var(--gradient-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--space-xl);
+        }
+
+        .credits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+        }
+
+        .credit-category {
+            background: var(--gradient-card);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-black);
+        }
+
+        .credit-category h4 {
+            font-size: var(--font-size-lg);
+            color: var(--color-primary-dark);
+            margin-bottom: var(--space-md);
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: var(--space-sm);
+        }
+
+        .credit-list {
+            list-style-type: none;
+        }
+
+        .credit-item {
+            padding: var(--space-xs) 0;
+            color: var(--color-gray-dark);
+        }
+
+        .credits-image {
+            width: 100%;
+            border-radius: var(--radius-md);
+            margin-top: var(--space-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .footer {
+            position: relative;
+            margin-top: var(--space-xxl);
+            padding: var(--space-xl) var(--space-lg);
+        }
+
+        .scroll-top-button {
+            position: fixed;
+            bottom: var(--space-xl);
+            right: var(--space-xl);
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border: none;
+            border-radius: var(--radius-full);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            z-index: 100;
+        }
+
+        .scroll-top-button:hover {
+            background-color: var(--color-secondary);
+            transform: translateY(-5px);
+        }
+
+        .mobile-nav-footer {
+            display: none;
+            background-color: var(--color-white);
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+            padding: var(--space-md);
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 90;
+        }
+
+        .mobile-nav-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: none;
+            border: none;
+            color: var(--color-primary);
+            font-size: var(--font-size-xs);
+            cursor: pointer;
+            flex: 1;
+            padding: var(--space-xs);
+        }
+
+        .mobile-nav-button .material-icons,
+        .mobile-nav-button .material-icons-outlined {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--space-xs);
+        }
+
+        .footer-info {
+            text-align: center;
+            color: var(--color-white);
+            margin-top: var(--space-xl);
+        }
+
+        @media (max-width: 1024px) {
+            .intro-content, .gamification-content {
+                flex-direction: column;
+            }
+            
+            .nav-items {
+                flex-wrap: wrap;
+            }
+            
+            .nav-item {
+                min-width: 140px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: var(--space-md);
+            }
+            
+            .logo-section {
+                flex: 1;
+                justify-content: center;
+            }
+            
+            .header-titles {
+                display: none;
+            }
+            
+            .header-controls .language-switcher {
+                display: none;
+            }
+            
+            .main-nav {
+                display: none;
+            }
+            
+            .mobile-nav-footer {
+                display: flex;
+                justify-content: space-around;
+            }
+            
+            .goals-grid, .partners-grid, .schools-grid, .credits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: var(--font-size-xxl);
+            }
+            
+            .intro-text p, .gamification-text p {
+                font-size: var(--font-size-md);
+            }
+            
+            .scroll-top-button {
+                bottom: 80px;
+                right: var(--space-md);
+                width: 50px;
+                height: 50px;
+            }
+
+            .carousel-control-prev, .carousel-control-next {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .activities-carousel {
+                max-width: 100%;
+            }
+            
+            .carousel-item {
+                min-height: 350px;
+                padding: var(--space-md);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: var(--space-md);
+            }
+            
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .main-content {
+                padding: var(--space-md);
+            }
+            
+            .intro-container, .goals-container, .activities-container, 
+            .partners-container, .gamification-container, .credits-container {
+                padding: var(--space-lg);
+            }
+
+            .carousel-item {
+                padding: var(--space-md);
+                min-height: 300px;
+            }
+            
+            .activity-image {
+                max-height: 180px;
+            }
+        }
+    </style>
 </head>
-    <header>
-        <div id="header-container">
-            <a href="index.html"><img class="logo logo_general" alt="logo" src="logo_trasparent.png" id = 'inmob_logo'></a>
-            <h1 id = 'inmobilita'>INMOBILITÀ</h1>
-            <h2 id = 'inmob_parag'> Progetto di sostenibilità</h2>
-            <div class="icon-container">
-                <span class="material-icons-outlined" id ="theme_button">dark_mode</span>
-                <a href="index_en.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAFVBMVEX///8AkkbOKzcAjz9otofeeoDNIS7QkpT1AAAAPklEQVRoge3MCREAIAADoPn2j2yDBfAgABnN2qnOnU3kcrlcLpfL5XK5XC6Xy+VyuVwul8vlcrlcLpfL/8ofekklvck8DdwAAAAASUVORK5CYII=" class="bandiera"></a>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <a href="index.html" class="logo-link">
+                    <img class="logo" alt="logo INMOBILITÀ" src="logo_trasparent.png" id="inmob_logo">
+                </a>
+                
+                <div class="header-titles">
+                    <h1 class="site-title">INMOBILITÀ</h1>
+                    <h2 class="site-subtitle">Progetto di sostenibilità</h2>
+                </div>
+            </div>
+            
+            <div class="header-controls">
+                <button id="theme-toggle" class="icon-button" aria-label="Cambia tema">
+                    <span class="material-icons-outlined">dark_mode</span>
+                </button>
+                <a href="index_en.html" class="language-switcher" aria-label="Versione inglese">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAFVBMVEX///8AkkbOKzcAjz9otofeeoDNIS7QkpT1AAAAPklEQVRoge3MCREAIAADoPn2j2yDBfAgABnN2qnOnU3kcrlcLpfL5XK5XC6Xy+VyuVwul8vlcrlcLpfL/8ofekklvck8DdwAAAAASUVORK5CYII=" class="flag-icon" alt="Bandiera UK">
+                </a>
             </div>
         </div>
     </header>
-    <body>
-        <div class="sezioni-container">
-          <a class="sezione" id = 'home' ><span class="material-icons-outlined">home</span>Home</a>
-          <a class="sezione" id = 'activity'><span class="material-icons-outlined">campaign</span>Attività</a>
-          <a class="sezione" id = 'webapp'><span class="material-icons-outlined">web</span>Gamification</a>
-          <a class="sezione" id = 'partner'><span class="material-icons-outlined">handshake</span>Chi Siamo?</a>
-          <a class="sezione" id = 'credits'><span class="material-icons-outlined">people</span>Crediti</a>
+
+    <nav class="main-nav">
+        <div class="nav-items">
+            <button class="nav-item active" data-section="home">
+                <span class="material-icons">home</span>
+                <span class="nav-label">Home</span>
+            </button>
+            <button class="nav-item" data-section="activities">
+                <span class="material-icons-outlined">campaign</span>
+                <span class="nav-label">Attività</span>
+            </button>
+            <button class="nav-item" data-section="gamification">
+                <span class="material-icons-outlined">web</span>
+                <span class="nav-label">Gamification</span>
+            </button>
+            <button class="nav-item" data-section="partners">
+                <span class="material-icons-outlined">handshake</span>
+                <span class="nav-label">Chi Siamo?</span>
+            </button>
+            <button class="nav-item" data-section="credits">
+                <span class="material-icons-outlined">people</span>
+                <span class="nav-label">Crediti</span>
+            </button>
         </div>
-        <div id="fullscreen-menu" class="fullscreen-menu">
-        <div class="menu-header">
-            <div class="logo-container">
-                <img src="logo_trasparent.png" class="logo_menu" alt="logo"> 
-                <h1 class="menu-title">INMOBILITÀ</h1>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="mobile-logo-container">
+                <img src="logo_trasparent.png" class="mobile-logo" alt="logo INMOBILITÀ">
+                <h2 class="mobile-menu-title">INMOBILITÀ</h2>
             </div>
-            <button id="close-menu" class="close-button">
+            <button id="close-mobile-menu" class="close-menu-button" aria-label="Chiudi menu">
                 <span class="material-icons-outlined">close</span>
             </button>
         </div>
-    
-        <nav class="menu-nav">
-            <div class="nav-column">
-                <a href="index.html" class="nav-item">
-                    <span class="material-icons-outlined">home</span>
-                    <span class="nav-text">Home</span>
-                </a>
-                <a id = "activity_mob2"class="nav-item">
-                    <span class="material-icons-outlined">campaign</span>
-                    <span class="nav-text">Attività</span>
-                </a>
-            </div>
-            <div id = "webapp_mob2" class="nav-column">
-                <a class="nav-item">
-                    <span class="material-icons-outlined">web</span>
-                    <span class="nav-text">Gamification</span>
-                </a>
-            </div>
-            <div id="partner_mob" class ="nav-column">
-              <a class="nav-item">
-                    <span class="material-icons-outlined">handshake</span>
-                    <span class="nav-text">Chi Siamo?</span>
-                </a>
-            </div>
-            <div id = "credits_mob" class="nav-column">
-                <a class="nav-item">
-                    <span class="material-icons-outlined">people</span>
-                    <span class="nav-text">Crediti</span>
-                </a>
-                <div class="language-switcher">
-                    <a href="index_en.html" class="nav-item">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAFVBMVEX///8AkkbOKzcAjz9otofeeoDNIS7QkpT1AAAAPklEQVRoge3MCREAIAADoPn2j2yDBfAgABnN2qnOnU3kcrlcLpfL5XK5XC6Xy+VyuVwul8vlcrlcLpfL/8ofekklvck8DdwAAAAASUVORK5CYII=" class="bandiera">
-                        <span class="nav-text">Italiano</span>
-                    </a>
-                </div>
-            </div> 
-          </div>
-      </nav>
-      <div class="menu-footer">
-          <p>Copyright 2025 - Cooperativa Urbana</p>
+
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-item">
+                <span class="material-icons">home</span>
+                <span>Home</span>
+            </a>
+            <button class="mobile-nav-item" data-section="activities">
+                <span class="material-icons-outlined">campaign</span>
+                <span>Attività</span>
+            </button>
+            <button class="mobile-nav-item" data-section="gamification">
+                <span class="material-icons-outlined">web</span>
+                <span>Gamification</span>
+            </button>
+            <button class="mobile-nav-item" data-section="partners">
+                <span class="material-icons-outlined">handshake</span>
+                <span>Chi Siamo?</span>
+            </button>
+            <button class="mobile-nav-item" data-section="credits">
+                <span class="material-icons-outlined">people</span>
+                <span>Crediti</span>
+            </button>
+            <a href="index_en.html" class="mobile-nav-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAFVBMVEX///8AkkbOKzcAjz9otofeeoDNIS7QkpT1AAAAPklEQVRoge3MCREAIAADoPn2j2yDBfAgABnN2qnOnU3kcrlcLpfL5XK5XC6Xy+VyuVwul8vlcrlcLpfL/8ofekklvck8DdwAAAAASUVORK5CYII=" class="flag-icon" alt="Bandiera UK">
+                <span>English Version</span>
+            </a>
+        </nav>
+
+        <div class="mobile-menu-footer">
+            <p>Copyright 2025 - Cooperativa Urbana</p>
+        </div>
     </div>
 
-    </div>
-      <div id="what">
-        <div id="intro_content">
-            <h2 id="introduction">Introduzione</h2>
-            <div id="intro-layout">
-                <p id="intro-text">IN-MOBILITÀ è un progetto che nasce per trasformare spazi scolastici sottoutilizzati in hub vivi, accessibili e sostenibili. Attraverso percorsi educativi, co-progettazione e rigenerazione urbana, si porta movimento dove prima c’era stasi. L’obiettivo? Stimolare un cambiamento reale nelle abitudini quotidiane, nella cura degli spazi comuni e nel modo in cui si vive la scuola e la città. IN-MOBILITÀ è un processo collettivo che coinvolge, ispira e costruisce futuro.</p>
-                <p id = "intro-mobile">IN-MOBILITÀ è un progetto che nasce per trasformare spazi scolastici sottoutilizzati in hub vivi, accessibili e sostenibili. Attraverso percorsi educativi, co-progettazione e rigenerazione urbana, si porta movimento dove prima c’era stasi. L’obiettivo? Stimolare un cambiamento reale nelle abitudini quotidiane, nella cura degli spazi comuni e nel modo in cui si vive la scuola e la città. IN-MOBILITÀ è un processo collettivo che coinvolge, ispira e costruisce futuro.</p>
-                <img id="img_body" src="body_img.jpg" alt="Progetto IN-MOBILITÀ">
-                <img id="logo_body" src="logo_bianco.jpg" alt="Progetto IN-MOBILITÀ" class = "logo_general">
-            </div>
-          </div>
-      </div>
-
-      <hr id="separatore_1"> <!-- Placed directly under the "what" section -->
-
-      <div id ="goals">
-        <div id="obiettivi_container">
-          <h2 id="goals_title">Obiettivi del progetto</h2>
-          <div class="card" id="goal1">
-              <h3>Rigenerare spazi scolastici, ispirare nuove abitudini</h3>
-              <img src="r_urbana.jpg" class="img_obiettivi" alt="Mobilità sostenibile">
-              <p>Abbiamo trasformato le scuole in luoghi più vivibili e sostenibili. Abbiamo creato aree dedicate a biciclette, mezzi leggeri e nuovi spazi verdi, progettati insieme a studenti e insegnanti.</p>
-          </div>
-          <div class="card" id="goal2">
-              <h3>Educazione alla mobilità, cittadinanza attiva</h3>
-              <img src="mobility_corner.jpg" class="img_obiettivi" alt="Spazi scolastici green">
-              <p>Abbiamo formato studenti e docenti su temi come mobilità dolce, cittadinanza, sostenibilità e cura degli spazi comuni. La scuola diventa laboratorio di cambiamento e partecipazione.</p>
-          </div>
-          <div class="card" id="goal3">
-              <h3>Dati che raccontano il cambiamento</h3>
-              <img src="tragitto.jpg" class="img_obiettivi" alt="Dati casa-scuola">
-              <p>Abbiamo raccolto e analizzato i tragitti casa-scuola per capire come si spostano gli studenti. I dati raccolti ci aiutano a progettare soluzioni concrete per una mobilità più sicura e sostenibile.</p>
-          </div>
-        </div>
-        <div id = "mobile_obiettivi">
-          <div class="obiettivi_content">
-            <h2>Obiettivi</h2>
-            <div id="obiettivi_carousel" class="card_goals_mobile carousel slide" data-bs-ride="carousel">
-              
-              <button id="scrollact" class="material-icons-outlined arrow_carousel_left" type="button" data-bs-target="#obiettivi_carousel" data-bs-slide="prev" aria-hidden="true">
-              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
-              <span class="visually-hidden"></span>
-              </button>
-
-              <div class="carousel-inner">
-
-                <div class="carousel-item active">
-                  <h3 class="title_goals_mobile">Rigenerazione degli spazi per la mobilità sostenibile</h3>
-                  <img src="r_urbana.jpg" class="img_goals_mobile" alt="Mobilità sostenibile">
-                  <p class="text_goals_mobile">Il nostro primo obiettivo è quello di rigenerare un’area dedicata alla mobilità sostenibile, creando spazi che incentivano l’uso di mezzi di trasporto eco-friendly. Parliamo di stazioni di bike-sharing, aree di sosta per mezzi elettrici.</p>
+    <main class="main-content">
+        <section id="home-section" class="content-section active">
+            <div class="intro-container">
+                <h2 class="section-title">Introduzione</h2>
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <p>IN-MOBILITÀ è un progetto che nasce per trasformare spazi scolastici sottoutilizzati in hub vivi, accessibili e sostenibili. Attraverso percorsi educativi, co-progettazione e rigenerazione urbana, si porta movimento dove prima c'era stasi. L'obiettivo? Stimolare un cambiamento reale nelle abitudini quotidiane, nella cura degli spazi comuni e nel modo in cui si vive la scuola e la città. IN-MOBILITÀ è un processo collettivo che coinvolge, ispira e costruisce futuro.</p>
+                    </div>
+                    <div class="intro-visuals">
+                        <img src="body_img.jpg" alt="Progetto IN-MOBILITÀ" class="intro-image">
+                        <img src="logo_bianco.jpg" alt="Logo IN-MOBILITÀ" class="intro-logo">
+                    </div>
                 </div>
-                <div class="carousel-item">
-                  <h3 class="title_goals_mobile">Spazi scolastici innovativi e green</h3>
-                  <img src="mobility_corner.jpg" class="img_goals_mobile" alt="Spazi scolastici green">
-                  <p class="text_goals_mobile">All'interno di questo progetto, un altro obiettivo fondamentale è lo sviluppo di luoghi legati agli interessi delle scuole, come un’aula in legno immersa nel verde.</p>
-                </div>
-                <div class="carousel-item">
-                  <h3 class="title_goals_mobile">Raccolta di dati sul tragitto casa-scuola</h3>
-                  <img src="tragitto.jpg" class="img_goals_mobile" alt="Dati casa-scuola">
-                  <p class="text_goals_mobile">Comprendere i percorsi degli studenti è essenziale per migliorare la mobilità sostenibile, attraverso questionari e analisi delle abitudini di viaggio.</p>
-                </div>
-
-              </div>
-
-              <button id="scrollact" class="material-icons-outlined arrow_carousel_right" type="button" data-bs-target="#obiettivi_carousel" data-bs-slide="next" aria-hidden="true">
-              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
-              <span class="visually-hidden"></span>
-              </button>
-
             </div>
-          </div>
-        </div>
-      </div>
-      
-      <div id = 'activity_div'>
-        <div id = 'act_content'>
-          <h2 id = 'activity_title'>Attività</h2>
-          <h3 id = "first_year_title">Primo Anno</h3>
-          <h3 id = 'second_year_title'>Secondo Anno</h3>
-          <div id="first_year" class="card_act carousel slide" data-bs-ride="carousel">
-            
-            <button id="scrollact" class="material-icons-outlined arrow_carousel_left" type="button" data-bs-target="#first_year" data-bs-slide="prev" aria-hidden="true">
-              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
-              <span class="visually-hidden"></span>
-              </button>
 
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <h4 class="title_activity">Cittadinanza attiva e partecipazione</h4>
-                <p class="text_activity">In gruppi, abbiamo riflettuto su una domanda provocatoria: gli studenti possono davvero cambiare la scuola? Ne è nata una discussione viva e appassionata, che ci ha fatto riscoprire il nostro ruolo attivo nella comunità scolastica. La partecipazione è il primo passo per trasformare davvero i luoghi che viviamo.</p>
-                <img src="1giornata_1anno.jpg" class="img_activity d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <h4 class="title_activity">Comunità</h4>
-                <p class="text_activity">Comunità non è solo convivenza: è relazione, è obiettivo condiviso. Abbiamo esplorato come le persone si uniscono per costruire qualcosa di più grande, mettendo in circolo energie, idee e responsabilità.</p>
-                <img src="2giornata_1anno.jpg" class="img_activity d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <h4 class="title_activity">Mobilità</h4>
-                <p class="text_activity">Abbiamo analizzato le nostre abitudini di spostamento attraverso sondaggi e confronti tra pari. Un video sulle città del Nord Europa ci ha ispirati: la mobilità sostenibile non è un’utopia, ma un modello possibile da immaginare — e realizzare — anche qui.</p>
-                <img src="3giornata_1anno.jpg" class="img_activity d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <h4 class="title_activity">Spazi e Relazioni</h4>
-                <p class="text_activity">La scuola è più di un edificio: è un ecosistema fatto di persone, percorsi e connessioni. Abbiamo immaginato come potrebbe evolvere il nostro spazio scolastico, dai tragitti quotidiani agli ambienti che viviamo ogni giorno. Perché uno spazio ben pensato genera relazioni migliori. immaginare — e realizzare — anche qui.</p>
-                <img src="4giornata_1anno.jpg" class="img_activity d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <h4 class="title_activity">Verso il Mobility Corner</h4>
-                <p class="text_activity">L’idea diventa progetto: abbiamo misurato, disegnato e immaginato il nostro spazio ideale. Con il supporto degli educatori e l’ispirazione di Camposaz, abbiamo scoperto come creare un Mobility Corner in legno, sostenibile e su misura per la nostra scuola.</p>
-                <img src="5giornata_1anno.jpg" class="img_activity d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <h4 class="title_activity">Peer Mobility / Mobilità tra Pari</h4>
-                <p class="text_activity">Abbiamo sviluppato proposte concrete per progettare e comunicare il mobility corner in modo efficace e coinvolgente. Il nostro obiettivo è creare uno spazio dinamico che favorisca l’incontro, lo scambio e la collaborazione tra pari, arricchito dall’introduzione di un’area dedicata alle lezioni. misura per la nostra scuola.</p>
-                <img src="6giornata_1anno(1).jpg" class="img_activity d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <h4 class="title_activity">Uscita a Vicenza</h4>
-                <p class="text_activity">Un’esperienza sul campo che ci ha aperto nuove prospettive, permettendoci di confrontarci con esperti di progettazione e comunicazione. A Vicenza abbiamo raccolto preziose idee e ispirazioni, trasformando la nostra visione in un progetto concreto e tangibile.</p>
-                <img src="7giornata_1anno(1).jpg" class="img_activity d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <h4 class="title_activity">Presentazione del Lavoro</h4>
-                <p class="text_activity">Le autorità comunali e provinciali hanno partecipato con interesse, assistendo all’inaugurazione del mobility corner, che oggi rappresenta il simbolo tangibile di un anno di impegno, crescita e partecipazione collettiva.rogetto concreto e tangibile.</p>
-                <img src="mobility_corner.jpg" class="img_activity d-block w-100" alt="...">
-              </div>
+            <div class="divider"></div>
+
+            <div class="goals-container">
+                <h2 class="section-title">Obiettivi del progetto</h2>
+                <div class="goals-grid">
+                    <div class="goal-card">
+                        <h3>Rigenerare spazi scolastici, ispirare nuove abitudini</h3>
+                        <img src="r_urbana.jpg" alt="Mobilità sostenibile" class="goal-image">
+                        <p>Abbiamo trasformato le scuole in luoghi più vivibili e sostenibili. Abbiamo creato aree dedicate a biciclette, mezzi leggeri e nuovi spazi verdi, progettati insieme a studenti e insegnanti.</p>
+                    </div>
+                    
+                    <div class="goal-card">
+                        <h3>Educazione alla mobilità, cittadinanza attiva</h3>
+                        <img src="mobility_corner.jpg" alt="Spazi scolastici green" class="goal-image">
+                        <p>Abbiamo formato studenti e docenti su temi come mobilità dolce, cittadinanza, sostenibilità e cura degli spazi comuni. La scuola diventa laboratorio di cambiamento e partecipazione.</p>
+                    </div>
+                    
+                    <div class="goal-card">
+                        <h3>Dati che raccontano il cambiamento</h3>
+                        <img src="tragitto.jpg" alt="Dati casa-scuola" class="goal-image">
+                        <p>Abbiamo raccolto e analizzato i tragitti casa-scuola per capire come si spostano gli studenti. I dati raccolti ci aiutano a progettare soluzioni concrete per una mobilità più sicura e sostenibile.</p>
+                    </div>
+                </div>
             </div>
-            
-            <button id="scrollact" class="material-icons-outlined arrow_carousel_right" type="button" data-bs-target="#first_year" data-bs-slide="next" aria-hidden="true">
-              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
-              <span class="visually-hidden"></span>
-              </button>
+        </section>
 
-          </div>
-          
+        <section id="activities-section" class="content-section">
+            <div class="activities-container">
+                <h2 class="section-title">Attività</h2>
+                
+                <div class="year-section">
+                    <h3 class="year-title">Primo Anno</h3>
+                    <div id="firstYearCarousel" class="carousel slide activities-carousel" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <h4 class="activity-title">Cittadinanza attiva e partecipazione</h4>
+                                <p class="activity-text">In gruppi, abbiamo riflettuto su una domanda provocatoria: gli studenti possono davvero cambiare la scuola? Ne è nata una discussione viva e appassionata, che ci ha fatto riscoprire il nostro ruolo attivo nella comunità scolastica. La partecipazione è il primo passo per trasformare davvero i luoghi che viviamo.</p>
+                                <img src="1giornata_1anno.jpg" class="activity-image" alt="Cittadinanza attiva">
+                            </div>
+                            <div class="carousel-item">
+                                <h4 class="activity-title">Comunità</h4>
+                                <p class="activity-text">Comunità non è solo convivenza: è relazione, è obiettivo condiviso. Abbiamo esplorato come le persone si uniscono per costruire qualcosa di più grande, mettendo in circolo energie, ideas e responsabilità.</p>
+                                <img src="2giornata_1anno.jpg" class="activity-image" alt="Comunità">
+                            </div>
+                            <div class="carousel-item">
+                                <h4 class="activity-title">Mobilità</h4>
+                                <p class="activity-text">Abbiamo analizzato le nostre abitudini di spostamento attraverso sondaggi e confronti tra pari. Un video sulle città del Nord Europa ci ha ispirati: la mobilità sostenibile non è un'utopia, ma un modello possibile da immaginare — e realizzare — anche qui.</p>
+                                <img src="3giornata_1anno.jpg" class="activity-image" alt="Mobilità">
+                            </div>
+                            <div class="carousel-item">
+                                <h4 class="activity-title">Spazio</h4>
+                                <p class="activity-text">Abbiamo osservato con occhi nuovi gli spazi scolastici: come vengono vissuti? Come potrebbero essere trasformati? Attraverso mappe mentali e disegni, abbiamo iniziato a immaginare una scuola più accogliente, verde e funzionale.</p>
+                                <img src="4giornata_1anno.jpg" class="activity-image" alt="Spazio">
+                            </div>
+                            <div class="carousel-item">
+                                <h4 class="activity-title">Co-progettazione</h4>
+                                <p class="activity-text">Dalle idee siamo passati ai progetti. Insieme a professionisti, docenti e rappresentanti del Comune, abbiamo disegnato proposte concrete per la rigenerazione degli spazi scolastici: stalli bici, aree verdi, panchine, zone d'incontro. La scuola che vogliamo comincia a prendere forma.</p>
+                                <img src="5giornata_1anno.jpg" class="activity-image" alt="Co-progettazione">
+                            </div>
+                            <div class="carousel-item">
+                                <h4 class="activity-title">Peer Mobility / Mobilità tra Pari</h4>
+                                <p class="activity-text">Abbiamo sviluppato proposte concrete per progettare e comunicare il mobility corner in modo efficace e coinvolgente. Il nostro obiettivo è creare uno spazio dinamico che favorisca l'incontro, lo scambio e la collaborazione tra pari, arricchito dall'introduzione di un'area dedicata alle lezioni.</p>
+                                <img src="6giornata_1anno(1).jpg" class="activity-image" alt="Peer Mobility">
+                            </div>
+                            <div class="carousel-item">
+                                <h4 class="activity-title">Uscita a Vicenza</h4>
+                                <p class="activity-text">Un'esperienza sul campo che ci ha aperto nuove prospettive, permettendoci di confrontarci con esperti di progettazione e comunicazione. A Vicenza abbiamo raccolto preziose idee e ispirazioni, trasformando la nostra visione in un progetto concreto e tangibile.</p>
+                                <img src="7giornata_1anno(1).jpg" class="activity-image" alt="Uscita a Vicenza">
+                            </div>
+                            <div class="carousel-item">
+                                <h4 class="activity-title">Presentazione del Lavoro</h4>
+                                <p class="activity-text">Le autorità comunali e provinciali hanno partecipato con interesse, assistendo all'inaugurazione del mobility corner, che oggi rappresenta il simbolo tangibile di un anno di impegno, crescita e partecipazione collettiva.</p>
+                                <img src="mobility_corner.jpg" class="activity-image" alt="Presentazione del Lavoro">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#firstYearCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Precedente</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#firstYearCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Successiva</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="year-section">
+                    <h3 class="year-title">Secondo Anno</h3>
+                    <div id="secondYearCarousel" class="carousel slide activities-carousel" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <h4 class="activity-title">Feedback e Rilancio</h4>
+                                <p class="activity-text">Abbiamo preso un momento di pausa per riflettere sull'impatto delle attività svolte nell'anno passato. Cosa abbiamo imparato? Quali sono le opportunità di miglioramento? Questo confronto ci ha permesso di raccogliere sfide e stimoli preziosi, gettando le basi per un nuovo anno di crescita e innovazione.</p>
+                                <img src="1giornata_2anno.jpg" class="activity-image" alt="Feedback e Rilancio">
+                            </div>
+                            <div class="carousel-item">
+                                <h4 class="activity-title">Finanza Etica</h4>
+                                <p class="activity-text">Abbiamo approfondito un tema fondamentale: la finanza etica, un modello che pone al centro la persona e l'ambiente, orientando le decisioni su come e dove allocare le risorse. Attraverso riflessioni e incontri con realtà che praticano questo approccio, abbiamo scoperto come l'etica possa trasformare il modo di fare finanza, con un impatto positivo e responsabile sulla società.</p>
+                                <img src="2giornata_2anno.jpg" class="activity-image" alt="Finanza Etica">
+                            </div>
+                            <div class="carousel-item">
+                                <h4 class="activity-title">Progettazione Culturale</h4>
+                                <p class="activity-text">Cos'è davvero un'azione culturale? Abbiamo esplorato diversi esempi, dal più formale al più informale, e messo in pratica quanto appreso progettando il nostro swap party: un evento pensato per promuovere il riuso, stimolare la creatività e diffondere la sostenibilità in modo concreto e partecipato.</p>
+                                <img src="3giornata_2anno.jpg" class="activity-image" alt="Progettazione Culturale">
+                            </div>
+                            <div class="carousel-item">
+                                <h4 class="activity-title">Swap Party</h4>
+                                <p class="activity-text">L'arte dello scambio prende vita nel nostro swap party: un'esperienza unica dove abbiamo condiviso oggetti di ogni tipo, dall'abbigliamento alla cancelleria, fino ai libri. Un modo divertente e concreto per promuovere la sostenibilità e il consumo consapevole, trasformando il riuso in un momento di socialità e comunità.</p>
+                                <img src="4giornata_2anno.jpg" class="activity-image" alt="Swap Party">
+                            </div>
+                            <div class="carousel-item">
+                                <h4 class="activity-title">Manutenzione Bicicletta</h4>
+                                <p class="activity-text">In questo laboratorio pratico abbiamo scoperto come funzionano i suoi componenti, imparato a ripararla e a mantenerla in sicurezza. Un'esperienza concreta che ci ha insegnato a prenderci cura del nostro mezzo di trasporto, garantendo prestazioni ottimali e viaggi più sicuri.</p>
+                                <img src="5giornata_2anno.jpg" class="activity-image" alt="Manutenzione Bicicletta">
+                            </div>
+                            <div class="carousel-item">
+                                <h4 class="activity-title">Cosa Diciamo alle Istituzioni?</h4>
+                                <p class="activity-text">Ci siamo organizzati in due gruppi: uno ha preparato il discorso per raccontare la nascita del sito e il cammino svolto durante i due anni di progetto; l'altro ha scritto una lettera rivolta alle istituzioni, per condividere riflessioni, risultati e proposte future.</p>
+                                <img src="6giornata_2anno.jpg" class="activity-image" alt="Cosa Diciamo alle Istituzioni">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#secondYearCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Precedente</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#secondYearCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Successiva</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section id="gamification-section" class="content-section">
+            <div class="gamification-container">
+                <h2 class="section-title">Gamification</h2>
+                
+                <div class="gamification-content">
+                    <div class="gamification-text">
+                        <p>PlaNet è una piattaforma di formazione sostenibile, pensata per essere accessibile, coinvolgente e stimolante. Si concentra su tematiche cruciali come alimentazione sostenibile, economia circolare, mobilità sostenibile, consumo energetico e diversità e inclusione (D&I). Utilizzando la gamification come tecnica di apprendimento, PlaNet rende l'acquisizione di competenze un'esperienza interattiva e motivante, promuovendo una maggiore consapevolezza e responsabilità verso un futuro più sostenibile e inclusivo.</p>
+                        
+                        <a href="https://drive.google.com/file/d/1-I4iwcvjOu1KlKYKfzLOOBRgh9tCbf8m/view?usp=drivesdk" target="_blank" class="gamification-link">
+                            <span class="material-icons-outlined">arrow_forward</span>
+                            Scopri di più
+                        </a>
+                    </div>
+                    
+                    <div class="gamification-visual">
+                        <img src="logo_up2you.jpg" alt="Piattaforma di Gamification" class="gamification-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="partners-section" class="content-section">
+            <div class="partners-container">
+                <h2 class="section-title">Chi Siamo?</h2>
+                
+                <div class="partners-grid">
+                    <div class="partner-category">
+                        <h3>Capofila Progetto</h3>
+                        <ul class="partner-list">
+                            <li class="partner-item">
+                                <a href="https://www.urbanfair.it/" target="_blank" class="partner-link">
+                                    <span class="material-icons-outlined">apartment</span>
+                                    Urbana cooperativa sociale
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="partner-category">
+                        <h3>Partner Scolastici</h3>
+                        <ul class="partner-list">
+                            <li class="partner-item">
+                                <a href="https://www.iiscanova.edu.it/" target="_blank" class="partner-link">
+                                    <span class="material-icons-outlined">school</span>
+                                    IIS Canova
+                                </a>
+                            </li>
+                            <li class="partner-item">
+                                <a href="https://www.itisrossi.edu.it/" target="_blank" class="partner-link">
+                                    <span class="material-icons-outlined">school</span>
+                                    ITIS Rossi
+                                </a>
+                            </li>
+                            <li class="partner-item">
+                                <a href="https://www.liceischio.edu.it/" target="_blank" class="partner-link">
+                                    <span class="material-icons-outlined">school</span>
+                                    Liceo Tron-Zanella
+                                </a>
+                            </li>
+                            <li class="partner-item">
+                                <a href="https://www.silvioceccato.edu.it" target="_blank" class="partner-link">
+                                    <span class="material-icons-outlined">school</span>
+                                    IIS Silvio Ceccato
+                                </a>
+                            </li>
+                            <li class="partner-item">
+                                <a href="https://www.auloceccato.edu.it/" target="_blank" class="partner-link">
+                                    <span class="material-icons-outlined">school</span>
+                                    ITET Aulo Ceccato
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="partner-category">
+                        <h3>Partner e organizzazioni operative</h3>
+                        <ul class="partner-list">
+                            <li class="partner-item">
+                                <a href="https://www.velocitta.it/" target="_blank" class="partner-link">
+                                    <span class="material-icons-outlined">directions_bike</span>
+                                    referente mobilità: civi&co e veloCittà
+                                </a>
+                            </li>
+                            <li class="partner-item">
+                                <a href="https://www.camposaz.com/" target="_blank" class="partner-link">
+                                    <span class="material-icons-outlined">carpenter</span>
+                                    referente Mobility Corner: Camposaz
+                                </a>
+                            </li>
+                            <li class="partner-item">
+                                <a href="https://www.arciserviziocivile.it/" target="_blank" class="partner-link">
+                                    <span class="material-icons-outlined">groups</span>
+                                    Vicenza: Arci Servizio Civile
+                                </a>
+                            </li>
+                            <li class="partner-item">
+                                <a href="https://www.samarcandaonlus.it/" target="_blank" class="partner-link">
+                                    <span class="material-icons-outlined">groups</span>
+                                    Schio: Samarcanda coop. sociale
+                                </a>
+                            </li>
+                            <li class="partner-item">
+                                <a href="https://www.pianoinfinitocoop.it/" target="_blank" class="partner-link">
+                                    <span class="material-icons-outlined">groups</span>
+                                    Montecchio: Piano Infinito
+                                </a>
+                            </li>
+                            <li class="partner-item">
+                                <a href="https://www.radicaonlus.it/" target="_blank" class="partner-link">
+                                    <span class="material-icons-outlined">groups</span>
+                                    Thiene: Radicà cooperativa sociale
+                                </a>
+                            </li>
+                            <li class="partner-item">
+                                <a href="https://www.fondazionecariverona.org" target="_blank" class="partner-link">
+                                    <span class="material-icons-outlined">foundation</span>
+                                    Fondazione Cariverona: supporto nell'ambito del bando "rigenerazioni 2023"
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="partner-category full-width-partner">
+                        <h3>Partner Istituzionali</h3>
+                        <ul class="partner-list">
+                            <li class="partner-item">
+                                <a href="https://www.provincia.vicenza.it/" target="_blank" class="partner-link">
+                                    <span class="material-icons-outlined">account_balance</span>
+                                    Provincia di Vicenza
+                                </a>
+                            </li>
+                            <li class="partner-item">
+                                <a href="https://vicenza.istruzioneveneto.gov.it/" target="_blank" class="partner-link">
+                                    <span class="material-icons-outlined">school</span>
+                                    USRV-Ufficio VIII - Ambito Territoriale di Vicenza
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="schools-grid">
+                    <div class="school-card">
+                        <h3>IIS Silvio Ceccato</h3>
+                        <p>La Scuola "Silvio Ceccato" di Montecchio Maggiore è un Istituto tecnico e professionale che prepara gli studenti ad affrontare le sfide del mondo del lavoro. Promuove un ambiente inclusivo e innovativo che favorisce lo sviluppo delle competenze individuali.</p>
+                    </div>
+                    
+                    <div class="school-card">
+                        <h3>IIS Canova</h3>
+                        <p>L'IIS Antonio Canova di Vicenza, che comprende un istituto tecnico e un liceo artistico, partecipa al progetto In-mobilità con una classe dell'indirizzo CAT, oggi composta da 18 alunni. L'istituto valorizza l'innovazione, la preparazione professionale e una solida formazione di base.</p>
+                    </div>
+                    
+                    <div class="school-card">
+                        <h3>ITIS Rossi</h3>
+                        <p>L'ITIS "Alessandro Rossi" di Vicenza, vicino al centro, è un istituto storico attento all'innovazione e al dialogo con il territorio. Offre cinque indirizzi e ha partecipato al progetto In-mobilità con un gruppo misto di studenti volontari di seconde. Oggi il gruppo conta circa dieci ragazzi.</p>
+                    </div>
+
+                    <div class="school-card">
+                        <h3>Liceo Tron-Zanella</h3>
+                        <p>L'istituto Tron-Zanella-Martini comprende tutti i licei di Schio, scientifico, classico, linguistico, artistico e scienze umane. La classe che ha partecipato al progetto è stata la 4BI formata da 22 studenti. Questo indirizzo pone attenzione all'analisi critica stimolando la riflessione.</p>
+                    </div>
+
+                    <div class="school-card">
+                        <h3>ITET Aulo Ceccato</h3>
+                        <p>Al progetto hanno partecipato due classes CAT, una per anno, per un totale di 39 studenti. L'indirizzo "Costruzioni, Ambiente e Territorio" forma competenze su materiali, strumenti di rilievo, software tecnici, valutazioni economiche, gestione ambientale e cantieri in sicurezza.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="credits-section" class="content-section">
+            <div class="credits-container">
+                <h2 class="section-title">Crediti</h2>
+                
+                <div class="credits-grid">
+                    <div class="credit-category">
+                        <h4>Programmatori</h4>
+                        <ul class="credit-list">
+                            <li class="credit-item">Pratham Madaan</li>
+                            <li class="credit-item">Manuel Visentin</li>
+                            <li class="credit-item">Giordano Peressini</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="credit-category">
+                        <h4>Designers</h4>
+                        <ul class="credit-list">
+                            <li class="credit-item">Gioia Ferrando</li>
+                            <li class="credit-item">Giordano Peressini</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <img src="foto_crediti.jpg" alt="Team di progetto" class="credits-image">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <button id="scroll-top" class="scroll-top-button" aria-label="Torna su">
+            <span class="material-icons-outlined">arrow_upward</span>
+        </button>
         
-          <div id = 'sep_line'></div>
-
-            <div id="second_year" class="card_act card2 carousel slide" data-bs-ride="carousel">
-              
-              <button id="scrollact" class="material-icons-outlined arrow_carousel_left" type="button" data-bs-target="#second_year" data-bs-slide="prev" aria-hidden="true">
-              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
-              <span class="visually-hidden"></span>
-              </button>
-
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                <h4 class="title_activity">Feedback e Rilancio</h4>
-                <p class="text_activity">Abbiamo preso un momento di pausa per riflettere sull’impatto delle attività svolte nell’anno passato. Cosa abbiamo imparato? Quali sono le opportunità di miglioramento? Questo confronto ci ha permesso di raccogliere sfide e stimoli preziosi, gettando le basi per un nuovo anno di crescita e innovazione.</p>
-                <img src="1giornata_2anno.jpg" class="img_activity d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <h4 class="title_activity">Finanza Etica</h4>
-                <p class="text_activity">Abbiamo approfondito un tema fondamentale: la finanza etica, un modello che pone alcentro la persona e l’ambiente, orientando le decisioni su come e dove allocare le risorse. Attraverso riflessioni e incontri con realtà che praticano questo approccio, abbiamo scoperto come l’etica possa trasformare il modo di fare finanza, con un impatto positivo e responsabile sulla società.o positivo e responsabile sulla società.</p>
-                <img src="2giornata_2anno.jpg" class="img_activity d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <h4 class="title_activity">Progettazione Culturale</h4>
-                <p class="text_activity">Cos’è davvero un’azione culturale? Abbiamo esplorato diversi esempi, dal più formale al più informale, e messo in pratica quanto appreso progettando il nostro swap party: un evento pensato per promuovere il riuso, stimolare la creatività e diffondere la sostenibilità in modo concreto e partecipato.</p>
-                <img src="3giornata_2anno.jpg" class="img_activity d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <h4 class="title_activity">Swap Party</h4>
-                <p class="text_activity">L’arte dello scambio prende vita nel nostro swap party: un’esperienza unica dove abbiamo condiviso oggetti di ogni tipo, dall’abbigliamento alla cancelleria, fino ai libri. Un modo divertente e concreto per promuovere la sostenibilità e il consumo consapevole, trasformando il riuso in un momento di socialità e comunità.</p>
-                <img src="4giornata_2anno.jpg" class="img_activity d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <h4 class="title_activity">Manutenzione Bicicletta</h4>
-                <p class="text_activity">In questo laboratorio pratico abbiamo scoperto come funzionano i suoi componenti, imparato a ripararla e a mantenerla in sicurezza. Un’esperienza concreta che ci ha insegnato a prenderci cura del nostro mezzo di trasporto, garantendo prestazioni ottimali e viaggi più sicuri.</p>
-                <img src="5giornata_2anno.jpg" class="img_activity d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <h4 class="title_activity">Cosa Diciamo alle Istituzioni?</h4>
-                <p class="text_activity">Ci siamo organizzati in due gruppi: uno ha preparato il discorso per raccontare la nascita del sito e il cammino svolto durante i due anni di progetto; l’altro ha scritto una lettera rivolta alle istituzioni, per condividere riflessioni, risultati e proposte future.</p>
-                <img src="6giornata_2anno.jpg" class="img_activity d-block w-100" alt="...">
-              </div>
-            </div>
-            
-            <button id="scrollact" class="material-icons-outlined arrow_carousel_right" type="button" data-bs-target="#second_year" data-bs-slide="next" aria-hidden="true">
-              <span class="arrow_carousel_font" aria-hidden="true">arrow_upward</span>
-              <span class="visually-hidden"></span>
-              </button>
-
-          </div>
+        <div class="mobile-nav-footer">
+            <button class="mobile-nav-button" data-section="home">
+                <span class="material-icons-outlined">home</span>
+                <span>Home</span>
+            </button>
+            <button class="mobile-nav-button" data-section="activities">
+                <span class="material-icons-outlined">campaign</span>
+                <span>Attività</span>
+            </button>
+            <button class="mobile-nav-button" data-section="gamification">
+                <span class="material-icons-outlined">web</span>
+                <span>Gamification</span>
+            </button>
+            <button class="mobile-nav-button" data-section="partners">
+                <span class="material-icons-outlined">handshake</span>
+                <span>Chi Siamo</span>
+            </button>
+            <button class="mobile-nav-button" data-section="credits">
+                <span class="material-icons-outlined">people</span>
+                <span>Crediti</span>
+            </button>
         </div>
-      </div>
-
-      <div id="partner_div">
-        <div id="project_partner">
-          <h3>Capofila Progetto</h3>
-          <p>
-            - Urbana cooperativa sociale
-          </p>
+        
+        <div class="footer-info">
+            <p>Copyright 2025 - Cooperativa Urbana - Finanziato da Cooperativa Urbana - Progetto sostenuto da Fondazione Cariverona</p>
         </div>
-        <div id="project_partner">
-          <h3>Capofila Progetto</h3>
-          <p>
-            - Urbana cooperativa sociale <a href = "https://www.urbanfair.it/"><span class="material-icons-outlined">open_in_new</span></a>
-          </p>
-        </div>
-        <div id="school_partner">
-          <h3>Partner Scolastici</h3>
-          <p>
-            - Vicenza: IIS Canova <a href = "https://www.iiscanova.edu.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
-            - Vicenza: ITIS Rossi <a href = "https://www.itisrossi.edu.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
-            - Schio: Liceo Tron-Zanella <a href = "https://www.liceischio.edu.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
-            - Montecchio: IIS Silvio Ceccato <a href = "https://www.silvioceccato.edu.it"><span class="material-icons-outlined">open_in_new</span></a><br>
-            - Thiene: ITET Aulo Ceccato <a href = "https://www.auloceccato.edu.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
-          </p>
-        </div>
-        <div id="organization_partner">
-          <h3>Partner e organizzazioni operative</h3>
-          <p>
-            - referente mobilità: civi&co e veloCittà <a href = "https://www.velocitta.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
-            - referente Mobility Corner: Camposaz <a href = "https://www.camposaz.com/"><span class="material-icons-outlined">open_in_new</span></a><br>
-            - Vicenza: Arci Servizio Civile <a href = "https://www.arciserviziocivile.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
-            - Schio: Samarcanda coop. sociale <a href = "https://www.samarcandaonlus.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
-            - Montecchio: Piano Infinito <a href = "https://www.pianoinfinitocoop.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
-            - Thiene: Radicà cooperativa sociale <a href = "https://www.radicaonlus.it/"><span class="material-icons-outlined">open_in_new</span></a><br>
-            - Fondazione  Cariverona: supporto nell'ambito del bando "rigenerazioni 2023"<a href = "https://www.fondazionecariverona.org"><span class="material-icons-outlined">open_in_new</span></a><br>
-          </p>
-        </div>
-        <div id="institutional_partner">
-          <h3>Partner Istituzionali</h3>
-          <p>- Provincia di Vicenza <a href = "https://www.provincia.vicenza.it/"><span class="material-icons-outlined">open_in_new</span></a></p>
-          <p>- USRV-Ufficio VIII - Ambito Territoriale di Vicenza <a href = "https://vicenza.istruzioneveneto.gov.it/"><span class="material-icons-outlined">open_in_new</span></a></p>
-        </div>
-
-        <div id="ceccato_div">
-          <h3>IIS Silvio Ceccato</h3>
-          <p>La Scuola "Silvio Ceccato" di Montecchio Maggiore è un Istituto tecnico e professionale che prepara gli studenti ad affrontare le sfide del mondo del lavoro. Promuove un ambiente inclusivo e innovativo che favorisce lo sviluppo delle competenze individuali.</p>
-        </div>
-        <div id="canova_div">
-          <h3>IIS Canova</h3>
-          <p>L’IIS Antonio Canova di Vicenza, che comprende un istituto tecnico e un liceo artistico, partecipa al progetto In-mobilità con una classe dell’indirizzo CAT, oggi composta da 18 alunni. L’istituto valorizza l’innovazione, la preparazione professionale e una solida formazione di base.</p>
-        </div>
-        <div id="rossi_div">
-          <h3>ITIS Rossi</h3>
-          <p>L’ITIS “Alessandro Rossi” di Vicenza, vicino al centro, è un istituto storico attento all’innovazione e al dialogo con il territorio. Offre cinque indirizzi e ha partecipato al progetto In-mobilità con un gruppo misto di studenti volontari di seconde. Oggi il gruppo conta circa dieci ragazzi.</p>
-        </div>
-        <div id="tron-zanella_div">
-          <h3>Liceo Tron-Zanella</h3>
-          <p>L’istituto Tron-Zanella-Martini comprende tutti i licei di Schio, scientifico, classico, linguistico, artistico e scienze umane. La classe che ha partecipato al progetto è stata la 4BI formata da 22 studenti. Questo indirizzo pone attenzione all’analisi critica stimolando la riflessione.</p>
-        </div>
-        <div id="aulo-ceccato_div">
-          <h3>ITET Aulo Ceccato</h3>
-          <p>Al progetto hanno partecipato due classi CAT, una per anno, per un totale di 39 studenti. L’indirizzo “Costruzioni, Ambiente e Territorio” forma competenze su materiali, strumenti di rilievo, software tecnici, valutazioni economiche, gestione ambientale e cantieri in sicurezza.</p>
-        </div>
-        <div id="separatore_3"></div>
-      </div>
-
-      <div id="webapp_div">
-        <div id="webapp_container">
-          <h3>Gamification</h3>
-          <p>PlaNet è una piattaforma di formazione sostenibile, pensata per essere accessibile, coinvolgente e stimolante. Si concentra su tematiche cruciali come alimentazione sostenibile, economia circolare, mobilità sostenibile, consumo energetico e diversità e inclusione (D&I). Utilizzando la gamification come tecnica di apprendimento, PlaNet rende l'acquisizione di competenze un'esperienza interattiva e motivante, promuovendo una maggiore consapevolezza e responsabilità verso un futuro più sostenibile e inclusivo.</p>
-          <a href="https://drive.google.com/file/d/1-I4iwcvjOu1KlKYKfzLOOBRgh9tCbf8m/view?usp=drivesdk" id="webapp_link"><span class="material-icons-outlined webapp">arrow_forward</span>Scopri di più</a>
-	  <img src="logo_up2you.jpg" alt="logo up2you">
-        </div>
-      </div>
-
-      <div id="webapp_div">
-        <div id="webapp_container">
-          <h3>Gamification</h3>
-          <p>PlaNet è una piattaforma di formazione sostenibile, pensata per essere accessibile, coinvolgente e stimolante. Si concentra su tematiche cruciali come alimentazione sostenibile, economia circolare, mobilità sostenibile, consumo energetico e diversità e inclusione (D&I). Utilizzando la gamification come tecnica di apprendimento, PlaNet rende l'acquisizione di competenze un'esperienza interattiva e motivante, promuovendo una maggiore consapevolezza e responsabilità verso un futuro più sostenibile e inclusivo.</p>
-          <a href="https://drive.google.com/file/d/1-I4iwcvjOu1KlKYKfzLOOBRgh9tCbf8m/view?usp=drivesdk" id="webapp_link"><span class="material-icons-outlined webapp">arrow_forward</span>Scopri di più</a>
-        </div>
-      </div>
-      
-      <div id="credits_div">
-        <div id="credits_container">
-          <h3>Crediti</h3>
-          <div id="programmers">
-            <h4>Programmatori</h4>
-            <p>Pratham Madaan <br> Manuel Visentin <br> Giordano Peressini</p>
-          </div>
-          <div id="designers">
-            <h4>Designers</h4>
-            <p>Gioia Ferrando <br> Giordano Peressini</p>
-          </div>
-	    <img src="foto_crediti.jpg" alt="">
-        </div>
-      </div>
-    </body>
-    <footer>
-      <span id="scrollToTop" class="material-icons-outlined">arrow_upward</span>
-        <div class="navmenu_mobile">
-            <nav class="navsez">
-                <a id ="home_mob"><span class="material-icons-outlined">home</span>Home</a>
-                <a id ="activity_mob"><span class="material-icons-outlined">campaign</span>Attività</a>
-                <a id ="webapp_mob"><span class="material-icons-outlined">web</span>Gamification</a>
-                <a href="#" id="footer-menu-icon"><span class="material-icons-outlined">menu</span>Menu</a>
-            </nav>
-        </div>
-        <p id="copyright">Copyright 2025 - Cooperativa Urbana - Finanziato da Cooperativa Urbana - Progetto sostenuto da Fondazione Cariverona</p>
-        <br>
-        <br>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzFdriIcZ3ERgYlMlZpXtIOMhuZI5c6+SzrpaHdQovY9OqKz7Uv5yMjQzfc7" crossorigin="anonymous"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = themeToggle.querySelector('.material-icons-outlined');
+            
+            themeToggle.addEventListener('click', function() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                if (currentTheme === 'dark') {
+                    document.documentElement.removeAttribute('data-theme');
+                    themeIcon.textContent = 'dark_mode';
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeIcon.textContent = 'light_mode';
+                }
+            });
+            
+            const navItems = document.querySelectorAll('.nav-item, .mobile-nav-button');
+            const contentSections = document.querySelectorAll('.content-section');
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const targetSection = this.getAttribute('data-section');
+                    
+                    document.querySelectorAll('.nav-item').forEach(navItem => {
+                        navItem.classList.remove('active');
+                    });
+                    
+                    if (this.classList.contains('nav-item')) {
+                        this.classList.add('active');
+                    }
+                    
+                    contentSections.forEach(section => {
+                        section.classList.remove('active');
+                    });
+                    
+                    document.getElementById(`${targetSection}-section`).classList.add('active');
+                    
+                    document.getElementById('mobile-menu').classList.remove('open');
+                    
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
+            
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+            
+            mobileMenuButton?.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('open');
+            });
+            
+            closeMobileMenuButton?.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.remove('open');
+            });
+            
+            const scrollTopButton = document.getElementById('scroll-top');
+            
+            scrollTopButton.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    scrollTopButton.style.display = 'flex';
+                } else {
+                    scrollTopButton.style.display = 'none';
+                }
+            });
+            
+            const carousels = document.querySelectorAll('.carousel');
+            carousels.forEach(carousel => {
+                new bootstrap.Carousel(carousel, {
+                    interval: 5000,
+                    wrap: true
+                });
+            });
+        });
+    </script>
+</body>
 </html>
